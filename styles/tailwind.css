@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --accent-a8: rgb(4, 4, 4);
+  --accent-a11: rgb(4, 4, 4);
+}
+
+.dark {
+  --accent-a8: rgb(4, 4, 4);
+  --accent-a11: rgb(4, 4, 4);
+}

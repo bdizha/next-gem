@@ -1,0 +1,128 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 1rem;
+  z-index: 50;
+}
+
+.headerContainer {
+  margin: 0 auto;
+  display: flex;
+  max-width: 1280px;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(24px);
+  background-color: rgba(35, 35, 35, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  box-shadow: 0px 8px 20px -4px rgba(0, 0, 0, 0.32);
+  color: rgb(255, 255, 255);
+  column-gap: 12px;
+  display: flex;
+  flex-direction: row;
+  line-height: 24px;
+  padding: 1rem;
+  width: 100%;
+  z-index: 1300;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brandButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background-color: rgb(8, 8, 8);
+  padding: 0.5rem 1rem;
+  color: white;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgb(4, 4, 4);
+  }
+
+  .brandText {
+    font-weight: 500;
+  }
+
+  .brandIcon {
+    font-family: 'Material Icons';
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  border: 1px solid rgb(4, 4, 4);
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: rgb(8, 8, 8);
+  }
+
+  .actionIcon {
+    font-family: 'Material Icons';
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  color: white;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgb(8, 8, 8);
+  }
+
+  .icon {
+    font-family: 'Material Icons';
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+}
+
+.profileButton {
+  width: 2.5rem;
+  height: 2.5rem;
+  overflow: hidden;
+  border-radius: 9999px;
+  ring: 2px rgb(4, 4, 4);
+  transition: all 0.2s;
+
+  &:hover {
+    ring: 2px rgb(234, 179, 8);
+  }
+
+  .profileImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

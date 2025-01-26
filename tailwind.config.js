@@ -29,6 +29,37 @@ module.exports = {
           800: "#1e40af",
           900: "#1e3a8a",
         },
+        brand: {
+          50: '#F5F7FF',
+          100: '#EBF0FF',
+          200: '#D6E0FF',
+          300: '#B3C5FF',
+          400: '#809FFF',
+          500: '#4D7AFF',  // Primary brand color
+          600: '#1A55FF',
+          700: '#0040FF',
+          800: '#0033CC',
+          900: '#002699',
+        },
+        background: {
+          DEFAULT: '#0A0A0B',
+          50: '#F7F7F8',
+          100: '#E3E3E7',
+          200: '#C7C7CF',
+          300: '#9D9DAC',
+          400: '#737389',
+          500: '#4F4F66',
+          600: '#363643',
+          700: '#232329',
+          800: '#151517',
+          900: '#0A0A0B',
+        },
+        accent: {
+          yellow: '#FFB800',
+          purple: '#7C3AED',
+          green: '#10B981',
+          red: '#EF4444',
+        }
       },
       fontFamily: {
         body: [
@@ -74,6 +105,12 @@ module.exports = {
         4: "4px",
         6: "6px",
         8: "8px",
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      },
+      boxShadow: {
+        'glow': '0 0 20px rgba(77, 122, 255, 0.25)',
       },
       minHeight: {
         ...defaultTheme.height,
