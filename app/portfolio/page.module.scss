@@ -1,0 +1,252 @@
+.main {
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  background: black;
+
+  .portfolio {
+    background: var(--background);
+    color: var(--text);
+    
+    .text-purple {
+      color: var(--purple);
+    }
+    
+    .bg-purple-50 {
+      background-color: rgba(var(--purple-rgb), 0.05);
+    }
+    
+    .bg-purple-600 {
+      background-color: var(--purple-600);
+    }
+    
+    .bg-purple-700 {
+      background-color: var(--purple-700);
+    }
+    
+    .bg-gray-900 {
+      background-color: var(--gray-900);
+    }
+    
+    .text-white {
+      color: var(--white);
+    }
+    
+    .rounded-xl {
+      border-radius: 1rem;
+    }
+    
+    .rounded-full {
+      border-radius: 9999px;
+    }
+    
+    .shadow-lg {
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    
+    .overflow-hidden {
+      overflow: hidden;
+    }
+    
+    .aspect-square {
+      aspect-ratio: 1 / 1;
+    }
+    
+    .object-cover {
+      object-fit: cover;
+    }
+    
+    .grid {
+      display: grid;
+      gap: 2rem;
+      
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .inline-flex {
+      display: inline-flex;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    .max-w-4xl {
+      max-width: 56rem;
+    }
+    
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .mb-4 {
+      margin-bottom: 1rem;
+    }
+    
+    .mb-8 {
+      margin-bottom: 2rem;
+    }
+    
+    .mb-12 {
+      margin-bottom: 3rem;
+    }
+    
+    .p-4 {
+      padding: 1rem;
+    }
+    
+    .px-6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    
+    .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    
+    .py-16 {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    
+    .text-center {
+      text-align: center;
+    }
+    
+    .text-4xl {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+    
+    .text-xl {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+    
+    .text-lg {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+    
+    .font-bold {
+      font-weight: 700;
+    }
+    
+    &::before {
+      background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-03-Final.png');
+    }
+
+    .header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 4rem;
+
+      h2 {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 1.25rem;
+        line-height: 1.6;
+        opacity: 0.8;
+      }
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 3rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1rem;
+      border-radius: 1rem;
+      backdrop-filter: blur(8px);
+      gap: 1rem;
+
+      .tab {
+        padding: 0.75rem 2rem;
+        border-radius: 9999px;
+        background: transparent;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: rgba(var(--purple-rgb), 0.5);
+        }
+
+        &.active {
+          background: var(--purple);
+        }
+      }
+    }
+
+    .projectsGrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+
+      @media (max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .projectCard {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.15);
+
+        .projectImage {
+          transform: scale(1.05);
+        }
+      }
+
+      .imageWrapper {
+        width: 100%;
+        aspect-ratio: 1;
+        overflow: hidden;
+      }
+
+      .projectImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      h3 {
+        padding: 1.5rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.text-purple {
+  color: var(--purple);
+}

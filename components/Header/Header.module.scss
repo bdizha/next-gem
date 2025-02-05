@@ -1,15 +1,19 @@
 .header {
   position: fixed;
+  top: 0;
   left: 0;
   right: 0;
-  top: 1rem;
   z-index: 50;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 9999px;
+  padding: 0.5rem;
 }
 
 .headerContainer {
   margin: 0 auto;
   display: flex;
-  max-width: 1280px;
+  max-width: 1080px;
   align-items: center;
   justify-content: space-between;
   backdrop-filter: blur(24px);
@@ -25,6 +29,16 @@
   padding: 1rem;
   width: 100%;
   z-index: 1300;
+  border-radius: 9999px;
+}
+
+.headerContent {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .headerLeft {
@@ -33,10 +47,252 @@
   gap: 1rem;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgba(var(--green-rgb), 0.1);
+  }
+
+  img {
+    width: auto;
+    height: 36px;
+  }
+}
+
 .headerRight {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.desktopNav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.navButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+  background-color: var(--green);
+  color: white;
+
+  &:hover {
+    background-color: var(--green-dark);
+  }
+
+  &.purple:hover {
+    color: var(--purple);
+  }
+
+  &.pink:hover {
+    color: var(--pink);
+  }
+
+  &.green:hover {
+    color: var(--green);
+  }
+
+  &.yellow:hover {
+    color: var(--yellow);
+  }
+
+  &.dark:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  &.outlined {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      border-color: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.menuIcon {
+  width: 24px;
+  height: 18px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+
+  span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: var(--secondary);
+    border-radius: 2px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+
+    &:nth-child(1) {
+      top: 0px;
+    }
+
+    &:nth-child(2) {
+      top: 8px;
+    }
+
+    &:nth-child(3) {
+      top: 16px;
+    }
+  }
+
+  &.open {
+    span {
+      &:nth-child(1) {
+        top: 8px;
+        transform: rotate(135deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+        left: -60px;
+      }
+
+      &:nth-child(3) {
+        top: 8px;
+        transform: rotate(-135deg);
+      }
+    }
+  }
+}
+
+.mobileNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  z-index: 1000;
+}
+
+.mobileLink {
+  color: var(--secondary);
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  text-align: center;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  &:last-child {
+    background: var(--purple);
+    
+    &:hover {
+      background: var(--purple-dark);
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.link {
+  color: var(--secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+
+  &:last-child {
+    background: var(--purple);
+    
+    &:hover {
+      background: var(--purple-dark);
+    }
+  }
+}
+
+.ctaButton {
+  background: white;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+  }
+}
+
+.contactButton {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid white;
+  border-radius: 9999px;
+  color: white;
+  background: transparent;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
 }
 
 .brandButton {
@@ -124,5 +380,39 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .menuButton {
+    display: flex;
+  }
+
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(8px);
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 90;
+
+    &.active {
+      transform: translateX(0);
+    }
+  }
+
+  .navLink {
+    font-size: 1.5rem;
+  }
+
+  .ctaButton {
+    margin-top: 2rem;
   }
 }

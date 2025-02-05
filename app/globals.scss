@@ -1,0 +1,423 @@
+@import '../styles/fonts.scss';
+@import '../styles/theme.scss';
+
+:root {
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-primary: 'GraphiGem', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-secondary: var(--font-mono);
+
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: var(--primary);
+  color: var(--secondary);
+  font-family: var(--font-primary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  transition: all 0.2s;
+  display: inline-block;
+
+  &:hover {
+    background-color: rgba(var(--green-rgb), 0.1);
+  }
+}
+
+button {
+  font-family: var(--font-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+  background-color: var(--green);
+  color: white;
+
+  &:hover {
+    background-color: var(--green-dark);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-secondary);
+}
+
+// Layout
+.main {
+  min-height: 100vh;
+  padding-top: 80px; // Space for fixed header
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+// Hero sections
+.hero {
+  padding: 6rem 0;
+  text-align: center;
+  background: var(--glass-dark);
+  backdrop-filter: blur(8px);
+
+  h2 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+// Grid layouts
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+// Cards
+.card {
+  background: var(--glass-light);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+// Utility classes
+.p0 {
+  padding: 0;
+}
+
+.p1 {
+  padding: 0.25rem;
+}
+
+.p2 {
+  padding: 0.5rem;
+}
+
+.p3 {
+  padding: 1rem;
+}
+
+.p4 {
+  padding: 1.5rem;
+}
+
+.p5 {
+  padding: 2rem;
+}
+
+.p6 {
+  padding: 2.5rem;
+}
+
+.p12 {
+  padding: 3rem;
+}
+
+// Margin utilities
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 2rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+.mt-5 {
+  margin-top: 2rem;
+}
+
+// Text utilities
+.text-h1 {
+  font-family: var(--font-secondary);
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.text-h2 {
+  font-family: var(--font-secondary);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.text-h3 {
+  font-family: var(--font-secondary);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.text-h4 {
+  font-family: var(--font-secondary);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.text-h5 {
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.text-h6 {
+  font-family: var(--font-secondary);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+// Theme colors
+.text-purple {
+  color: var(--purple);
+}
+
+.text-pink {
+  color: var(--pink);
+}
+
+.text-green {
+  color: var(--green);
+}
+
+.text-yellow {
+  color: var(--yellow);
+}
+
+// Theme backgrounds
+.bg-dark-grey {
+  background: var(--dark-grey);
+}
+
+.bg-glass-dark {
+  background: var(--glass-dark);
+  backdrop-filter: blur(8px);
+}
+
+.bg-glass-light {
+  background: var(--glass-light);
+  backdrop-filter: blur(8px);
+}
+
+// Theme waves
+.bg-purple-wave {
+  background: var(--purple-wave);
+}
+
+.bg-pink-wave {
+  background: var(--pink-wave);
+}
+
+.bg-green-wave {
+  background: var(--green-wave);
+}
+
+.bg-yellow-wave {
+  background: var(--yellow-wave);
+}
+
+// Flex utilities
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 1rem;
+}
+
+.gap-4 {
+  gap: 1.5rem;
+}
+
+.gap-5 {
+  gap: 2rem;
+}
+
+// Responsive utilities
+@media (max-width: 768px) {
+  .text-h1 {
+    font-size: 4rem;
+  }
+
+  .text-h2 {
+    font-size: 3rem;
+  }
+
+  .text-h3 {
+    font-size: 2.5rem;
+  }
+
+  .text-h4 {
+    font-size: 1.75rem;
+  }
+
+  .text-h5 {
+    font-size: 1.25rem;
+  }
+
+  .text-h6 {
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding: 4rem 0;
+
+    h2 {
+      font-size: 3rem;
+    }
+  }
+}
+
+// Masked Container
+.maskedContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  mask-image: url('/assets/GD-2D/GD-Waves/GD-Wave-02-Final.png');
+  mask-size: cover;
+  mask-position: center;
+  -webkit-mask-image: url('/assets/GD-2D/GD-Waves/GD-Wave-02-Final.png');
+  -webkit-mask-size: cover;
+  -webkit-mask-position: center;
+  z-index: 10;
+}
+
+// Section
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    opacity: 0.8;
+  }
+
+  .content {
+    position: relative;
+    z-index: 20;
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

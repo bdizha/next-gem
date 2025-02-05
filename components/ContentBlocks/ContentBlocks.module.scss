@@ -1,0 +1,151 @@
+.hero {
+  max-width: var(--max-width);
+  margin: 0 auto 6rem;
+  text-align: center;
+
+  h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.8;
+  }
+}
+
+.grid {
+  max-width: var(--max-width);
+  margin: 0 auto 6rem;
+}
+
+.gridHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.8;
+  }
+}
+
+.gridContent {
+  display: grid;
+  gap: 2rem;
+
+  &.columns1 {
+    grid-template-columns: 1fr;
+  }
+
+  &.columns2 {
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &.columns3 {
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &.columns4 {
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.gridCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 9999px;
+  padding: 3rem;
+  transition: all 0.3s ease;
+  text-align: center;
+
+  &:hover {
+    transform: translateY(-8px);
+  }
+
+  .iconWrapper {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 2rem;
+    border-radius: 9999px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.8;
+  }
+
+  &.greenWave {
+    background: var(--green-wave);
+  }
+
+  &.purpleWave {
+    background: var(--purple-wave);
+  }
+
+  &.yellowWave {
+    background: var(--yellow-wave);
+  }
+
+  &.darkGrey {
+    background: var(--dark-grey);
+  }
+}

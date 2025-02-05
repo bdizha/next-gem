@@ -7,7 +7,7 @@ import styles from "./VideoPlayer.module.scss"
 
 interface VideoPlayerProps {
   src: string
-  description: string
+  description?: string
 }
 
 export function VideoPlayer({ src, description }: VideoPlayerProps) {
@@ -51,7 +51,7 @@ export function VideoPlayer({ src, description }: VideoPlayerProps) {
   }, [])
 
   return (
-    <div className={styles.videoPlayerWrapper}>
+    <div className={styles.maskedContainer}>
       <div className={styles.videoPlayer}>
         <div className={styles.videoPlayerContainer}>
           <video

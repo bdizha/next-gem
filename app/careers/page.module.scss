@@ -1,0 +1,153 @@
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000000;
+}
+
+.hero {
+  width: 100%;
+  min-height: 600px;
+  background: var(--purple-wave);
+  padding: 6rem 2rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-02-Final.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 0;
+  }
+
+  .heroContent {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .heroText {
+      flex: 1;
+
+      h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: var(--secondary);
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: var(--secondary-80);
+      }
+    }
+
+    .heroImage {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.craft {
+  width: 100%;
+  padding: 6rem 2rem;
+  background: var(--pink-wave);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-04-Final.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 0;
+  }
+
+  .craftContent {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+
+    .craftText {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+
+      h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: var(--text);
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: var(--text-80);
+      }
+    }
+  }
+}
+
+.positions {
+  width: 100%;
+  padding: 6rem 2rem;
+  background: var(--green-wave);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-06-Final.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 0;
+  }
+
+  .positionsContent {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

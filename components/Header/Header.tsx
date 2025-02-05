@@ -1,53 +1,75 @@
 "use client"
 
-import { Button } from "components/Button/Button"
-import styles from "./Header.module.scss"
+import Link from 'next/link'
+import Image from 'next/image'
+import styles from './Header.module.scss'
+import { useMediaQuery } from '../../hooks/useMediaQuery'
+import { useState } from 'react'
 
 export function Header() {
+  const isMobile = useMediaQuery('(max-width: 768px)')
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const links = [
+    { href: '/', title: 'Home' },
+    { href: '/services', title: 'Services' },
+    { href: '/careers', title: 'Careers' },
+    { href: '/about', title: 'About' },
+    { href: '/contact', title: 'Contact' },
+  ]
+
   return (
     <header className={styles.header}>
-      <div className={styles.headerContainer}>
-        <div className={styles.headerLeft}>
-          <button className={styles.brandButton}>
-            <span className={styles.brandText}>BoldLand</span>
-            <span className={styles.brandIcon}>arrow_drop_down</span>
-          </button>
+      <div className={styles.headerContent}>
+        <div className={styles.logo}>
+          <Link href="/">
+            <Image
+              src="/icons/GD-Icon/GD-P-Icon-White.png"
+              alt="Graphigem"
+              width={36}
+              height={36}
+            />
+          </Link>
         </div>
 
-        <div className={styles.headerRight}>
-          <Button 
-            intent="secondary" 
-            className={styles.actionButton}
-          >
-            <span className={styles.actionIcon}>science</span>
-            <span>Join the waitlist</span>
-          </Button>
-          
-          <button 
-            className={styles.iconButton}
-            aria-label="Help"
-          >
-            <span className={styles.icon}>help_outline</span>
-          </button>
-          
-          <button 
-            className={styles.iconButton}
-            aria-label="Menu"
-          >
-            <span className={styles.icon}>more_vert</span>
-          </button>
-          
-          <button 
-            className={styles.profileButton}
-            aria-label="Profile"
-          >
-            <img 
-              src="https://lh3.googleusercontent.com/a/ACg8ocKxPf4TFQc5hf5yOdDy7fF2KJQ6K_Zd3nQ0jK98PQaWxrLJOf0h=s96-c"
-              alt="Profile"
-              className={styles.profileImage}
-            />
-          </button>
-        </div>
+        {!isMobile ? (
+          <nav className={styles.navigation}>
+            {links.map((link) => (
+              <Link key={link.href} href={link.href} className={styles.link}>
+                {link.title}
+              </Link>
+            ))}
+          </nav>
+        ) : (
+          <>
+            <button 
+              className={styles.menuButton} 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              <div className={`${styles.menuIcon} ${isMenuOpen ? styles.open : ''}`}>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </button>
+
+            {isMenuOpen && (
+              <nav className={styles.mobileNav}>
+                {links.map((link) => (
+                  <Link 
+                    key={link.href} 
+                    href={link.href} 
+                    className={styles.mobileLink}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.title}
+                  </Link>
+                ))}
+              </nav>
+            )}
+          </>
+        )}
       </div>
     </header>
   )

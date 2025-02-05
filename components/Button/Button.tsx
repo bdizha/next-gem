@@ -1,48 +1,44 @@
-"use client"
+import Link from 'next/link'
+import styles from './Button.module.scss'
 
-import { Button as RadixButton } from "@radix-ui/themes"
-import type { ComponentPropsWithoutRef } from "react"
-
-export interface ButtonProps extends ComponentPropsWithoutRef<typeof RadixButton> {
-  intent?: "primary" | "secondary"
-  size?: "sm" | "lg"
+interface ButtonProps {
+  intent?: 'primary' | 'secondary'
+  size?: 'sm' | 'md' | 'lg'
   underline?: boolean
   href?: string
+  className?: string
+  children: React.ReactNode
+  onClick?: () => void
 }
 
 export function Button({ 
   intent = "primary", 
-  size = "sm", 
+  size = "md", 
   underline,
   href,
   className = "",
-  ...props 
+  onClick,
+  children 
 }: ButtonProps) {
-  const variant = intent === "primary" ? "solid" : "outline"
-  const radixSize = size === "sm" ? "2" : "3"
+  const classes = [
+    styles.button,
+    styles[intent],
+    styles[size],
+    underline ? styles.underline : '',
+    className
+  ].filter(Boolean).join(' ')
 
-  const baseStyles = [
-    className,
-    underline ? "underline" : "",
-    intent === "primary" ? "bg-yellow-500 hover:bg-yellow-600" : "border border-gray-700 hover:bg-gray-800",
-    "transition-colors"
-  ].filter(Boolean).join(" ")
+  if (href) {
+    return (
+      <Link href={href} className={classes}>
+        {children}
+      </Link>
+    )
+  }
 
   return (
-    <RadixButton
-      {...props}
-      variant={variant}
-      size={radixSize}
-      className={baseStyles}
-      asChild={href ? true : false}
-    >
-      {href ? (
-        <a href={href}>
-          {props.children}
-        </a>
-      ) : (
-        props.children
-      )}
-    </RadixButton>
+    <button className={classes} onClick={onClick}>
+      {children}
+    </button>
   )
 }

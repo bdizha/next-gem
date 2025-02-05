@@ -1,0 +1,258 @@
+.main {
+  min-height: 100vh;
+  padding: 6rem 2rem;
+}
+
+.hero {
+  max-width: var(--max-width);
+  margin: 0 auto 6rem;
+  text-align: center;
+
+  h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.8;
+  }
+}
+
+.services {
+  max-width: var(--max-width);
+  margin: 0 auto 6rem;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.serviceCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 9999px;
+  padding: 3rem;
+  transition: all 0.3s ease;
+  text-align: center;
+
+  &:hover {
+    transform: translateY(-8px);
+  }
+
+  .iconWrapper {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 2rem;
+    border-radius: 9999px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.8;
+  }
+
+  &.greenWave {
+    background: var(--green-wave);
+  }
+
+  &.purpleWave {
+    background: var(--purple-wave);
+  }
+
+  &.yellowWave {
+    background: var(--yellow-wave);
+  }
+}
+
+.approach {
+  max-width: var(--max-width);
+  margin: 0 auto 6rem;
+  text-align: center;
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    opacity: 0.8;
+  }
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stepCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 9999px;
+  padding: 3rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.8;
+  }
+
+  &.darkGrey {
+    background: var(--dark-grey);
+  }
+}
+
+// Theme variants
+.greenWave {
+  background: var(--green-wave);
+}
+
+.yellowWave {
+  background: var(--yellow-wave);
+}
+
+.yellowPurple {
+  background: linear-gradient(135deg, var(--yellow-wave), var(--purple-wave));
+}
+
+.glass {
+  background: var(--glass-light);
+}
+
+.darkGrey {
+  background: var(--dark-grey);
+}
+
+.darkWave {
+  background: linear-gradient(135deg, var(--dark-grey), var(--glass-dark));
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 0;
+
+    .heroContent {
+      h2 {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .services, .approach {
+    padding: 3rem 0;
+
+    .servicesContent, .approachContent {
+      padding: 0 1rem;
+    }
+  }
+}
+
+// Removed styles
+// .bg-primary {
+//   background-color: var(--primary);
+
+//   &:hover {
+//     background-color: var(--primary-dark);
+//   }
+// }
+
+// .rounded-xl {
+//   border-radius: 1rem;
+// }
+
+// .shadow-lg {
+//   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+//   &:hover {
+//     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+//   }
+// }
+
+// .transition-shadow {
+//   transition: box-shadow 0.3s ease-in-out;
+// }
+
+// .transition-colors {
+//   transition: background-color 0.3s ease-in-out;
+// }
+
+// .text-pink {
+//   color: var(--pink);
+// }
+
+// .text-green {
+//   color: var(--green);
+// }
+
+// .text-purple {
+//   color: var(--purple);
+// }
+
+// .text-yellow {
+//   color: var(--yellow);
+// }
