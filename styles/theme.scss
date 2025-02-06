@@ -3,16 +3,21 @@
 
 :root {
   // Layout
-  --max-width: 1200px;
+  --max-width: 1280px;
+  --header-height: 80px;
+  --border-radius: 24px;
   
   // Fonts
-  --font-primary: 'GraphiGem', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --font-secondary: 'BoldLand', Georgia, 'Times New Roman', Times, serif;
+  --font-graphigem: 'Graphigem Regular', sans-serif;
+  --font-boldland: 'BoldLand', sans-serif;
   
   // Theme colors
   --primary: #000000;
   --secondary: #ffffff;
-  --secondary-80: rgba(255, 255, 255, 0.8);
+  --accent-purple: #6B46C1;
+  --accent-pink: #D53F8C;
+  --accent-green: #38A169;
+  --accent-yellow: #D69E2E;
   --text: #000000;
   --text-80: rgba(0, 0, 0, 0.8);
   
@@ -49,23 +54,38 @@
   --pink-wave: linear-gradient(135deg, rgba(var(--pink-rgb), 0.15), rgba(var(--pink-rgb), 0.05));
   --green-wave: linear-gradient(135deg, rgba(var(--green-rgb), 0.15), rgba(var(--green-rgb), 0.05));
   --yellow-wave: linear-gradient(135deg, rgba(var(--yellow-rgb), 0.15), rgba(var(--yellow-rgb), 0.05));
+  
+  // Transitions
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
 }
 
 // Theme text colors
 .text-purple {
-  color: var(--purple);
+  color: var(--accent-purple);
 }
 
 .text-pink {
-  color: var(--pink);
+  color: var(--accent-pink);
 }
 
 .text-green {
-  color: var(--green);
+  color: var(--accent-green);
 }
 
 .text-yellow {
-  color: var(--yellow);
+  color: var(--accent-yellow);
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-graphigem);
+  font-weight: normal;
+}
+
+p, span, a, button, input, textarea {
+  font-family: var(--font-boldland);
 }
 
 // Theme backgrounds
@@ -102,9 +122,9 @@
 
 // Font utilities
 .font-primary {
-  font-family: var(--font-primary);
+  font-family: var(--font-graphigem);
 }
 
 .font-secondary {
-  font-family: var(--font-secondary);
+  font-family: var(--font-boldland);
 }

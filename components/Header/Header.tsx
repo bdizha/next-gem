@@ -4,14 +4,39 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from './Header.module.scss'
 import { useMediaQuery } from '../../hooks/useMediaQuery'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import classNames from 'classnames'
 
 export function Header() {
   const isMobile = useMediaQuery('(max-width: 768px)')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [currentSection, setCurrentSection] = useState(0)
+  const [isDarkTheme, setIsDarkTheme] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section');
+      sections.forEach((section, index) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 100 && rect.bottom >= 100) {
+          setCurrentSection(index);
+          // Set dark theme for sections with light backgrounds
+          setIsDarkTheme(index === 0); // First section (Light wave) gets dark theme
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const headerClass = classNames(styles.header, {
+    [styles.darkTheme]: isDarkTheme,
+  });
 
   const links = [
-    { href: '/', title: 'Home' },
     { href: '/services', title: 'Services' },
     { href: '/careers', title: 'Careers' },
     { href: '/about', title: 'About' },
@@ -19,10 +44,10 @@ export function Header() {
   ]
 
   return (
-    <header className={styles.header}>
-      <div className={styles.headerContent}>
-        <div className={styles.logo}>
-          <Link href="/">
+    <header className={headerClass}>
+      <div className={styles.headerContainer}>
+        <div className={styles.headerLeft}>
+          <Link href="/" className={styles.logo}>
             <Image
               src="/icons/GD-Icon/GD-P-Icon-White.png"
               alt="Graphigem"
@@ -30,20 +55,28 @@ export function Header() {
               height={36}
             />
           </Link>
+
+          {!isMobile && (
+            <nav className={styles.navigation}>
+              {links.map((link) => (
+                <Link key={link.href} href={link.href} className={styles.link}>
+                  {link.title}
+                </Link>
+              ))}
+            </nav>
+          )}
         </div>
 
-        {!isMobile ? (
-          <nav className={styles.navigation}>
-            {links.map((link) => (
-              <Link key={link.href} href={link.href} className={styles.link}>
-                {link.title}
-              </Link>
-            ))}
-          </nav>
-        ) : (
-          <>
+        <div className={styles.headerRight}>
+          <Link href="/contact" className={styles.contactButton}>
+            Get Started
+          </Link>
+
+          {isMobile && (
             <button 
-              className={styles.menuButton} 
+              className={classNames(styles.menuButton, {
+                [styles.active]: isMenuOpen,
+              })}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -53,24 +86,19 @@ export function Header() {
                 <span></span>
               </div>
             </button>
-
-            {isMenuOpen && (
-              <nav className={styles.mobileNav}>
-                {links.map((link) => (
-                  <Link 
-                    key={link.href} 
-                    href={link.href} 
-                    className={styles.mobileLink}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {link.title}
-                  </Link>
-                ))}
-              </nav>
-            )}
-          </>
-        )}
+          )}
+        </div>
       </div>
+
+      {isMobile && isMenuOpen && (
+        <nav className={styles.mobileMenu}>
+          {links.map((link) => (
+            <Link key={link.href} href={link.href} className={styles.mobileLink}>
+              {link.title}
+            </Link>
+          ))}
+        </nav>
+      )}
     </header>
   )
 }

@@ -1,151 +1,105 @@
 .hero {
-  max-width: var(--max-width);
-  margin: 0 auto 6rem;
-  text-align: center;
-
-  h2 {
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    line-height: 1.2;
-  }
-
-  p {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-    opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  
+  .heroContent {
+    max-width: var(--max-width);
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    
+    h2 {
+      font-family: var(--font-graphigem);
+      font-size: 4rem;
+      line-height: 1.2;
+      margin-bottom: 2rem;
+      
+      span {
+        font-family: var(--font-graphigem);
+      }
+    }
+    
+    p {
+      font-family: var(--font-boldland);
+      font-size: 1.25rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
   }
 }
 
 .grid {
-  max-width: var(--max-width);
-  margin: 0 auto 6rem;
-}
-
-.gridHeader {
-  text-align: center;
-  margin-bottom: 4rem;
-
-  h2 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
+  padding: 4rem 0;
+  
+  .gridHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+    
+    h2 {
+      font-family: var(--font-graphigem);
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      
+      span {
+        font-family: var(--font-graphigem);
+      }
+    }
+    
+    p {
+      font-family: var(--font-boldland);
+      font-size: 1.25rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
   }
-
-  p {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    max-width: 800px;
+  
+  .gridItems {
+    display: grid;
+    gap: 2rem;
+    max-width: var(--max-width);
     margin: 0 auto;
-    opacity: 0.8;
-  }
-}
-
-.gridContent {
-  display: grid;
-  gap: 2rem;
-
-  &.columns1 {
-    grid-template-columns: 1fr;
-  }
-
-  &.columns2 {
-    grid-template-columns: repeat(2, 1fr);
-
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  &.columns3 {
-    grid-template-columns: repeat(3, 1fr);
-
-    @media (max-width: 1024px) {
+    padding: 0 2rem;
+    
+    &[data-columns="2"] {
       grid-template-columns: repeat(2, 1fr);
     }
-
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
+    
+    &[data-columns="3"] {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    &[data-columns="4"] {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
-
-  &.columns4 {
-    grid-template-columns: repeat(4, 1fr);
-
-    @media (max-width: 1200px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
-  }
-}
-
-.gridCard {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 9999px;
-  padding: 3rem;
-  transition: all 0.3s ease;
-  text-align: center;
-
-  &:hover {
-    transform: translateY(-8px);
-  }
-
-  .iconWrapper {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 2rem;
-    border-radius: 9999px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  
+  .gridItem {
     background: rgba(255, 255, 255, 0.1);
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    
+    h3 {
+      font-family: var(--font-graphigem);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      
+      span {
+        font-family: var(--font-graphigem);
+      }
     }
-  }
-
-  h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-  }
-
-  .subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 1.5rem;
-    opacity: 0.9;
-  }
-
-  p {
-    font-size: 1rem;
-    line-height: 1.6;
-    opacity: 0.8;
-  }
-
-  &.greenWave {
-    background: var(--green-wave);
-  }
-
-  &.purpleWave {
-    background: var(--purple-wave);
-  }
-
-  &.yellowWave {
-    background: var(--yellow-wave);
-  }
-
-  &.darkGrey {
-    background: var(--dark-grey);
+    
+    p {
+      font-family: var(--font-boldland);
+      font-size: 1rem;
+      line-height: 1.5;
+    }
   }
 }
