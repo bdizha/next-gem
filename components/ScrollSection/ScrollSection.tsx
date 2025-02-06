@@ -1,18 +1,19 @@
 import React from 'react';
 import styles from './ScrollSection.module.scss';
+import { ContentRenderer } from '../ContentBlocks/ContentRenderer';
+import classNames from 'classnames';
 
 interface ScrollSectionProps {
-  background: string;
-  children: React.ReactNode;
+  content: any;
   className?: string;
 }
 
-export const ScrollSection: React.FC<ScrollSectionProps> = ({ background, children, className }) => {
+export function ScrollSection({ content, className }: ScrollSectionProps) {
   return (
-    <section className={`${styles.section} ${className || ''}`} style={{ backgroundImage: `url(${background})` }}>
+    <section className={classNames(styles.section, className)}>
       <div className={styles.content}>
-        {children}
+        <ContentRenderer blocks={[content]} />
       </div>
     </section>
   );
-};
+}

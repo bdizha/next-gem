@@ -1,22 +1,42 @@
 .section {
   min-height: 100vh;
   width: 100%;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  scroll-snap-align: start;
-  overflow: hidden;
-}
-
-.content {
-  max-width: 1280px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 2rem;
   position: relative;
-  z-index: 1;
+  padding: 0;
+  margin: 0;
+  
+  .content {
+    width: 100%;
+    max-width: var(--max-width);
+    padding: 0 max(2rem, calc((100% - var(--max-width)) / 2));
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+    > div {
+      width: 100%;
+      text-align: center;
+      
+      h1, h2 {
+        font-family: var(--font-graphigem-bold);
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        line-height: 1.2;
+        margin-bottom: 2rem;
+      }
+      
+      p {
+        font-family: var(--font-boldland);
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        opacity: 0.9;
+      }
+    }
+  }
 }

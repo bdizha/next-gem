@@ -21,7 +21,7 @@ export function Header() {
         if (rect.top <= 100 && rect.bottom >= 100) {
           setCurrentSection(index);
           // Set dark theme for sections with light backgrounds
-          setIsDarkTheme(index === 0); // First section (Light wave) gets dark theme
+          setIsDarkTheme(section.classList.contains('waveLight'));
         }
       });
     };
@@ -49,11 +49,12 @@ export function Header() {
         <div className={styles.headerLeft}>
           <Link href="/" className={styles.logo}>
             <Image
-              src="/icons/GD-Icon/GD-P-Icon-White.png"
-              alt="Graphigem"
-              width={36}
-              height={36}
+              src={isDarkTheme ? '/icons/GD-Icon/GD-P-Icon-Black.png' : '/icons/GD-Icon/GD-P-Icon-White.png'}
+              alt="GraphiGem"
+              width={40}
+              height={40}
             />
+            <span>GraphiGem</span>
           </Link>
 
           {!isMobile && (
