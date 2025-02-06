@@ -26,13 +26,13 @@ export const homeContent: PageContent = {
         {
           title: 'Tribal Combat',
           description: 'Premium martial arts brand with global reach',
-          icon: '/brands/tribal-combat.png',
+          icon: '/brands/boldland.png',
           background: 'whiteGrey',
         },
         {
           title: 'Bold Girls',
           description: 'Empowering women through powerful branding',
-          icon: '/brands/bold-girls.png',
+          icon: '/brands/zudaland.png',
           background: 'whiteGrey',
         },
       ],

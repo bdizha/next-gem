@@ -12,56 +12,42 @@ export function Grid({
   items 
 }: GridBlock) {
   return (
-    <section className={styles.grid}>
+    <div className={styles.grid}>
       {(title || description) && (
         <div className={styles.gridHeader}>
           {title && (
             <h2>
-              {titleAccent ? (
-                <span className={`text-${accentColor}`}>{titleAccent}</span>
-              ) : null}{' '}
+              {titleAccent && (
+                <span style={{ color: `var(--${accentColor})` }}>{titleAccent}</span>
+              )}{' '}
               {title}
             </h2>
           )}
           {description && <p>{description}</p>}
         </div>
       )}
-      <div className={`${styles.gridContent} ${styles[`columns${columns}`]}`}>
+      <div className={styles.gridItems} data-columns={columns}>
         {items.map((item, index) => (
           <div 
             key={index} 
-            className={`${styles.gridCard} ${item.background ? styles[item.background] : ''}`}
+            className={styles.gridItem}
           >
             {item.icon && (
               <div className={styles.iconWrapper}>
                 <Image 
                   src={item.icon} 
                   alt={item.title} 
-                  width={600} 
-                  height={600} 
+                  width={80} 
+                  height={80}
+                  className={styles.icon}
                 />
               </div>
             )}
-            <h3>
-              {item.titleAccent ? (
-                <span className={`text-${item.accentColor || 'green'}`}>
-                  {item.titleAccent}
-                </span>
-              ) : null}{' '}
-              {item.title}
-            </h3>
-            {item.subtitle && (
-              <p className={styles.subtitle}>
-                <span className={`text-${item.accentColor || 'green'}`}>
-                  {item.subtitle.split(' ')[0]}
-                </span>{' '}
-                {item.subtitle.split(' ').slice(1).join(' ')}
-              </p>
-            )}
-            <p>{item.description}</p>
+            <h3>{item.title}</h3>
+            {item.description && <p>{item.description}</p>}
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }

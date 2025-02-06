@@ -70,7 +70,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('/icons/GD-Web/GD-Wave-Grey-NB.png');
+    background-image: url('/icons/GD-Web/GD-Wave-Pink-B.png');
     background-size: cover;
     background-position: center;
     opacity: 0.1;
@@ -88,6 +88,7 @@
       font-size: clamp(2rem, 4vw, 3rem);
       line-height: 1.2;
       margin-bottom: 1.5rem;
+      color: white;
       
       span {
         font-family: var(--font-graphigem-bold);
@@ -100,7 +101,7 @@
       line-height: 1.6;
       max-width: 800px;
       margin: 0 auto;
-      opacity: 0.9;
+      color: rgba(255, 255, 255, 0.8);
     }
   }
   
@@ -109,21 +110,29 @@
     z-index: 1;
     display: grid;
     gap: 2rem;
+    width: 100%;
     
     &[data-columns="2"] {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     
     &[data-columns="3"] {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     
     &[data-columns="4"] {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    
+    @media (max-width: 1024px) {
+      &[data-columns="4"],
+      &[data-columns="3"] {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
     
     @media (max-width: 768px) {
-      grid-template-columns: 1fr !important;
+      grid-template-columns: minmax(0, 1fr) !important;
     }
   }
   
@@ -135,6 +144,10 @@
     text-align: center;
     transition: all 0.3s ease;
     box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
     
     &:hover {
       transform: translateY(-4px);
@@ -144,21 +157,32 @@
                   0 2px 4px -2px rgba(0, 0, 0, 0.1);
     }
     
+    .iconWrapper {
+      width: 80px;
+      height: 80px;
+      flex-shrink: 0;
+      
+      .icon {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    
     h3 {
       font-family: var(--font-graphigem-bold);
       font-size: 1.5rem;
-      margin-bottom: 1rem;
-      
-      span {
-        font-family: var(--font-graphigem-bold);
-      }
+      line-height: 1.2;
+      margin: 0;
+      color: white;
     }
     
     p {
       font-family: var(--font-boldland);
       font-size: 1rem;
       line-height: 1.5;
-      opacity: 0.9;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.8);
     }
   }
 }
