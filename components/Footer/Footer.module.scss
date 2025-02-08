@@ -1,35 +1,69 @@
 .footer {
   position: relative;
   width: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(20px) saturate(180%);
-  box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.1);
-  padding: 4rem 0;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Night-Final.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   
   &::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/icons/GD-Web/GD-Wave-Grey-NB.png');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.1;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
     z-index: 0;
   }
+}
+
+.footer .container {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-width);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 48px;
+  padding: 3rem;
+  box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.2);
+}
+
+.footer .top {
+  text-align: center;
   
-  .container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 4rem;
-    position: relative;
-    z-index: 1;
+  .logo {
+    height: 64px;
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    
+    img {
+      height: 100%;
+      width: auto;
+    }
   }
+  
+  .tagline {
+    font-family: var(--font-boldland);
+    font-size: 1.25rem;
+    color: white;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+}
+
+.footer .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
   
   .section {
     h3 {
@@ -61,17 +95,43 @@
       }
     }
   }
+}
+
+.footer .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   
-  .bottom {
-    margin-top: 4rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
+  .copyright {
+    color: white;
     font-family: var(--font-boldland);
     font-size: 0.875rem;
-    opacity: 0.6;
-    position: relative;
-    z-index: 1;
+    opacity: 0.8;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .link {
+    padding: 0.75rem 1.5rem;
+    border-radius: 48px;
+    color: white;
+    font-family: var(--font-graphigem-bold);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px) saturate(180%);
+    box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.2);
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
   }
 }
 
