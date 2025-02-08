@@ -6,8 +6,12 @@ import { Grid } from '../Grid/Grid';
 import { Action } from '../Action/Action';
 import { ContentBlock } from '../../types/content';
 import styles from './ContentBlocks.module.scss';
+import { usePathname } from 'next/navigation';
 
 export function ContentRenderer({ blocks }: { blocks: ContentBlock[] }) {
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+
   // Background classes for main sections
   const scapeClasses = [
     'waveGreenPink',
@@ -21,9 +25,13 @@ export function ContentRenderer({ blocks }: { blocks: ContentBlock[] }) {
   ];
 
   // Background classes for content sections
-  const gradientClasses = [
-    'waveGradientGreenPurple',
-    'waveGradientYellowPurple'
+  const contentBannerClasses = [
+    'contentBannerGreenPurple',
+    'contentBannerPinkGreen',
+    'contentBannerPurpleYellow',
+    'contentBannerYellowPink',
+    'contentBannerGreyLight',
+    'contentBannerGreyDark'
   ];
 
   // Background classes for cards
@@ -31,7 +39,9 @@ export function ContentRenderer({ blocks }: { blocks: ContentBlock[] }) {
     'bannerGreenPurple',
     'bannerPinkGreen',
     'bannerPurpleYellow',
-    'bannerYellowPink'
+    'bannerYellowPink',
+    'bannerGreyLight',
+    'bannerGreyDark'
   ];
 
   // Function to get random class from array
@@ -43,10 +53,23 @@ export function ContentRenderer({ blocks }: { blocks: ContentBlock[] }) {
     <>
       {blocks.map((block, index) => {
         const scapeClass = getRandomClass(scapeClasses);
-        const gradientClass = getRandomClass(gradientClasses);
+        const contentBannerClass = getRandomClass(contentBannerClasses);
+        
+        // Position logic:
+        // 1. Home page hero is always top
+        // 2. Other sections alternate between top and bottom
+        // 3. Last section is final
+        let positionClass;
+        if (isHomePage && block.type === 'hero') {
+          positionClass = 'top';
+        } else if (index === blocks.length - 1) {
+          positionClass = 'final';
+        } else {
+          positionClass = index % 2 === 0 ? 'top' : 'bottom';
+        }
         
         return (
-          <section key={index} className={`${styles.section} ${styles[scapeClass]} ${styles[gradientClass]}`}>
+          <section key={index} className={`${styles.section} ${styles[scapeClass]} ${styles[contentBannerClass]} ${styles[positionClass]}`}>
             <div className={styles.content}>
               {block.type === 'hero' && (
                 <Hero

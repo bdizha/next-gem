@@ -8403,7 +8403,7 @@ execa@^5.0.0, execa@^5.1.1:
     npm-run-path "^4.0.1"
     onetime "^5.1.2"
     signal-exit "^3.0.3"
-    strip-final-newline "^2.0.0"
+    strip-Final-Bottom-newline "^2.0.0"
 
 execa@^8.0.0, execa@^8.0.1:
   version "8.0.1"
@@ -8418,7 +8418,7 @@ execa@^8.0.0, execa@^8.0.1:
     npm-run-path "^5.1.0"
     onetime "^6.0.0"
     signal-exit "^4.1.0"
-    strip-final-newline "^3.0.0"
+    strip-Final-Bottom-newline "^3.0.0"
 
 execa@^9.0.0:
   version "9.5.2"
@@ -8435,7 +8435,7 @@ execa@^9.0.0:
     npm-run-path "^6.0.0"
     pretty-ms "^9.0.0"
     signal-exit "^4.1.0"
-    strip-final-newline "^4.0.0"
+    strip-Final-Bottom-newline "^4.0.0"
     yoctocolors "^2.0.0"
 
 exit@^0.1.2:
@@ -9886,9 +9886,9 @@ is-extglob@^2.1.1:
   resolved "https://registry.yarnpkg.com/is-extglob/-/is-extglob-2.1.1.tgz#a88c02535791f02ed37c76a1b9ea9773c833f8c2"
   integrity sha512-SbKbANkN603Vi4jEZv49LeVJMn4yGwsbzZworEoyEiutsN3nJYdbO36zfhGJ6QEDpOZIFkDtnq5JRxmvl3jsoQ==
 
-is-finalizationregistry@^1.1.0:
+is-Final-Bottomizationregistry@^1.1.0:
   version "1.1.1"
-  resolved "https://registry.yarnpkg.com/is-finalizationregistry/-/is-finalizationregistry-1.1.1.tgz#eefdcdc6c94ddd0674d9c85887bf93f944a97c90"
+  resolved "https://registry.yarnpkg.com/is-Final-Bottomizationregistry/-/is-Final-Bottomizationregistry-1.1.1.tgz#eefdcdc6c94ddd0674d9c85887bf93f944a97c90"
   integrity sha512-1pC6N8qWJbWoPtEjgcL2xyhQOP491EQjeUo3qTKcmV8YSDDJrOepfG8pcC7h/QgnQHYSv0mJ3Z/ZWxmatVrysg==
   dependencies:
     call-bound "^1.0.3"
@@ -14776,19 +14776,19 @@ strip-bom@^4.0.0:
   resolved "https://registry.yarnpkg.com/strip-bom/-/strip-bom-4.0.0.tgz#9c3505c1db45bcedca3d9cf7a16f5c5aa3901878"
   integrity sha512-3xurFv5tEgii33Zi8Jtp55wEIILR9eh34FAW00PZf+JnSsTmV/ioewSgQl97JHvgjoRGwPShsWm+IdrxB35d0w==
 
-strip-final-newline@^2.0.0:
+strip-Final-Bottom-newline@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/strip-final-newline/-/strip-final-newline-2.0.0.tgz#89b852fb2fcbe936f6f4b3187afb0a12c1ab58ad"
+  resolved "https://registry.yarnpkg.com/strip-Final-Bottom-newline/-/strip-Final-Bottom-newline-2.0.0.tgz#89b852fb2fcbe936f6f4b3187afb0a12c1ab58ad"
   integrity sha512-BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA==
 
-strip-final-newline@^3.0.0:
+strip-Final-Bottom-newline@^3.0.0:
   version "3.0.0"
-  resolved "https://registry.yarnpkg.com/strip-final-newline/-/strip-final-newline-3.0.0.tgz#52894c313fbff318835280aed60ff71ebf12b8fd"
+  resolved "https://registry.yarnpkg.com/strip-Final-Bottom-newline/-/strip-Final-Bottom-newline-3.0.0.tgz#52894c313fbff318835280aed60ff71ebf12b8fd"
   integrity sha512-dOESqjYr96iWYylGObzd39EuNTa5VJxyvVAEm5Jnh7KGo75V43Hk1odPQkNDyXNmUR6k+gEiDVXnjB8HJ3crXw==
 
-strip-final-newline@^4.0.0:
+strip-Final-Bottom-newline@^4.0.0:
   version "4.0.0"
-  resolved "https://registry.yarnpkg.com/strip-final-newline/-/strip-final-newline-4.0.0.tgz#35a369ec2ac43df356e3edd5dcebb6429aa1fa5c"
+  resolved "https://registry.yarnpkg.com/strip-Final-Bottom-newline/-/strip-Final-Bottom-newline-4.0.0.tgz#35a369ec2ac43df356e3edd5dcebb6429aa1fa5c"
   integrity sha512-aulFJcD6YK8V1G7iRB5tigAP4TsHBZZrOV8pjV++zdUwmeV8uzbY7yn6h9MswN62adStNZFuCIx4haBnRuMDaw==
 
 strip-indent@^3.0.0:
@@ -15969,7 +15969,7 @@ which-builtin-type@^1.2.1:
     has-tostringtag "^1.0.2"
     is-async-function "^2.0.0"
     is-date-object "^1.1.0"
-    is-finalizationregistry "^1.1.0"
+    is-Final-Bottomizationregistry "^1.1.0"
     is-generator-function "^1.0.10"
     is-regex "^1.2.1"
     is-weakref "^1.0.2"
