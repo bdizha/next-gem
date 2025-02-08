@@ -4,11 +4,11 @@ export const homeContent: PageContent = {
   blocks: [
     {
       type: 'hero',
-      titleAccent: 'Delight',
-      title: 'your customer',
+      titleAccent: 'Envision. Apply. Evaluate.',
+      title: '',
       accentColor: 'purple',
-      description: 'Great brands tend to believe in the possible. We help brands create value in the virtual world.',
-      image: '/images/hero.jpg'
+      description: 'Great brands believe in the impossible.',
+      // image: '/images/hero.jpg'
     },
     {
       type: 'grid',
@@ -17,17 +17,17 @@ export const homeContent: PageContent = {
       accentColor: 'green',
       items: [
         {
-          title: 'Digital Branding',
+          title: 'Spatial',
           description: 'Create a strong digital presence that resonates with your audience.',
           icon: '/icons/GD-Icon-001.png'
         },
         {
-          title: 'Character Branding',
+          title: 'Character',
           description: 'Develop unique brand characters that tell your story.',
           icon: '/icons/GD-Icon-002.png'
         },
         {
-          title: 'Virtual World',
+          title: 'Virtual',
           description: 'Step into the future with immersive virtual experiences.',
           icon: '/icons/GD-Icon-003.png'
         }

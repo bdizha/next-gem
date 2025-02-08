@@ -6,12 +6,12 @@ export function Hero({ title, titleAccent, accentColor = 'pink', description }: 
   return (
     <section className={styles.hero}>
       <div className={styles.heroContent}>
-        <h2>
+        <h1>
           {titleAccent ? (
             <span className={`text-${accentColor}`}>{titleAccent}</span>
-          ) : null}{' '}
+          ) : null}
           {title}
-        </h2>
+        </h1>
         <p>{description}</p>
       </div>
     </section>
