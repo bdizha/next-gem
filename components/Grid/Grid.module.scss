@@ -33,23 +33,33 @@
   gap: 2rem;
 }
 
-.item {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px) saturate(180%);
-  border-radius: 9999px;
+.card {
+  position: relative;
   padding: 2rem;
-  text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 100%;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+  }
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-  &:hover {
-    transform: translateY(-4px);
-    background: rgba(255, 255, 255, 0.15);
-  }
+  text-align: center;
 }
 
 .icon {
@@ -62,6 +72,12 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+  }
+  
+  &:hover img {
+    filter: none;
   }
 }
 
@@ -69,12 +85,31 @@
   font-family: var(--font-graphigem-bold);
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .itemDescription {
   font-family: var(--font-boldland);
   font-size: 1rem;
   line-height: 1.6;
-  opacity: 0.8;
+  opacity: 0.9;
+  color: white;
   flex-grow: 1;
+}
+
+// Banner backgrounds for cards
+.bannerGreenPurple {
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Green-Purple.png');
+}
+
+.bannerPinkGreen {
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Pink-Green.png');
+}
+
+.bannerPurpleYellow {
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Purple-Yellow.png');
+}
+
+.bannerYellowPink {
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Yellow-Pink.png');
 }

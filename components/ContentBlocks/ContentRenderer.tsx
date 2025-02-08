@@ -8,15 +8,45 @@ import { ContentBlock } from '../../types/content';
 import styles from './ContentBlocks.module.scss';
 
 export function ContentRenderer({ blocks }: { blocks: ContentBlock[] }) {
-  const waveClasses = ['waveLight', 'waveGreenPurple', 'waveYellowPurple', 'wavePinkGreen', 'wavePurpleYellow'];
+  // Background classes for main sections
+  const scapeClasses = [
+    'waveGreenPink',
+    'waveGreenPurple',
+    'waveGreenYellow',
+    'waveLight',
+    'waveNight',
+    'wavePinkPurple',
+    'waveYellowPink',
+    'waveYellowPurple'
+  ];
+
+  // Background classes for content sections
+  const gradientClasses = [
+    'waveGradientGreenPurple',
+    'waveGradientYellowPurple'
+  ];
+
+  // Background classes for cards
+  const bannerClasses = [
+    'bannerGreenPurple',
+    'bannerPinkGreen',
+    'bannerPurpleYellow',
+    'bannerYellowPink'
+  ];
+
+  // Function to get random class from array
+  const getRandomClass = (classes: string[]) => {
+    return classes[Math.floor(Math.random() * classes.length)];
+  };
 
   return (
     <>
       {blocks.map((block, index) => {
-        const waveClass = waveClasses[index % waveClasses.length];
+        const scapeClass = getRandomClass(scapeClasses);
+        const gradientClass = getRandomClass(gradientClasses);
         
         return (
-          <section key={index} className={`${styles.section} ${styles[waveClass]}`}>
+          <section key={index} className={`${styles.section} ${styles[scapeClass]} ${styles[gradientClass]}`}>
             <div className={styles.content}>
               {block.type === 'hero' && (
                 <Hero
@@ -33,7 +63,10 @@ export function ContentRenderer({ blocks }: { blocks: ContentBlock[] }) {
                   titleAccent={block.titleAccent}
                   accentColor={block.accentColor}
                   description={block.description}
-                  items={block.items}
+                  items={block.items?.map(item => ({
+                    ...item,
+                    background: getRandomClass(bannerClasses)
+                  }))}
                 />
               )}
               {block.type === 'action' && (
