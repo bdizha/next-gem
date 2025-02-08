@@ -1,14 +1,117 @@
 .hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
   width: 100%;
+  padding: 6rem 2rem;
   
-  @media (max-width: 768px) {
-    flex-direction: column;
+  &.lightText {
+    h1, p {
+      color: white;
+    }
+  }
+  
+  &.darkText {
+    h1, p {
+      color: #030609;
+    }
+  }
+  
+  // Text-only layout
+  &.textOnly {
     text-align: center;
-    gap: 2rem;
+    
+    .heroContent {
+      max-width: 1200px;
+      margin: 0 auto;
+      
+      h1 {
+        font-family: var(--font-graphigem-bold);
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        line-height: 1.1;
+        margin-bottom: 2rem;
+        white-space: nowrap;
+        
+        span {
+          display: inline;
+          margin-right: 0.5rem;
+        }
+      }
+      
+      p {
+        font-family: var(--font-boldland);
+        font-size: clamp(1.25rem, 2vw, 1.5rem);
+        line-height: 1.4;
+        max-width: 800px;
+        margin: 0 auto;
+        opacity: 0.9;
+      }
+    }
+  }
+  
+  // With image layout
+  &.withImage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    
+    .heroContent {
+      flex: 1;
+      
+      h1 {
+        font-family: var(--font-graphigem-bold);
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.2;
+        margin-bottom: 2rem;
+        text-align: left;
+        white-space: nowrap;
+        
+        span {
+          display: inline;
+          margin-right: 0.5rem;
+        }
+      }
+      
+      p {
+        font-family: var(--font-boldland);
+        font-size: clamp(1.125rem, 1.5vw, 1.25rem);
+        line-height: 1.5;
+        opacity: 0.9;
+        text-align: left;
+      }
+    }
+    
+    .heroImage {
+      flex: 1;
+      max-width: 600px;
+      
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+    
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      gap: 3rem;
+      
+      .heroContent {
+        text-align: center;
+        
+        h1, p {
+          text-align: center;
+        }
+        
+        h1 {
+          white-space: normal;  // Allow wrapping on mobile
+        }
+      }
+      
+      .heroImage {
+        max-width: 100%;
+      }
+    }
   }
 }
 

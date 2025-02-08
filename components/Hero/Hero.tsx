@@ -1,41 +1,33 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import styles from './Hero.module.scss';
+import { HeroBlock } from '../../types/content';
+import Image from 'next/image';
 
-type HeroProps = {
-  titleAccent?: string;
-  title?: string;
-  accentColor?: string;
-  description?: string;
-  image?: string;
-};
+type HeroProps = HeroBlock;
 
-export function Hero({ titleAccent, title, accentColor, description, image }: HeroProps) {
+export function Hero({ title, titleAccent, accentColor = 'pink', description, image }: HeroProps) {
+  // Check if we're in a light background based on the random class
+  const isLightBackground = document.querySelector('.' + styles.hero)?.classList.contains('waveLight');
+  const textColorClass = isLightBackground ? styles.darkText : styles.lightText;
+
   return (
-    <div className={styles.hero}>
-      <div className={styles.content}>
-        <h1 className={styles.title}>
-          {titleAccent && (
+    <section className={`${styles.hero} ${image ? styles.withImage : styles.textOnly} ${textColorClass}`}>
+      <div className={styles.heroContent}>
+        <h1>
+          {titleAccent ? (
             <span className={`text-${accentColor}`}>{titleAccent}</span>
-          )}{' '}
+          ) : null}
           {title}
         </h1>
-        {description && <p className={styles.description}>{description}</p>}
+        <p>{description}</p>
       </div>
       {image && (
-        <div className={styles.imageWrapper}>
-          <Image
-            src={image}
-            alt="Hero"
-            width={600}
-            height={400}
-            className={styles.image}
-            priority
-          />
+        <div className={styles.heroImage}>
+          <Image src={image} alt="" width={600} height={600} />
         </div>
       )}
-    </div>
+    </section>
   );
 }
