@@ -1,56 +1,26 @@
-"use client"
+'use client';
 
 import React from 'react';
-import Image from 'next/image'
-import styles from './page.module.scss'
-import { Action } from '../../components/Action/Action';
+import Image from 'next/image';
+import styles from './page.module.scss';
+import { ScrollSection } from '../../components/ScrollSection/ScrollSection';
+import classNames from 'classnames';
 
 export default function About() {
-  const values = [
-    {
-      src: "/icons/GD-Icon-014.png",
-      theme: "pink",
-      accent: "",
-      title: <span className="text-pink">Adventure</span>,
-      text: <><span className="text-pink">We</span> serve unique and disruptive brands of all sizes and are fanatical about their success. We explore the impossible of dreams.</>,
-    },
-    {
-      src: "/icons/GD-Icon-012.png",
-      theme: "green",
-      accent: "",
-      title: <span className="text-green">Autonomy</span>,
-      text: <><span className="text-green">It's</span> about dreaming big and changing the game. We are proud to create delightful branding solutions for clients who dream bold ideas.</>,
-    },
-    {
-      src: "/icons/GD-Icon-007.png",
-      theme: "yellow",
-      accent: "",
-      title: <span className="text-yellow">Courage</span>,
-      text: <><span className="text-yellow">We</span> always seek ways to challenge the status quo as we routinely build, apply, evaluate and repeat at every turn of the clock of each day.</>,
-    },
-    {
-      src: "/icons/GD-Icon-003.png",
-      theme: "purple",
-      accent: "",
-      title: <span className="text-purple">Trust</span>,
-      text: <><span className="text-purple">We</span> practise trust and transparency within a context of a supportive network of digital and media partners from diverse industries we serve.</>,
-    },
-  ]
-
   const team = [
     {
       theme: "purple",
       src: "/team/Bold-Team-Drijke-WB.png",
       title: "Creative Art",
       subtitle: "Drijke Wessels",
-      text: "Always and expanding my knowledge scope while spreading magic around the world through a futuristic lense of imagination.",
+      text: "Always expanding my knowledge while spreading magic through imagination.",
     },
     {
       theme: "yellow",
       src: "/team/Bold-Team-KG-WB.png",
       title: "3D Modeling",
       subtitle: "Kagiso Silindane",
-      text: "I am a diligent animator who is dedicated to introducing new and unique skills into the field of animation and art.",
+      text: "Dedicated to introducing unique skills into animation and art.",
     },
     {
       theme: "purple",
@@ -87,79 +57,133 @@ export default function About() {
       subtitle: "Michaela Bothner",
       text: "I'm a highly creative, energetic and innovative 3D modeller with a strong background in character design and development.",
     },
-  ]
+  ];
+
+  const values = [
+    {
+      src: "/icons/GD-Icon-014.png",
+      theme: "pink",
+      title: <span className="text-pink">Adventure</span>,
+      text: <><span className="text-pink">We</span> serve unique and disruptive brands of all sizes and are fanatical about their success.</>,
+    },
+    {
+      src: "/icons/GD-Icon-012.png",
+      theme: "green",
+      title: <span className="text-green">Autonomy</span>,
+      text: <><span className="text-green">It's</span> about dreaming big and changing the game.</>,
+    },
+    {
+      src: "/icons/GD-Icon-007.png",
+      theme: "yellow",
+      title: <span className="text-yellow">Courage</span>,
+      text: <><span className="text-yellow">We</span> always seek ways to challenge the status quo.</>,
+    },
+    {
+      src: "/icons/GD-Icon-003.png",
+      theme: "purple",
+      title: <span className="text-purple">Trust</span>,
+      text: <><span className="text-purple">We</span> practice trust and transparency with our partners.</>,
+    },
+  ];
+
+  const sections = [
+    {
+      id: 'vision',
+      title: 'Our Vision',
+      content: (
+        <div className={styles.sectionContent}>
+          <h2>Our <span className="text-purple">Vision</span></h2>
+          <p>
+            To be the leading creative agency that transforms brands through innovative design solutions.
+            We envision a world where every brand has the power to inspire and connect through exceptional design.
+          </p>
+        </div>
+      ),
+      waveClass: 'waveLight'
+    },
+    {
+      id: 'story',
+      title: 'Our Story',
+      content: (
+        <div className={styles.sectionContent}>
+          <h2>Our <span className="text-green">Story</span></h2>
+          <p>
+            We are a dynamic team of creative professionals passionate about crafting unique digital experiences. 
+            Our journey began with a simple vision: to help brands stand out in the digital landscape through 
+            innovative design and cutting-edge technology.
+          </p>
+          <div className={styles.teamGrid}>
+            {team.map((member, index) => (
+              <div key={index} className={styles.teamCard}>
+                <div className={styles.avatar}>
+                  <Image src={member.src} alt={member.subtitle} width={120} height={120} />
+                </div>
+                <h3>{member.subtitle}</h3>
+                <h4>{member.title}</h4>
+                <p>{member.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      ),
+      waveClass: 'waveGreenPurple'
+    },
+    {
+      id: 'values',
+      title: 'Our Values',
+      content: (
+        <div className={styles.sectionContent}>
+          <h2>Our <span className="text-yellow">Values</span></h2>
+          <div className={styles.valuesGrid}>
+            {values.map((value, index) => (
+              <div key={index} className={styles.valueCard}>
+                <div className={styles.icon}>
+                  <Image src={value.src} alt="" width={64} height={64} />
+                </div>
+                <h3>{value.title}</h3>
+                <p>{value.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      ),
+      waveClass: 'waveYellowPurple'
+    }
+  ];
+
+  const [activeSection, setActiveSection] = React.useState(sections[0].id);
+
+  const handleTabClick = (sectionId: string) => {
+    setActiveSection(sectionId);
+    const element = document.getElementById(sectionId);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <main className={styles.main}>
-      <div className={styles.about}>
-        {/* Hero Section */}
-        <section className={styles.hero}>
-          <div className={styles.heroContent}>
-            <h2>
-              <span className="text-purple">About</span> us
-            </h2>
-          </div>
-        </section>
-
-        {/* Story Section */}
-        <section className={styles.story}>
-          <div className={styles.storyContent}>
-            <div className={styles.storyCard}>
-              <h2>Our <span className="text-green">Story</span></h2>
-              <p>
-                We are a dynamic team of creative professionals passionate about crafting unique digital experiences. 
-                Our journey began with a simple vision: to help brands stand out in the digital landscape through 
-                innovative design and cutting-edge technology.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Values Section */}
-        <section className={styles.values}>
-          {values.map((value, index) => (
-            <div key={index} className={styles.valueCard}>
-              <div className={styles.icon}>
-                <Image src={value.src} alt="" width={64} height={64} />
-              </div>
-              <h3>{value.title}</h3>
-              <p>{value.text}</p>
-            </div>
-          ))}
-        </section>
-
-        {/* Team Section */}
-        <section className={styles.team}>
-          <div className={styles.teamContent}>
-            <h2>Our <span className="text-green">Team</span></h2>
-            <div className={styles.teamGrid}>
-              {team.map((member, index) => (
-                <div key={index} className={styles.teamCard}>
-                  <div className={styles.avatar}>
-                    <Image src={member.src} alt={member.subtitle} width={120} height={120} />
-                  </div>
-                  <h3>{member.subtitle}</h3>
-                  <h4>{member.title}</h4>
-                  <p>{member.text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <Action 
-          theme="pink"
-          accent=""
-          image="/icons/GD-Icon-005.png"
-          title={<>
-            <span className="text-green">Unleash</span> your brand
-          </>}
-          subtitle={<>
-            Ready to transform your brand? Let's create something amazing together.
-          </>}
-        />
+      <div className={styles.tabsContainer}>
+        {sections.map((section) => (
+          <button
+            key={section.id}
+            onClick={() => handleTabClick(section.id)}
+            className={classNames(styles.tab, {
+              [styles.active]: activeSection === section.id
+            })}
+          >
+            {section.title}
+          </button>
+        ))}
       </div>
+
+      {sections.map((section) => (
+        <ScrollSection
+          key={section.id}
+          id={section.id}
+          className={classNames(styles.section, styles[section.waveClass])}
+        >
+          {section.content}
+        </ScrollSection>
+      ))}
     </main>
-  )
+  );
 }

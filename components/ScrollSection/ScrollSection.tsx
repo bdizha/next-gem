@@ -1,19 +1,17 @@
 import React from 'react';
 import styles from './ScrollSection.module.scss';
-import { ContentRenderer } from '../ContentBlocks/ContentRenderer';
 import classNames from 'classnames';
 
 interface ScrollSectionProps {
-  content: any;
+  children: React.ReactNode;
   className?: string;
+  id?: string;
 }
 
-export function ScrollSection({ content, className }: ScrollSectionProps) {
+export function ScrollSection({ children, className, id }: ScrollSectionProps) {
   return (
-    <section className={classNames(styles.section, className)}>
-      <div className={styles.content}>
-        <ContentRenderer blocks={[content]} />
-      </div>
+    <section id={id} className={classNames(styles.section, className)}>
+      {children}
     </section>
   );
 }

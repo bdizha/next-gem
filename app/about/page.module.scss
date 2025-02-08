@@ -1,411 +1,172 @@
 .main {
   min-height: 100vh;
-  padding: 6rem 2rem;
-  background: black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
 
-  .about {
-    background: var(--background);
-    color: var(--text);
-    
-    a {
-      color: inherit;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 9999px;
-      transition: background-color 0.2s;
-
-      &:hover {
-        background-color: rgba(var(--green-rgb), 0.1);
-      }
-    }
-    
-    .text-purple {
-      color: var(--purple);
-    }
-    
-    .text-pink {
-      color: var(--pink);
-    }
-    
-    .text-green {
-      color: var(--green);
-    }
-    
-    .text-yellow {
-      color: var(--yellow);
-    }
-    
-    .bg-pink-50 {
-      background-color: rgba(var(--pink-rgb), 0.05);
-    }
-    
-    .bg-gray-50 {
-      background-color: var(--gray-50);
-    }
-    
-    .bg-gray-100 {
-      background-color: var(--gray-100);
-    }
-    
-    .rounded-xl {
-      border-radius: 1rem;
-    }
-    
-    .grid {
-      display: grid;
-      gap: 2rem;
-      
-      @media (min-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    
-    .flex {
-      display: flex;
-    }
-    
-    .items-start {
-      align-items: flex-start;
-    }
-    
-    .items-center {
-      align-items: center;
-    }
-    
-    .justify-center {
-      justify-content: center;
-    }
-    
-    .text-center {
-      text-align: center;
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-    
-    .py-16 {
-      padding-top: 4rem;
-      padding-bottom: 4rem;
-    }
-    
-    .mb-4 {
-      margin-bottom: 1rem;
-    }
-    
-    .mb-8 {
-      margin-bottom: 2rem;
-    }
-    
-    .mb-12 {
-      margin-bottom: 3rem;
-    }
-    
-    .ml-6 {
-      margin-left: 1.5rem;
-    }
-    
-    .w-24 {
-      width: 6rem;
-    }
-    
-    .w-full {
-      width: 100%;
-    }
-    
-    .flex-shrink-0 {
-      flex-shrink: 0;
-    }
-    
-    .text-4xl {
-      font-size: 2.25rem;
-      line-height: 2.5rem;
-    }
-    
-    .text-3xl {
-      font-size: 1.875rem;
-      line-height: 2.25rem;
-    }
-    
-    .text-xl {
-      font-size: 1.25rem;
-      line-height: 1.75rem;
-    }
-    
-    .text-lg {
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-    }
-    
-    .font-bold {
-      font-weight: 700;
-    }
-    
-    @media (min-width: 768px) {
-      .md\:order-1 {
-        order: 1;
-      }
-      
-      .md\:order-2 {
-        order: 2;
-      }
-    }
-  }
-
-  .hero {
-    position: relative;
-    padding: 8rem 0;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.05);
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-05-Final.png');
-      background-size: cover;
-      background-position: center;
-      opacity: 0.1;
-      z-index: -1;
-    }
-
-    .heroContent {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 4rem 2rem;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 9999px;
-
-      h2 {
-        font-size: 4rem;
-        font-weight: 700;
-        margin: 0;
-      }
-    }
-  }
-
-  .story {
-    padding: 8rem 0;
-    background: rgba(0, 0, 0, 0.8);
-
-    .storyContent {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    .storyCard {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 9999px;
-      padding: 4rem 2rem;
-      text-align: center;
-
-      h2 {
-        font-size: 3rem;
-        font-weight: 700;
-        margin: 0 0 2rem;
-      }
-
-      p {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        margin: 0;
-        opacity: 0.8;
-      }
-    }
-  }
-
-  .vision {
-    padding: 8rem 0;
-    background: linear-gradient(135deg, rgba(var(--pink-rgb), 0.1), rgba(var(--pink-rgb), 0.05));
-
-    .visionContent {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-
-      @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-    }
-
-    .visionText {
-      order: 1;
-
-      @media (max-width: 768px) {
-        order: 2;
-      }
-    }
-
-    .visionImage {
-      order: 2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      @media (max-width: 768px) {
-        order: 1;
-      }
-
-      img {
-        width: 100%;
-        height: auto;
-        max-width: 500px;
-      }
-    }
-
-    .visionCard {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(8px);
-      border-radius: 1rem;
-      padding: 4rem 2rem;
-
-      h2 {
-        font-size: 4rem;
-        font-weight: 700;
-        margin-bottom: 2rem;
-      }
-
-      p {
-        font-size: 1.25rem;
-        line-height: 1.6;
-        opacity: 0.8;
-      }
-    }
-  }
-
-  .team {
-    padding: 8rem 0;
-    background: rgba(0, 0, 0, 0.8);
-
-    .teamContent {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 2rem;
-
-      h2 {
-        font-size: 3rem;
-        font-weight: 700;
-        text-align: center;
-        margin: 0 0 4rem;
-      }
-    }
-
-    .teamGrid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    .teamCard {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 9999px;
-      padding: 2rem;
-      text-align: center;
-      transition: all 0.3s ease;
-
-      &:hover {
-        transform: translateY(-5px);
-      }
-
-      .avatar {
-        width: 120px;
-        height: 120px;
-        border-radius: 9999px;
-        overflow: hidden;
-        margin: 0 auto 1.5rem;
-      }
-
-      h3 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin: 0 0 0.5rem;
-      }
-
-      h4 {
-        font-size: 1.1rem;
-        font-weight: 500;
-        margin: 0 0 1rem;
-        opacity: 0.8;
-      }
-
-      p {
-        font-size: 1rem;
-        line-height: 1.6;
-        margin: 0;
-        opacity: 0.8;
-      }
-    }
-  }
-
-  .values {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-    max-width: var(--max-width);
-    margin: 0 auto;
-  }
-
-  .valueCard {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 9999px;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    transition: all 0.3s ease;
-
-    &:hover {
-      transform: translateY(-5px);
-    }
-
-    .icon {
-      width: 64px;
-      height: 64px;
-      border-radius: 9999px;
-      overflow: hidden;
-    }
-
-    h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin: 0;
-    }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.6;
-      margin: 0;
-      opacity: 0.8;
-    }
+.section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 6rem max(2rem, calc((100% - var(--max-width)) / 2));
+  margin: 0;
+  
+  &:first-child {
+    padding-top: 8rem;
   }
 }
 
-@media (max-width: 768px) {
-  .values {
-    grid-template-columns: 1fr;
+.sectionContent {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 48px;
+  box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.2);
+  
+  h2 {
+    font-family: var(--font-graphigem-bold);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    text-align: center;
   }
-
-  .hero .heroContent h2 {
-    font-size: 3rem;
+  
+  p {
+    font-family: var(--font-boldland);
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
   }
+}
 
-  .story .storyCard h2 {
-    font-size: 2.5rem;
+.tabsContainer {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 9999px;
+  box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.1);
+  z-index: 50;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-family: var(--font-boldland);
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
   }
+  
+  &.active {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
 
-  .team .teamGrid {
-    grid-template-columns: 1fr;
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.valueCard {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 24px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.2);
+  
+  &:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1.5rem;
+  }
+  
+  h3 {
+    font-family: var(--font-graphigem-bold);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.teamCard {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 24px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.2);
+  
+  &:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  h3 {
+    font-family: var(--font-graphigem-bold);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  h4 {
+    font-family: var(--font-boldland);
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 0.875rem;
+    margin: 0;
   }
 }

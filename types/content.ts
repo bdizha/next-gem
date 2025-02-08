@@ -1,41 +1,37 @@
-export interface HeroBlock {
+export type HeroBlock = {
   type: 'hero';
-  title: string;
   titleAccent?: string;
+  title?: string;
   accentColor?: string;
-  description: string;
-}
+  description?: string;
+  image?: string;
+};
 
-export interface GridBlock {
+export type GridBlock = {
   type: 'grid';
-  columns: 1 | 2 | 3 | 4;
   title?: string;
   titleAccent?: string;
   accentColor?: string;
   description?: string;
-  items: Array<{
+  items?: Array<{
     title: string;
-    titleAccent?: string;
-    accentColor?: string;
-    subtitle?: string;
     description: string;
-    icon?: string;
+    icon: string;
     background?: string;
   }>;
-}
+};
 
-export interface ActionBlock {
+export type ActionBlock = {
   type: 'action';
   theme?: string;
   accent?: string;
   image?: string;
-  title: string;
-  titleAccent?: string;
-  description: string;
-}
+  title?: string;
+  description?: string;
+};
 
 export type ContentBlock = HeroBlock | GridBlock | ActionBlock;
 
-export interface PageContent {
+export type PageContent = {
   blocks: ContentBlock[];
-}
+};

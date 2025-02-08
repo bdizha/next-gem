@@ -1,90 +1,161 @@
-import React from 'react';
-import Image from 'next/image'
-import styles from './page.module.scss'
-import { Action } from '../../components/Action/Action'
+'use client';
+
+import React, { useState } from 'react';
+import Image from 'next/image';
+import styles from './page.module.scss';
+import { ScrollSection } from '../../components/ScrollSection/ScrollSection';
+import classNames from 'classnames';
+
+type Section = {
+  id: string;
+  title: string;
+  content: React.ReactNode;
+  waveClass: string;
+};
 
 export default function Contact() {
-  return (
-    <main className={styles.main}>
-      <section className={styles.hero}>
-        <div className={styles.heroContent}>
-          <h2>
-            <span className="text-purple">Get</span> in touch
-          </h2>
-          <p>
-            Let's discuss your project and explore how we can help bring your vision to life.
-          </p>
+  const sections: Section[] = [
+    {
+      id: 'connect',
+      title: 'Connect',
+      content: (
+        <div className={styles.sectionContent}>
+          <h2>Get in <span className="text-purple">Touch</span></h2>
+          <p>Ready to start your next project? We'd love to hear from you!</p>
+          <div className={styles.contactForm}>
+            <div className={styles.formGroup}>
+              <input type="text" placeholder="Your Name" />
+            </div>
+            <div className={styles.formGroup}>
+              <input type="email" placeholder="Your Email" />
+            </div>
+            <div className={styles.formGroup}>
+              <input type="text" placeholder="Subject" />
+            </div>
+            <div className={styles.formGroup}>
+              <textarea placeholder="Your Message" rows={5}></textarea>
+            </div>
+            <button className={styles.submitButton}>Send Message</button>
+          </div>
         </div>
-      </section>
-
-      <section className={styles.contact}>
-        <div className={styles.contactContent}>
-          <div className={styles.contactInfo}>
-            <h3>Contact Information</h3>
-            <div className={styles.infoItem}>
-              <Image 
-                src="/icons/email.svg" 
-                alt="Email"
-                width={24}
-                height={24}
-              />
-              <a href="mailto:hello@graphigem.com">hello@graphigem.com</a>
+      ),
+      waveClass: 'waveLight'
+    },
+    {
+      id: 'offices',
+      title: 'Offices',
+      content: (
+        <div className={styles.sectionContent}>
+          <h2>Our <span className="text-green">Locations</span></h2>
+          <p>Find us at our offices around South Africa.</p>
+          <div className={styles.cardsGrid}>
+            <div className={styles.card}>
+              <div className={styles.icon}>
+                <Image src="/GD-2D/GD-Icon/GD-Icon-004.png" alt="" width={120} height={120} className={styles.cardImage} />
+              </div>
+              <h3>Cape Town</h3>
+              <p>123 Long Street<br />Cape Town, 8001<br />South Africa</p>
+              <a href="tel:+27123456789" className={styles.contactLink}>+27 12 345 6789</a>
             </div>
-            <div className={styles.infoItem}>
-              <Image 
-                src="/icons/phone.svg" 
-                alt="Phone"
-                width={24}
-                height={24}
-              />
-              <a href="tel:+27110835500">+27 11 083 5500</a>
+            <div className={styles.card}>
+              <div className={styles.icon}>
+                <Image src="/GD-2D/GD-Icon/GD-Icon-005.png" alt="" width={120} height={120} className={styles.cardImage} />
+              </div>
+              <h3>Johannesburg</h3>
+              <p>456 Jan Smuts Avenue<br />Johannesburg, 2196<br />South Africa</p>
+              <a href="tel:+27123456789" className={styles.contactLink}>+27 12 345 6789</a>
             </div>
-            <div className={styles.infoItem}>
-              <Image 
-                src="/icons/location.svg" 
-                alt="Location"
-                width={24}
-                height={24}
-              />
-              <address>
-                Johannesburg, South Africa
-              </address>
+            <div className={styles.card}>
+              <div className={styles.icon}>
+                <Image src="/GD-2D/GD-Icon/GD-Icon-006.png" alt="" width={120} height={120} className={styles.cardImage} />
+              </div>
+              <h3>Remote</h3>
+              <p>We work with clients<br />worldwide through our<br />remote team</p>
+              <a href="mailto:info@graphigem.com" className={styles.contactLink}>info@graphigem.com</a>
             </div>
           </div>
-
-          <form className={styles.contactForm}>
-            <div className={styles.formGroup}>
-              <input type="text" placeholder="Your Name" required />
-            </div>
-            <div className={styles.formGroup}>
-              <input type="email" placeholder="Your Email" required />
-            </div>
-            <div className={styles.formGroup}>
-              <input type="text" placeholder="Subject" required />
-            </div>
-            <div className={styles.formGroup}>
-              <textarea placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" className={styles.submitButton}>
-              Send Message
-            </button>
-          </form>
         </div>
-      </section>
+      ),
+      waveClass: 'waveGreenPurple'
+    },
+    {
+      id: 'social',
+      title: 'Social',
+      content: (
+        <div className={styles.sectionContent}>
+          <h2>Follow <span className="text-yellow">Us</span></h2>
+          <p>Stay connected with us on social media for the latest updates and inspiration.</p>
+          <div className={styles.cardsGrid}>
+            <div className={styles.card}>
+              <div className={styles.icon}>
+                <Image src="/GD-2D/GD-Icon/GD-Icon-007.png" alt="" width={120} height={120} className={styles.cardImage} />
+              </div>
+              <h3>Instagram</h3>
+              <p>Follow our creative journey and get inspired by our latest work.</p>
+              <a href="https://instagram.com/graphigem" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                @graphigem
+              </a>
+            </div>
+            <div className={styles.card}>
+              <div className={styles.icon}>
+                <Image src="/GD-2D/GD-Icon/GD-Icon-008.png" alt="" width={120} height={120} className={styles.cardImage} />
+              </div>
+              <h3>LinkedIn</h3>
+              <p>Connect with our team and stay updated on company news.</p>
+              <a href="https://linkedin.com/company/graphigem" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                GraphiGem Digital
+              </a>
+            </div>
+            <div className={styles.card}>
+              <div className={styles.icon}>
+                <Image src="/GD-2D/GD-Icon/GD-Icon-009.png" alt="" width={120} height={120} className={styles.cardImage} />
+              </div>
+              <h3>Twitter</h3>
+              <p>Join the conversation and get real-time updates.</p>
+              <a href="https://twitter.com/graphigem" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                @graphigem
+              </a>
+            </div>
+          </div>
+        </div>
+      ),
+      waveClass: 'waveYellowPurple'
+    }
+  ];
 
-      <Action 
-        theme="pink"
-        accent=""
-        image="/icons/GD-Icon-005.png"
-        title={<>
-          <span className="text-green">Unleash</span> your brand
-        </>}
-        subtitle={<>
-          <span className="text-pink">Graphigem</span> helps brands create value in the virtual world. 
-          We are a strategic and creative digital service guiding businesses through digital branding, 
-          character branding and the Virtual World.
-        </>}
-      />
+  const [activeSection, setActiveSection] = useState(sections[0].id);
+
+  const handleTabClick = (sectionId: string) => {
+    setActiveSection(sectionId);
+    const element = document.getElementById(sectionId);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  return (
+    <main className={styles.main}>
+      <div className={styles.tabsContainer}>
+        {sections.map((section) => (
+          <button
+            key={section.id}
+            onClick={() => handleTabClick(section.id)}
+            className={classNames(styles.tab, {
+              [styles.active]: activeSection === section.id
+            })}
+          >
+            {section.title}
+          </button>
+        ))}
+      </div>
+
+      {sections.map((section) => (
+        <ScrollSection
+          key={section.id}
+          id={section.id}
+          className={classNames(styles.section, styles[section.waveClass])}
+        >
+          {section.content}
+        </ScrollSection>
+      ))}
     </main>
-  )
+  );
 }
