@@ -176,28 +176,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8rem 2rem 4rem;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   overflow: hidden;
   background-repeat: no-repeat !important;
   background-size: 100vw auto !important;
 
   &.top {
-    padding-top: 10rem;
     align-items: flex-start;
     background-position: top center !important;
   }
 
   &.bottom {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
     align-items: center;
-    background-position: center !important;
+    background-position: top center !important;
   }
 
   &.final {
-    padding-bottom: 8rem;
     align-items: flex-end;
-    background-position: bottom center !important;
+    background-position: top center !important;
   }
 
   .content {
@@ -224,24 +223,62 @@
   }
 }
 
+// Wave background classes
+.waveGreenPink {
+  background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Green-Pink.png');
+}
+
+.waveGreenPurple {
+  background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Green-Purple.png');
+}
+
+.waveGreenYellow {
+  background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Green-Yellow.png');
+}
+
+.waveLight {
+  background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Light.png');
+}
+
+.waveNight {
+  background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Night.png');
+}
+
+.wavePinkPurple {
+  background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Pink-Purple.png');
+}
+
+.waveYellowPink {
+  background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Yellow-Pink.png');
+}
+
+.waveYellowPurple {
+  background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Yellow-Purple.png');
+}
+
+// Content banner background classes
 .contentBannerGreenPurple .content {
-  background-image: url('/assets/GD-2D/GD-Banners/GD-Green-Purple-03.png');
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Green-Purple.png');
 }
 
-.contentBannerGreenPink .content {
-  background-image: url('/assets/GD-2D/GD-Banners/GD-Green-Pink-03.png');
+.contentBannerPinkGreen .content {
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Pink-Green.png');
 }
 
-.contentBannerPurplePink .content {
-  background-image: url('/assets/GD-2D/GD-Banners/GD-Purple-Pink-03.png');
+.contentBannerPurpleYellow .content {
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Purple-Yellow.png');
 }
 
 .contentBannerYellowPink .content {
-  background-image: url('/assets/GD-2D/GD-Banners/GD-Yellow-Pink-03.png');
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Yellow-Pink.png');
 }
 
-.contentBannerYellowPurple .content {
-  background-image: url('/assets/GD-2D/GD-Banners/GD-Yellow-Purple-03.png');
+.contentBannerGreyLight .content {
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Grey-Light.png');
+}
+
+.contentBannerGreyDark .content {
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Grey-Dark.png');
 }
 
 .waveYellowPink {
