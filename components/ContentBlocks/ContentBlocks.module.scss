@@ -176,18 +176,26 @@
   justify-content: center;
   padding: 8rem 2rem 4rem;
   overflow: hidden;
+  background-repeat: no-repeat !important;
+  background-size: 100vw auto !important;
 
   &.top {
     padding-top: 10rem;
+    align-items: flex-start;
+    background-position: top center !important;
   }
 
   &.bottom {
     padding-top: 4rem;
     padding-bottom: 4rem;
+    align-items: center;
+    background-position: center !important;
   }
 
   &.final {
     padding-bottom: 8rem;
+    align-items: flex-end;
+    background-position: bottom center !important;
   }
 
   .content {
@@ -229,53 +237,113 @@
   }
 }
 
-// Scape backgrounds for sections
+// Wave backgrounds
+.waveYellowPink {
+  &.top { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Yellow-Pink-Top.png');
+  }
+  &.bottom { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Yellow-Pink-Bottom.png');
+  }
+  &.final { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Yellow-Pink-Final.png');
+  }
+}
+
 .waveGreenPink {
-  &.top { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Green-Pink-Top.png'); }
-  &.bottom { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Green-Pink-Bottom.png'); }
-  &.final { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Green-Pink-Final.png'); }
+  &.top { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Green-Pink-Top.png');
+  }
+  &.bottom { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Green-Pink-Bottom.png');
+  }
+  &.final { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Green-Pink-Final.png');
+  }
+}
+
+.wavePurplePink {
+  &.top { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Purple-Pink-Top.png');
+  }
+  &.bottom { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Purple-Pink-Bottom.png');
+  }
+  &.final { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Purple-Pink-Final.png');
+  }
 }
 
 .waveGreenPurple {
-  &.top { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Green-Purple-Top.png'); }
-  &.bottom { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Green-Purple-Bottom.png'); }
-  &.final { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Green-Purple-Final.png'); }
+  &.top { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Green-Purple-Top.png');
+  }
+  &.bottom { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Green-Purple-Bottom.png');
+  }
+  &.final { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Green-Purple-Final.png');
+  }
 }
 
 .waveGreenYellow {
-  &.top { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Green-Yellow-Top.png'); }
-  &.bottom { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Green-Yellow-Bottom.png'); }
-  &.final { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Green-Yellow-Final.png'); }
+  &.top { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Green-Yellow-Top.png');
+  }
+  &.bottom { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Green-Yellow-Bottom.png');
+  }
+  &.final { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Green-Yellow-Final.png');
+  }
 }
 
 .waveLight {
-  &.top { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Grey-Light-Top.png'); }
-  &.bottom { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Grey-Light-Bottom.png'); }
-  &.final { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Grey-Light-Final.png'); }
+  &.top { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Grey-Light-Top.png');
+  }
+  &.bottom { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Grey-Light-Bottom.png');
+  }
+  &.final { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Grey-Light-Final.png');
+  }
 }
 
 .waveNight {
-  &.top { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Night-Top.png'); }
-  &.bottom { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Night-Bottom.png'); }
-  &.final { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Night-Final.png'); }
+  &.top { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Night-Top.png');
+  }
+  &.bottom { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Night-Bottom.png');
+  }
+  &.final { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Night-Final.png');
+  }
 }
 
 .wavePinkPurple {
-  &.top { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Pink-Purple-Top.png'); }
-  &.bottom { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Pink-Purple-Bottom.png'); }
-  &.final { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Pink-Purple-Final.png'); }
-}
-
-.waveYellowPink {
-  &.top { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Yellow-Pink-Top.png'); }
-  &.bottom { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Yellow-Pink-Bottom.png'); }
-  &.final { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Yellow-Pink-Final.png'); }
+  &.top { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Pink-Purple-Top.png');
+  }
+  &.bottom { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Pink-Purple-Bottom.png');
+  }
+  &.final { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Pink-Purple-Final.png');
+  }
 }
 
 .waveYellowPurple {
-  &.top { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Yellow-Purple-Top.png'); }
-  &.bottom { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Yellow-Purple-Bottom.png'); }
-  &.final { background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Yellow-Purple-Final.png'); }
+  &.top { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Yellow-Purple-Top.png');
+  }
+  &.bottom { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Yellow-Purple-Bottom.png');
+  }
+  &.final { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Wave-Yellow-Purple-Final.png');
+  }
 }
 
 // Banner backgrounds for content sections
