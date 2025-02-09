@@ -9,7 +9,7 @@
 
 .title {
   font-family: var(--font-graphigem);
-  font-weight: 700;
+  font-weight: var(--font-bold);
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.2;
   margin-bottom: 1.5rem;

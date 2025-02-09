@@ -6,7 +6,7 @@ export const homeContent: PageContent = {
       type: 'hero',
       id: 'home-hero',
       titleAccent: 'Building Immersive',
-      title: 'Brand Experiences',
+      title: 'Experiences',
       accentColor: 'white',
       description: 'Step into the next era of brand engagement with virtual worlds and spatial branding experiences.',
       // image: '/images/hero-video.mp4'
