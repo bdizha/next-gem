@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Hero } from '../Hero/Hero';
 import { Grid } from '../Grid/Grid';
 import { Action } from '../Action/Action';
+import { Slider } from '../Slider/Slider';
 import styles from './ContentBlocks.module.scss';
 import { usePathname } from 'next/navigation';
 import { scapeClasses, contentBannerClasses, getRandomClass } from '../../utils/backgrounds';
@@ -12,7 +13,7 @@ import clsx from 'clsx';
 
 export interface ContentBlock {
   id: string;
-  type: 'hero' | 'grid' | 'action';
+  type: 'hero' | 'grid' | 'action' | 'slider';
   titleAccent?: string;
   title?: string;
   accentColor?: string;
@@ -40,6 +41,7 @@ const BLOCK_COMPONENTS = {
   hero: Hero,
   grid: Grid,
   action: Action,
+  slider: Slider,
 } as const;
 
 const ContentRenderer: React.FC<ContentRendererProps> = ({ content }) => {

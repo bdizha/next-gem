@@ -33,7 +33,22 @@ export type ActionBlock = {
   description?: string;
 };
 
-export type ContentBlock = HeroBlock | GridBlock | ActionBlock;
+export type SliderBlock = {
+  type: 'slider';
+  id: string;
+  title?: string;
+  titleAccent?: string;
+  accentColor?: string;
+  description?: string;
+  items: {
+    src: string;
+    title: string;
+    width?: number;
+    height?: number;
+  }[];
+};
+
+export type ContentBlock = HeroBlock | GridBlock | ActionBlock | SliderBlock;
 
 export type Tab = {
   id: string;

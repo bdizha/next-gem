@@ -1,6 +1,8 @@
 .hero {
   width: 100%;
   padding: 6rem 2rem;
+  position: relative;
+  overflow: hidden;
   
   &.lightText {
     h1, p {
@@ -19,6 +21,8 @@
     text-align: center;
     
     .heroContent {
+      position: relative;
+      z-index: 2;
       max-width: 1200px;
       margin: 0 auto;
       
@@ -56,6 +60,8 @@
     margin: 0 auto;
     
     .heroContent {
+      position: relative;
+      z-index: 2;
       flex: 1;
       
       h1 {
@@ -82,6 +88,8 @@
     }
     
     .heroImage {
+      position: relative;
+      z-index: 2;
       flex: 1;
       max-width: 600px;
       
@@ -112,6 +120,13 @@
         max-width: 100%;
       }
     }
+  }
+  
+  .heroSlider {
+    margin-top: 6rem;
+    background: none;
+    padding: 0;
+    width: 100%;
   }
 }
 
