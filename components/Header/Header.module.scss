@@ -1,19 +1,58 @@
 .header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 100;
-  padding: 1rem;
   display: flex;
   justify-content: center;
+  width: calc(100% - 4rem);
   max-width: var(--max-width);
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(20, 20, 20, 0.5);
   backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 48px;
   padding: 0.75rem 1.5rem;
-  box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 48px;
+    padding: 1px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0.03)
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 48px;
+    background: radial-gradient(
+      circle at calc(var(--x, 0) * 1px) calc(var(--y, 0) * 1px),
+      rgba(255, 255, 255, 0.08) 0%,
+      transparent 100%
+    );
+    opacity: var(--hover, 0);
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  &:hover {
+    background: rgba(20, 20, 20, 0.6);
+    --hover: 1;
+  }
 }
 
 .container {
@@ -21,6 +60,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .headerLeft {
@@ -52,28 +92,24 @@
 
 .nav {
   display: flex;
-  gap: 1rem;
-}
+  gap: 2rem;
+  align-items: center;
 
-.link {
-  padding: 0.75rem 1.5rem;
-  border-radius: 48px;
-  color: white;
-  font-family: var(--font-graphigem-bold);
-  text-decoration: none;
-  transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px) saturate(180%);
-  box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.2);
-  
-  &:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateY(-2px);
-  }
-  
-  &.active {
-    background: white;
-    color: black;
+  .link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: all 0.2s ease;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    background: transparent;
+
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+      background: rgba(255, 255, 255, 0.1);
+    }
   }
 }
 
