@@ -1,5 +1,6 @@
 export type HeroBlock = {
   type: 'hero';
+  id: string;
   titleAccent?: string;
   title?: string;
   accentColor?: string;
@@ -9,6 +10,7 @@ export type HeroBlock = {
 
 export type GridBlock = {
   type: 'grid';
+  id: string;
   title?: string;
   titleAccent?: string;
   accentColor?: string;
@@ -23,6 +25,7 @@ export type GridBlock = {
 
 export type ActionBlock = {
   type: 'action';
+  id: string;
   theme?: string;
   accent?: string;
   image?: string;
@@ -32,6 +35,15 @@ export type ActionBlock = {
 
 export type ContentBlock = HeroBlock | GridBlock | ActionBlock;
 
+export type Tab = {
+  id: string;
+  title: string;
+  titleAccent?: string;
+  accentColor?: string;
+  content: ContentBlock[];
+};
+
 export type PageContent = {
   blocks: ContentBlock[];
+  tabs?: Tab[];
 };

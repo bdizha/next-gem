@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { usePathname } from 'next/navigation';
-import { ContentRenderer } from '../components/ContentBlocks/ContentRenderer';
+import ContentRenderer from '../components/ContentBlocks/ContentRenderer';
 import { homeContent } from './content';
 import { aboutContent } from './about/content';
 import { servicesContent } from './services/content';
@@ -37,7 +37,10 @@ export default function Page() {
 
   return (
     <main className={styles.main}>
-      <ContentRenderer blocks={pageContent.blocks} />
+      <ContentRenderer content={{
+        content: pageContent.blocks,
+        tabs: pageContent.tabs
+      }} />
     </main>
   );
 }

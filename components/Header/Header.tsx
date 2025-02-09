@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Header.module.scss';
@@ -8,20 +8,37 @@ import classNames from 'classnames';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    const header = headerRef.current;
+    if (!header) return;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = header.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      header.style.setProperty('--x', x.toString());
+      header.style.setProperty('--y', y.toString());
+    };
+
+    header.addEventListener('mousemove', handleMouseMove);
+    return () => header.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   return (
-    <header className={styles.header}>
+    <header ref={headerRef} className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
           <Image
             src="/assets/GD-2D/GD-Icon/GD-P-Icon-White.png"
             alt="GraphiGem"
-            width={40}
-            height={40}
+            width={60}
+            height={60}
             className={styles.logoImage}
           />
         </Link>

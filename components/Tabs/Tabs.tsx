@@ -1,39 +1,43 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './Tabs.module.scss';
+import clsx from 'clsx';
 
-type TabItem = {
+interface Tab {
+  id: string;
   title: string;
   titleAccent?: string;
   accentColor?: string;
-};
+}
 
-type TabsProps = {
-  items: TabItem[];
-};
+interface TabsProps {
+  tabs: Tab[];
+  activeTab: string;
+  onTabChange: (tabId: string) => void;
+}
 
-export function Tabs({ items }: TabsProps) {
-  const [activeTab, setActiveTab] = useState(0);
-
+export const TabsComponent: React.FC<TabsProps> = ({ tabs, activeTab, onTabChange }) => {
   return (
     <div className={styles.tabsContainer}>
-      <div className={styles.tabs}>
-        {items.map((item, index) => (
+      <nav className={styles.tabs}>
+        {tabs.map((tab) => (
           <button
-            key={index}
-            className={`${styles.tab} ${activeTab === index ? styles.active : ''}`}
-            onClick={() => setActiveTab(index)}
+            key={tab.id}
+            className={clsx(styles.tab, {
+              [styles.active]: activeTab === tab.id,
+            })}
+            onClick={() => onTabChange(tab.id)}
           >
-            {item.titleAccent && (
-              <span className={`${styles.accent} ${styles[item.accentColor || '']}`}>
-                {item.titleAccent}
+            {tab.titleAccent && (
+              <span className={clsx(styles.accent, styles[tab.accentColor || 'green'])}>
+                {tab.titleAccent}
               </span>
             )}
-            {item.title}
+            {tab.title}
           </button>
         ))}
-      </div>
+      </nav>
     </div>
   );
-}
+};

@@ -174,35 +174,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 2rem;
-  margin-top: -6rem;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 0;
-  }
+  padding: 8rem 2rem 4rem;
+  overflow: hidden;
 
   &.top {
-    background-position: top center;
-    align-items: flex-start;
-    padding-top: 8rem;
+    padding-top: 10rem;
   }
 
   &.bottom {
-    background-position: bottom center;
-    align-items: flex-end;
-    padding-bottom: 8rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   &.final {
-    background-position: center;
-    align-items: center;
+    padding-bottom: 8rem;
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
   }
 }
 
