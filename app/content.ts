@@ -4,14 +4,16 @@ export const homeContent: PageContent = {
   blocks: [
     {
       type: 'hero',
+      id: 'home-hero',
       titleAccent: 'Envision. Apply. Evaluate.',
       title: '',
-      accentColor: 'purple',
+      accentColor: 'white',
       description: 'Great brands believe in the impossible.',
       // image: '/images/hero.jpg'
     },
     {
       type: 'grid',
+      id: 'home-services',
       title: 'Our Services',
       titleAccent: 'Explore',
       accentColor: 'green',
@@ -35,6 +37,7 @@ export const homeContent: PageContent = {
     },
     {
       type: 'action',
+      id: 'home-cta',
       theme: 'pink',
       accent: 'green',
       image: '/icons/GD-Icon-005.png',
