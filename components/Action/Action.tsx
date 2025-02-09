@@ -23,28 +23,24 @@ export function Action({
   buttonLink = "/#contact-us"
 }: ActionProps) {
   return (
-    <section className={styles.action}>
-      <div className={styles.actionContent}>
-        <div className={styles.actionCard}>
-          <div className={styles.content}>
-            <h2>{title}</h2>
-            <p>{subtitle}</p>
-            <a href={buttonLink}>
-              <button className={styles.button}>{buttonText}</button>
-            </a>
-          </div>
-          <div className={styles.image}>
-            <div className={clsx(styles.imageWrapper, styles[theme])}>
-              <Image 
-                src={image} 
-                alt="Action Image"
-                width={1200}
-                height={1200}
-              />
-            </div>
-          </div>
+    <div className={styles.actionCard}>
+      <div className={styles.content}>
+        <h2>{title}</h2>
+        <p>{subtitle}</p>
+        <a href={buttonLink}>
+          <button className={styles.button}>{buttonText}</button>
+        </a>
+      </div>
+      <div className={styles.image}>
+        <div className={clsx(styles.imageWrapper, styles[theme])}>
+          <Image 
+            src={image} 
+            alt="Action Image"
+            width={1200}
+            height={1200}
+          />
         </div>
       </div>
-    </section>
+    </div>
   );
 }
