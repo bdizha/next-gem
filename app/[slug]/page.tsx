@@ -1,43 +1,37 @@
-'use client';
-
-import React from 'react';
-import pageStyles from '../page.module.scss';
-import styles from '../../components/ContentBlocks/ContentBlocks.module.scss';
-import ContentRenderer from '../../components/ContentBlocks/ContentRenderer';
-import { homeContent } from '../content';
-import { aboutContent } from '../about/content';
-import { servicesContent } from '../services/content';
-import { portfolioContent } from '../portfolio/content';
-import { contactContent } from '../contact/content';
+import { aboutContent } from '../content/about';
+import { portfolioContent } from '../content/portfolio';
+import { contactContent } from '../content/contact';
 import { careersContent } from '../careers/content';
-import { notFound } from 'next/navigation';
+import { ContentBlocks } from '@/components/ContentBlocks/ContentBlocks';
+import { Metadata } from 'next';
 
-const pageContent = {
-  home: homeContent,
+const contentMap = {
   about: aboutContent,
-  services: servicesContent,
   portfolio: portfolioContent,
   contact: contactContent,
-  careers: careersContent,
+  careers: careersContent
 };
 
-function getContentBySlug(slug: string) {
-  return pageContent[slug as keyof typeof pageContent];
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const content = contentMap[params.slug as keyof typeof contentMap];
+
+  if (!content) {
+    return {
+      title: 'Not Found | Graphigem Digital'
+    };
+  }
+
+  return {
+    title: `${params.slug.charAt(0).toUpperCase() + params.slug.slice(1)} | Graphigem Digital`
+  };
 }
 
 export default function Page({ params }: { params: { slug: string } }) {
-  const content = getContentBySlug(params.slug);
+  const content = contentMap[params.slug as keyof typeof contentMap];
 
   if (!content) {
-    return null;
+    return <div>Not Found</div>;
   }
 
-  return (
-    <main className={pageStyles.main}>
-      <ContentRenderer content={{
-        content: content.blocks,
-        tabs: content.tabs
-      }} />
-    </main>
-  );
+  return <ContentBlocks blocks={content.blocks} />;
 }

@@ -43,23 +43,23 @@ export function Header() {
           />
         </Link>
 
-        <nav className={classNames(styles.nav, { [styles.isOpen]: isMenuOpen })}>
+        <nav className={classNames(styles.nav, { [styles.open]: isMenuOpen })}>
+          <Link href="/approach" className={styles.link}>
+            Approach
+          </Link>
           <Link href="/about" className={styles.link}>
             About
-          </Link>
-          <Link href="/services" className={styles.link}>
-            Services
           </Link>
           <Link href="/careers" className={styles.link}>
             Careers
           </Link>
-          <Link href="/contact" className={styles.link}>
-            Get in touch
+          <Link href="/#contact-us" className={`${styles.link} ${styles.button}`}>
+            Get in Touch
           </Link>
         </nav>
 
         <button
-          className={classNames(styles.menuButton, { [styles.isOpen]: isMenuOpen })}
+          className={classNames(styles.menuButton, { [styles.open]: isMenuOpen })}
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >

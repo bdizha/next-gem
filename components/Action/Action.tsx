@@ -6,6 +6,7 @@ import clsx from 'clsx';
 interface ActionProps {
   theme?: 'purple' | 'pink' | 'green' | 'yellow';
   accent?: 'darkPink' | 'darkPurple' | 'darkGreen' | 'darkYellow';
+  buttonStyle?: 'solid' | 'outline';
   image?: string;
   title?: React.ReactNode;
   subtitle?: string;
@@ -16,6 +17,7 @@ interface ActionProps {
 export function Action({ 
   theme = "purple",
   accent = "darkPink",
+  buttonStyle = "solid",
   image = "/icons/GD-Icon-009.png",
   title = <><span className="text-yellow">Delight</span> your customer</>,
   subtitle = "If you were to ask us, what's it like to launch a successful brand? Our answer is simple: It's always a delight working with upcoming brands making their dreams a reality.",
@@ -28,7 +30,7 @@ export function Action({
         <h2>{title}</h2>
         <p>{subtitle}</p>
         <a href={buttonLink}>
-          <button className={styles.button}>{buttonText}</button>
+          <button className={clsx(styles.button, styles[buttonStyle])}>{buttonText}</button>
         </a>
       </div>
       <div className={styles.image}>

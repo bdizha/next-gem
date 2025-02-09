@@ -1,46 +1,12 @@
-'use client';
-
-import React from 'react';
-import { usePathname } from 'next/navigation';
-import ContentRenderer from '../components/ContentBlocks/ContentRenderer';
+import { ContentBlocks } from '@/components/ContentBlocks/ContentBlocks';
 import { homeContent } from './content';
-import { aboutContent } from './about/content';
-import { servicesContent } from './services/content';
-import { portfolioContent } from './portfolio/content';
-import { contactContent } from './contact/content';
-import { careersContent } from './careers/content';
-import styles from './page.module.scss';
+import { Metadata } from 'next';
 
-export default function Page() {
-  const pathname = usePathname();
-  
-  const getContent = () => {
-    switch (pathname) {
-      case '/':
-        return homeContent;
-      case '/about':
-        return aboutContent;
-      case '/services':
-        return servicesContent;
-      case '/portfolio':
-        return portfolioContent;
-      case '/contact':
-        return contactContent;
-      case '/careers':
-        return careersContent;
-      default:
-        return homeContent; // Fallback to home content
-    }
-  };
+export const metadata: Metadata = {
+  title: 'Home | Graphigem Digital',
+  description: 'Step into the next era of brand engagement with virtual worlds and spatial branding experiences.',
+};
 
-  const pageContent = getContent();
-
-  return (
-    <main className={styles.main}>
-      <ContentRenderer content={{
-        content: pageContent.blocks,
-        tabs: pageContent.tabs
-      }} />
-    </main>
-  );
+export default function Home() {
+  return <ContentBlocks blocks={homeContent.blocks} />;
 }

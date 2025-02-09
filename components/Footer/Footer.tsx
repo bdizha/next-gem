@@ -24,25 +24,23 @@ export function Footer() {
         </div>
 
         <div className={styles.content}>
-          <div className={styles.section}>
-            <h3>Services</h3>
-            <ul>
-              <li><Link href="/services#branding">Digital Branding</Link></li>
-              <li><Link href="/services#character">Character Branding</Link></li>
-              <li><Link href="/services#virtual">Virtual World</Link></li>
-            </ul>
-          </div>
-
-          <div className={styles.section}>
+          <div className={styles.column}>
             <h3>Company</h3>
             <ul>
               <li><Link href="/about">About Us</Link></li>
-              <li><Link href="/careers">Careers</Link></li>
+              <li><Link href="/portfolio">Portfolio</Link></li>
               <li><Link href="/contact">Contact</Link></li>
             </ul>
           </div>
-
-          <div className={styles.section}>
+          <div className={styles.column}>
+            <h3>Explore</h3>
+            <ul>
+              <li><Link href="/#envision-future">Virtual Worlds</Link></li>
+              <li><Link href="/#unleash-brand">Brand Experience</Link></li>
+              <li><Link href="/#delight-customer">Customer Engagement</Link></li>
+            </ul>
+          </div>
+          <div className={styles.column}>
             <h3>Connect</h3>
             <ul>
               <li><a href="https://instagram.com/graphigem" target="_blank" rel="noopener noreferrer">Instagram</a></li>

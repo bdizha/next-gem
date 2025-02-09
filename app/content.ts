@@ -98,6 +98,30 @@ export const homeContent: PageContent = {
         label: 'Explore Our Portfolio',
         href: '/portfolio'
       }
+    },
+    {
+      type: 'action',
+      id: 'our-approach',
+      theme: 'purple',
+      accent: 'darkPurple',
+      buttonStyle: 'solid',
+      image: '/icons/GD-Icon-020.png',
+      title: 'Our Services Approach',
+      subtitle: 'We believe in a collaborative approach to creating virtual worlds. Our team works closely with you to understand your vision and bring it to life in ways that exceed expectations.',
+      buttonText: 'Get in Touch',
+      buttonLink: '/#contact-us'
+    },
+    {
+      type: 'action',
+      id: 'get-in-touch',
+      theme: 'yellow',
+      accent: 'darkYellow',
+      buttonStyle: 'outline',
+      image: '/icons/GD-Icon-021.png',
+      title: 'Ready to Get Started?',
+      subtitle: 'Let’s discuss how we can help bring your brand into the virtual world. Our team is ready to help you create an immersive experience that your customers will love.',
+      buttonText: 'Get in Touch',
+      buttonLink: '/#contact-us'
     }
   ]
 };
