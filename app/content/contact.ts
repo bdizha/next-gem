@@ -8,7 +8,7 @@ export const contactContent: PageContent = {
       titleAccent: 'Get in',
       title: 'Touch',
       accentColor: 'purple',
-      description: 'Ready to start your journey into the metaverse? We\'d love to hear from you.',
+      description: 'Ready to start your journey into the virtual space? We\'d love to hear from you.',
       image: '/images/contact-hero.mp4'
     },
     {
@@ -17,7 +17,7 @@ export const contactContent: PageContent = {
       title: 'Connect With Us',
       titleAccent: 'Let\'s Talk',
       accentColor: 'purple',
-      description: 'Choose the best way to reach out and start a conversation about your brand\'s future in the metaverse.',
+      description: 'Choose the best way to reach out and start a conversation about your brand\'s future in the virtual space.',
       items: [
         {
           title: 'Schedule a Call',

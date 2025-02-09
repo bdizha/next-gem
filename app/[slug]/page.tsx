@@ -1,4 +1,5 @@
 import { aboutContent } from '../content/about';
+import { approachContent } from '../content/approach';
 import { portfolioContent } from '../content/portfolio';
 import { contactContent } from '../content/contact';
 import { careersContent } from '../careers/content';
@@ -7,6 +8,7 @@ import { Metadata } from 'next';
 
 const contentMap = {
   about: aboutContent,
+  approach: approachContent,
   portfolio: portfolioContent,
   contact: contactContent,
   careers: careersContent

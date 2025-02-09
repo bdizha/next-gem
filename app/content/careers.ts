@@ -8,7 +8,7 @@ export const careersContent: PageContent = {
       titleAccent: 'Join Our',
       title: 'Team',
       accentColor: 'pink',
-      description: 'Help us shape the future of brand experiences in the metaverse.',
+      description: 'Help us shape the future of brand experiences in the virtual space.',
       image: '/images/careers-hero.mp4'
     },
     {
@@ -17,10 +17,10 @@ export const careersContent: PageContent = {
       title: 'Why Join Us',
       titleAccent: 'Growth & Innovation',
       accentColor: 'pink',
-      description: 'Be part of a team that\'s pushing the boundaries of what\'s possible in the metaverse.',
+      description: 'Be part of a team that\'s pushing the boundaries of what\'s possible in the virtual space.',
       items: [
         {
-          title: 'Innovation First',
+          title: 'Customer First',
           description: 'Work with cutting-edge technologies and shape the future of digital experiences.',
           icon: '/icons/GD-Icon-032.png',
           background: 'pinkWave'

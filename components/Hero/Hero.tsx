@@ -46,7 +46,7 @@ export function Hero({ title, titleAccent, accentColor = 'pink', description, im
           <Image src={image} alt="" width={600} height={600} />
         </div>
       )}
-      <Slider items={films} className={styles.heroSlider} />
+      {/* <Slider items={films} className={styles.heroSlider} /> */}
     </section>
   );
 }

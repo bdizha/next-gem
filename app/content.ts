@@ -1,103 +1,91 @@
-import { PageContent } from '../types/content';
+import { ContentBlock } from '../types/content';
 
-export const homeContent: PageContent = {
+export const homeContent = {
   blocks: [
     {
       type: 'hero',
-      id: 'home-hero',
-      titleAccent: 'Building Immersive',
-      title: 'Experiences',
-      accentColor: 'white',
-      description: 'Step into the next era of brand engagement with virtual worlds and spatial branding experiences.',
-      // image: '/images/hero-video.mp4'
+      id: 'hero',
+      theme: 'purple',
+      accent: 'darkPurple',
+      title: 'Virtual Worlds, Real Impact',
+      subtitle: 'Step into the next era of brand engagement with virtual worlds and spatial branding experiences.',
+      description: 'We create immersive digital experiences that transform how brands connect with their audience in the virtual space.',
+      image: '/assets/GD-2D/GD-Icon/GD-P-Icon-White.png'
     },
     {
       type: 'grid',
       id: 'envision-future',
-      title: 'Your Future',
-      titleAccent: 'Envision',
-      accentColor: 'pink',
-      description: 'Step into the next era of brand engagement. Graphigem helps you imagine and build the future of your brand in immersive virtual worlds. We transform your vision into tangible, interactive experiences that captivate your audience and drive meaningful connections.',
+      theme: 'purple',
+      accent: 'darkPurple',
+      title: 'Envision the Future',
+      subtitle: 'Create lasting impressions in virtual spaces',
       items: [
         {
-          title: 'Spatial Storytelling',
-          description: 'Craft compelling narratives that unfold in three-dimensional space, creating deeper emotional connections with your customers.',
-          icon: '/icons/GD-Icon-001.png'
+          title: 'Virtual Worlds',
+          description: 'Build immersive digital environments that showcase your brand in innovative ways.',
+          image: '/icons/GD-Icon-011.png'
         },
         {
-          title: 'Infinite Possibilities',
-          description: "Explore limitless creative avenues and push the boundaries of what's possible with virtual world experiences. No physical constraints, just pure imagination.",
-          icon: '/icons/GD-Icon-002.png'
+          title: 'Digital Characters',
+          description: 'Bring your brand to life with unique character designs and animations.',
+          image: '/icons/GD-Icon-012.png'
         },
         {
-          title: 'Future-Proof Your Brand',
-          description: 'Position your brand at the forefront of innovation by embracing the transformative power of virtual worlds. Be ready for the future of customer interaction.',
-          icon: '/icons/GD-Icon-003.png'
+          title: 'Brand Integration',
+          description: 'Seamlessly integrate your brand into virtual experiences.',
+          image: '/icons/GD-Icon-013.png'
         }
       ]
     },
     {
       type: 'grid',
       id: 'unleash-brand',
-      title: 'Your Brand',
-      titleAccent: 'Unleash',
-      accentColor: 'green',
-      description: "Your brand is more than a logo—it's an experience. Graphigem empowers you to unleash the full potential of your brand by creating immersive virtual environments where customers can interact, explore, and connect with your brand on a deeper level.",
+      theme: 'darkPurple',
+      accent: 'purple',
+      title: 'Unleash Your Brand',
+      subtitle: 'Stand out in the digital landscape',
       items: [
         {
-          title: 'Immersive Engagement',
-          description: 'Create interactive brand experiences that leave a lasting impression, fostering brand loyalty and advocacy.',
-          icon: '/icons/GD-Icon-004.png'
+          title: 'Brand Strategy',
+          description: 'Develop a comprehensive digital brand strategy that resonates with your audience.',
+          image: '/icons/GD-Icon-014.png'
         },
         {
-          title: 'Elevated Brand Presence',
-          description: 'Establish a powerful and memorable presence in the metaverse, differentiating your brand from the competition.',
-          icon: '/icons/GD-Icon-005.png'
+          title: 'Visual Identity',
+          description: 'Create a distinctive visual language that captures your brand essence.',
+          image: '/icons/GD-Icon-015.png'
         },
         {
-          title: 'Data-Driven Insights',
-          description: 'Gather valuable data on customer behavior and preferences within your virtual world, gaining insights to optimize your brand strategy.',
-          icon: '/icons/GD-Icon-006.png'
+          title: 'Digital Experience',
+          description: 'Design intuitive and engaging digital touchpoints.',
+          image: '/icons/GD-Icon-016.png'
         }
       ]
     },
     {
       type: 'grid',
       id: 'delight-customer',
-      title: 'Your Customer',
-      titleAccent: 'Delight',
-      accentColor: 'yellow',
-      description: 'Inspired by customer-centric philosophies of business leaders like Jeff Bezos and Steve Jobs, we believe in starting with the customer and working backward. We create delightful and engaging virtual experiences that exceed expectations.',
+      theme: 'purple',
+      accent: 'darkPurple',
+      title: 'Delight Your Customers',
+      subtitle: 'Create memorable brand experiences',
       items: [
         {
-          title: 'Personalized Experiences',
-          description: 'Tailor virtual experiences to individual customer preferences, creating personalized journeys that resonate and delight.',
-          icon: '/icons/GD-Icon-007.png'
+          title: 'Interactive Design',
+          description: 'Build engaging interactions that keep users coming back.',
+          image: '/icons/GD-Icon-017.png'
         },
         {
-          title: 'Seamless Interactions',
-          description: 'Facilitate effortless and intuitive interactions within your virtual world, ensuring a smooth and enjoyable customer experience.',
-          icon: '/icons/GD-Icon-008.png'
+          title: 'User Experience',
+          description: 'Craft seamless experiences that guide users naturally.',
+          image: '/icons/GD-Icon-018.png'
         },
         {
-          title: 'Building Community',
-          description: 'Foster a sense of community among your customers by creating shared virtual experiences that encourage interaction and connection.',
-          icon: '/icons/GD-Icon-009.png'
+          title: 'Performance',
+          description: 'Optimize for speed and reliability across all platforms.',
+          image: '/icons/GD-Icon-019.png'
         }
       ]
-    },
-    {
-      type: 'action',
-      id: 'home-cta',
-      theme: 'pink',
-      accent: 'green',
-      image: '/icons/GD-Icon-010.png',
-      title: 'Bringing Virtual Worlds to Life',
-      description: 'Experience how we transform brands through immersive virtual worlds. Explore our portfolio of successful projects including BoldLand, NaimLand, and ZudaLand.',
-      cta: {
-        label: 'Explore Our Portfolio',
-        href: '/portfolio'
-      }
     },
     {
       type: 'action',
@@ -106,22 +94,22 @@ export const homeContent: PageContent = {
       accent: 'darkPurple',
       buttonStyle: 'solid',
       image: '/icons/GD-Icon-020.png',
-      title: 'Our Services Approach',
+      title: 'Our Approach',
       subtitle: 'We believe in a collaborative approach to creating virtual worlds. Our team works closely with you to understand your vision and bring it to life in ways that exceed expectations.',
-      buttonText: 'Get in Touch',
-      buttonLink: '/#contact-us'
+      buttonText: 'Learn More',
+      buttonLink: '/approach'
     },
     {
       type: 'action',
-      id: 'get-in-touch',
-      theme: 'yellow',
-      accent: 'darkYellow',
+      id: 'contact-us',
+      theme: 'darkPurple',
+      accent: 'purple',
       buttonStyle: 'outline',
       image: '/icons/GD-Icon-021.png',
-      title: 'Ready to Get Started?',
-      subtitle: 'Let’s discuss how we can help bring your brand into the virtual world. Our team is ready to help you create an immersive experience that your customers will love.',
-      buttonText: 'Get in Touch',
+      title: 'Get in Touch',
+      subtitle: 'Ready to transform your brand with immersive digital experiences? Let\'s start a conversation about your project.',
+      buttonText: 'Contact Us',
       buttonLink: '/#contact-us'
     }
-  ]
+  ] as ContentBlock[]
 };
