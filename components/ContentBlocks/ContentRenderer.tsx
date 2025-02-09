@@ -7,47 +7,11 @@ import { Action } from '../Action/Action';
 import { ContentBlock } from '../../types/content';
 import styles from './ContentBlocks.module.scss';
 import { usePathname } from 'next/navigation';
+import { scapeClasses, contentBannerClasses, getRandomClass } from '../../utils/backgrounds';
 
 export function ContentRenderer({ blocks }: { blocks: ContentBlock[] }) {
   const pathname = usePathname();
   const isHomePage = pathname === '/';
-
-  // Background classes for main sections
-  const scapeClasses = [
-    'waveGreenPink',
-    'waveGreenPurple',
-    'waveGreenYellow',
-    'waveLight',
-    'waveNight',
-    'wavePinkPurple',
-    'waveYellowPink',
-    'waveYellowPurple'
-  ];
-
-  // Background classes for content sections
-  const contentBannerClasses = [
-    'contentBannerGreenPurple',
-    'contentBannerPinkGreen',
-    'contentBannerPurpleYellow',
-    'contentBannerYellowPink',
-    'contentBannerGreyLight',
-    'contentBannerGreyDark'
-  ];
-
-  // Background classes for cards
-  const bannerClasses = [
-    'bannerGreenPurple',
-    'bannerPinkGreen',
-    'bannerPurpleYellow',
-    'bannerYellowPink',
-    'bannerGreyLight',
-    'bannerGreyDark'
-  ];
-
-  // Function to get random class from array
-  const getRandomClass = (classes: string[]) => {
-    return classes[Math.floor(Math.random() * classes.length)];
-  };
 
   return (
     <>
@@ -85,20 +49,16 @@ export function ContentRenderer({ blocks }: { blocks: ContentBlock[] }) {
                   title={block.title}
                   titleAccent={block.titleAccent}
                   accentColor={block.accentColor}
-                  description={block.description}
-                  items={block.items?.map(item => ({
-                    ...item,
-                    background: getRandomClass(bannerClasses)
-                  }))}
+                  items={block.items}
                 />
               )}
               {block.type === 'action' && (
                 <Action
+                  title={block.title}
+                  description={block.description}
                   theme={block.theme}
                   accent={block.accent}
                   image={block.image}
-                  title={block.title}
-                  description={block.description}
                 />
               )}
             </div>

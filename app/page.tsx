@@ -1,20 +1,43 @@
 'use client';
 
 import React from 'react';
-import { Header } from '../components/Header/Header';
-import { Footer } from '../components/Footer/Footer';
+import { usePathname } from 'next/navigation';
 import { ContentRenderer } from '../components/ContentBlocks/ContentRenderer';
 import { homeContent } from './content';
+import { aboutContent } from './about/content';
+import { servicesContent } from './services/content';
+import { portfolioContent } from './portfolio/content';
+import { contactContent } from './contact/content';
+import { careersContent } from './careers/content';
 import styles from './page.module.scss';
 
-export default function Home() {
+export default function Page() {
+  const pathname = usePathname();
+  
+  const getContent = () => {
+    switch (pathname) {
+      case '/':
+        return homeContent;
+      case '/about':
+        return aboutContent;
+      case '/services':
+        return servicesContent;
+      case '/portfolio':
+        return portfolioContent;
+      case '/contact':
+        return contactContent;
+      case '/careers':
+        return careersContent;
+      default:
+        return homeContent; // Fallback to home content
+    }
+  };
+
+  const pageContent = getContent();
+
   return (
-    <>
-      <Header />
-      <main className={styles.main}>
-        <ContentRenderer blocks={homeContent.blocks} />
-      </main>
-      {/* <Footer /> */}
-    </>
+    <main className={styles.main}>
+      <ContentRenderer blocks={pageContent.blocks} />
+    </main>
   );
 }

@@ -27,9 +27,6 @@ export function Header() {
         </Link>
 
         <nav className={classNames(styles.nav, { [styles.isOpen]: isMenuOpen })}>
-          <Link href="/" className={styles.link}>
-            Home
-          </Link>
           <Link href="/about" className={styles.link}>
             About
           </Link>
@@ -40,7 +37,7 @@ export function Header() {
             Careers
           </Link>
           <Link href="/contact" className={styles.link}>
-            Contact
+            Get in touch
           </Link>
         </nav>
 
