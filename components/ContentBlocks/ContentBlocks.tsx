@@ -23,18 +23,7 @@ export function ContentBlocks({ blocks }: ContentBlocksProps) {
   return (
     <div className={styles.content}>
       {blocks.map((block, index) => {
-        const isFirst = index === 0;
-        const isLast = index === blocks.length - 1;
         const { wave: waveClass, content: contentBannerClass } = getBackgroundClasses();
-
-        let positionClass;
-        if (block.type === 'hero') {
-          positionClass = 'top';
-        } else if (isLast) {
-          positionClass = 'final';
-        } else {
-          positionClass = index % 2 === 0 ? 'top' : 'bottom';
-        }
 
         const Component = BLOCK_COMPONENTS[block.type];
 
@@ -50,7 +39,7 @@ export function ContentBlocks({ blocks }: ContentBlocksProps) {
               styles.section,
               styles[waveClass],
               styles[contentBannerClass],
-              styles[positionClass]
+              styles.top
             )}
           >
             <div className={styles.content}>
