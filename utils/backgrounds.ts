@@ -2,27 +2,27 @@
 export const backgroundPairs = {
   greenPurple: {
     wave: 'waveGreenPurple',
-    content: 'contentBannerGreenPurple'
+    content: 'contentGradientGreenPurple'
   },
   pinkGreen: {
     wave: 'wavePinkGreen',
-    content: 'contentBannerPinkGreen'
+    content: 'contentGradientPinkGreen'
   },
   purpleYellow: {
     wave: 'wavePurpleYellow',
-    content: 'contentBannerPurpleYellow'
+    content: 'contentGradientPurpleYellow'
   },
   yellowPink: {
     wave: 'waveYellowPink',
-    content: 'contentBannerYellowPink'
+    content: 'contentGradientYellowPink'
   },
   greyLight: {
     wave: 'waveGreyLight',
-    content: 'contentBannerGreyLight'
+    content: 'contentGradientGreyLight'
   },
   night: {
     wave: 'waveNight',
-    content: 'contentBannerNight'
+    content: 'contentGradientNight'
   }
 };
 

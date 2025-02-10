@@ -21,9 +21,9 @@ interface ContentBlocksProps {
 
 export function ContentBlocks({ blocks }: ContentBlocksProps) {
   return (
-    <div className={styles.content}>
+    <div className={styles.contentWrapper}>
       {blocks.map((block, index) => {
-        const { wave: waveClass, content: contentBannerClass } = getBackgroundClasses();
+        const { wave: waveClass, content: contentGradientClass } = getBackgroundClasses();
 
         const Component = BLOCK_COMPONENTS[block.type];
 
@@ -38,7 +38,7 @@ export function ContentBlocks({ blocks }: ContentBlocksProps) {
             className={clsx(
               styles.section,
               styles[waveClass],
-              styles[contentBannerClass],
+              styles[contentGradientClass],
               styles.top
             )}
           >

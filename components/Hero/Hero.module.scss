@@ -6,6 +6,8 @@
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   background: linear-gradient(45deg, var(--color-purple) 0%, var(--color-dark-purple) 100%);
   
   &::before {
@@ -29,8 +31,9 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 4rem;
 }
 
@@ -55,9 +58,10 @@
   
   p {
     font-family: var(--font-boldland);
-    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
     line-height: 1.4;
     max-width: 600px;
+    margin: 0 auto;
     color: rgba(255, 255, 255, 0.9);
     text-align: center;
   }

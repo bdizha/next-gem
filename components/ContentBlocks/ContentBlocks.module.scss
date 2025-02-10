@@ -169,6 +169,21 @@
   }
 }
 
+.contentWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 0, 0, 0.15),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .section {
   position: relative;
   width: 100%;
@@ -205,15 +220,11 @@
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 
-      0 8px 32px 0 rgba(0, 0, 0, 0.15),
-      inset 0 0 0 1px rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 4rem;
     border-radius: 48px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
     &::before {
       content: '';
@@ -354,46 +365,46 @@
   }
 }
 
-// Content banner backgrounds
-.contentBannerGreenPurple {
+// Content gradient backgrounds
+.contentGradientGreenPurple {
   .content {
-    background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Green-Purple-04.png');
+    background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Green-Purple-02.png');
   }
 }
 
-.contentBannerPinkGreen {
+.contentGradientPinkGreen {
   .content {
-    background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Pink-Green-04.png');
+    background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Pink-Green-02.png');
   }
 }
 
-.contentBannerPurpleYellow {
+.contentGradientPurpleYellow {
   .content {
-    background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Purple-Yellow-04.png');
+    background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Purple-Yellow-02.png');
   }
 }
 
-.contentBannerYellowPink {
+.contentGradientYellowPink {
   .content {
-    background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Yellow-Pink-04.png');
+    background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Yellow-Pink-02.png');
   }
 }
 
-.contentBannerGreyLight {
+.contentGradientGreyLight {
   .content {
-    background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Grey-Light-04.png');
+    background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Grey-Light-02.png');
   }
 }
 
-.contentBannerGreyDark {
+.contentGradientGreyDark {
   .content {
-    background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Grey-Dark-04.png');
+    background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Grey-Dark-02.png');
   }
 }
 
-.contentBannerNight {
+.contentGradientNight {
   .content {
-    background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Night-04.png');
+    background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Night-02.png');
   }
 }
 

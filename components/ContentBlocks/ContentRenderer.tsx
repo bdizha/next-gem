@@ -7,7 +7,7 @@ import { Action } from '../Action/Action';
 import { Slider } from '../Slider/Slider';
 import styles from './ContentBlocks.module.scss';
 import { usePathname } from 'next/navigation';
-import { scapeClasses, contentBannerClasses, getRandomClass } from '../../utils/backgrounds';
+import { scapeClasses, contentGradientClasses, getRandomClass } from '../../utils/backgrounds';
 import { TabsComponent as Tabs } from '../Tabs/Tabs';
 import clsx from 'clsx';
 
@@ -77,7 +77,7 @@ const ContentRenderer: React.FC<ContentRendererProps> = ({ content }) => {
           const isFirst = index === 0;
           const isLast = index === currentContent.length - 1;
           const scapeClass = getRandomClass(scapeClasses);
-          const contentBannerClass = getRandomClass(contentBannerClasses);
+          const contentGradientClass = getRandomClass(contentGradientClasses);
 
           // Position logic:
           // 1. Home page hero is always top
@@ -104,7 +104,7 @@ const ContentRenderer: React.FC<ContentRendererProps> = ({ content }) => {
               className={clsx(
                 styles.section,
                 styles[scapeClass],
-                styles[contentBannerClass],
+                styles[contentGradientClass],
                 styles[positionClass]
               )}
             >
