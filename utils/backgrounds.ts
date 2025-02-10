@@ -1,36 +1,45 @@
-// Background classes for main sections
-export const scapeClasses = [
-  'waveGreenPink',
-  'waveGreenPurple',
-  'waveGreenYellow',
-  'waveLight',
-  'waveNight',
-  'wavePinkPurple',
-  'waveYellowPink',
-  'waveYellowPurple'
-];
+// Background class pairs for sections
+export const backgroundPairs = {
+  greenPurple: {
+    wave: 'waveGreenPurple',
+    content: 'contentBannerGreenPurple'
+  },
+  pinkGreen: {
+    wave: 'wavePinkGreen',
+    content: 'contentBannerPinkGreen'
+  },
+  purpleYellow: {
+    wave: 'wavePurpleYellow',
+    content: 'contentBannerPurpleYellow'
+  },
+  yellowPink: {
+    wave: 'waveYellowPink',
+    content: 'contentBannerYellowPink'
+  },
+  greyLight: {
+    wave: 'waveGreyLight',
+    content: 'contentBannerGreyLight'
+  },
+  night: {
+    wave: 'waveNight',
+    content: 'contentBannerNight'
+  }
+};
 
-// Background classes for content sections
-export const contentBannerClasses = [
-  'contentBannerGreenPurple',
-  'contentBannerPinkGreen',
-  'contentBannerPurpleYellow',
-  'contentBannerYellowPink',
-  'contentBannerGreyLight',
-  'contentBannerGreyDark'
-];
+// Get matching wave and content banner classes
+export const getBackgroundClasses = () => {
+  const themes = Object.keys(backgroundPairs);
+  const theme = themes[Math.floor(Math.random() * themes.length)];
+  return backgroundPairs[theme];
+};
 
-// Background classes for cards
+// Banner classes for cards
 export const bannerClasses = [
   'bannerGreenPurple',
   'bannerPinkGreen',
   'bannerPurpleYellow',
   'bannerYellowPink',
   'bannerGreyLight',
-  'bannerGreyDark'
+  'bannerGreyDark',
+  'bannerNight'
 ];
-
-// Helper function to get random class from array
-export const getRandomClass = (classes: string[]) => {
-  return classes[Math.floor(Math.random() * classes.length)];
-};

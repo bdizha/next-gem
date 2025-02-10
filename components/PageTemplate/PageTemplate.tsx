@@ -11,7 +11,7 @@ type PageTemplateProps = {
   sections: {
     title: string;
     content: React.ReactNode;
-    waveClass: 'waveLight' | 'waveGreenPurple' | 'waveYellowPurple';
+    waveClass: 'waveGreyLight' | 'waveGreenPurple' | 'waveYellowPurple';
   }[];
   tabs: string[];
 };

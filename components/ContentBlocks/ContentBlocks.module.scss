@@ -40,7 +40,7 @@
   padding: 4rem 2rem;
   position: relative;
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(8px) saturate(180%);
   border-radius: 48px;
   box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.2);
   overflow: hidden;
@@ -120,7 +120,7 @@
   
   .gridItem {
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px) saturate(180%);
+    backdrop-filter: blur(8px) saturate(180%);
     border-radius: 24px;
     padding: 2rem;
     text-align: center;
@@ -216,14 +216,13 @@
       position: absolute;
       inset: 0;
       background: rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(20px) saturate(180%);
+      backdrop-filter: blur(8px) saturate(180%);
       border-radius: 48px;
       z-index: -1;
     }
   }
 }
 
-// Base wave styles with overlay
 %waveBase {
   position: relative;
   
@@ -234,204 +233,189 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Yellow-Purple-new.png');
-    background-size: cover;
-    background-position: center;
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
     opacity: 0.7;
-    mix-blend-mode: color-burn;
     pointer-events: none;
     z-index: 1;
   }
 }
 
+// Green Purple
 .waveGreenPurple {
   @extend %waveBase;
+  
   &::after {
-    mix-blend-mode: multiply;
+    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Green-Purple.png');
   }
   &.top { 
     background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Green-Purple-Top.png');
   }
   &.bottom { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Green-Purple-Top.png');
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Green-Purple-Bottom.png');
   }
   &.final { 
     background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Green-Purple-Top.png');
   }
 }
 
-.waveGreenYellow {
+// Pink Green
+.wavePinkGreen {
   @extend %waveBase;
+  
   &::after {
-    mix-blend-mode: hard-light;
+    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Pink-Green.png');
   }
   &.top { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Green-Yellow-Top.png');
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Pink-Green-Top.png');
   }
   &.bottom { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Green-Yellow-Top.png');
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Pink-Green-Bottom.png');
   }
   &.final { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Green-Yellow-Top.png');
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Pink-Green-Top.png');
   }
 }
 
-.waveLight {
+// Purple Yellow
+.wavePurpleYellow {
   @extend %waveBase;
+  
   &::after {
-    mix-blend-mode: overlay;
+    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Purple-Yellow.png');
   }
   &.top { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Grey-Light-Top.png');
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Purple-Yellow-Top.png');
   }
   &.bottom { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Grey-Light-Top.png');
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Purple-Yellow-Bottom.png');
   }
   &.final { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Grey-Light-Top.png');
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Purple-Yellow-Top.png');
   }
 }
 
-.waveNight {
-  @extend %waveBase;
-  &::after {
-    mix-blend-mode: screen;
-  }
-  &.top { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Night-Top.png');
-  }
-  &.bottom { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Night-Top.png');
-  }
-  &.final { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Night-Top.png');
-  }
-}
-
-.wavePinkPurple {
-  @extend %waveBase;
-  &::after {
-    mix-blend-mode: color;
-  }
-  &.top { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Pink-Purple-Top.png');
-  }
-  &.bottom { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Pink-Purple-Top.png');
-  }
-  &.final { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Pink-Purple-Top.png');
-  }
-}
-
-.wavePurplePink {
-  @extend %waveBase;
-  &::after {
-    mix-blend-mode: darken;
-  }
-  &.top { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Purple-Pink-Top.png');
-  }
-  &.bottom { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Purple-Pink-Top.png');
-  }
-  &.final { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Purple-Pink-Top.png');
-  }
-}
-
+// Yellow Pink
 .waveYellowPink {
   @extend %waveBase;
+  
   &::after {
-    mix-blend-mode: lighten;
+    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Yellow-Pink.png');
   }
   &.top { 
     background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Yellow-Pink-Top.png');
   }
   &.bottom { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Yellow-Pink-Top.png');
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Yellow-Pink-Bottom.png');
   }
   &.final { 
     background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Yellow-Pink-Top.png');
   }
 }
 
-.waveYellowPurple {
+// Grey Light
+.waveGreyLight {
   @extend %waveBase;
+  
   &::after {
-    mix-blend-mode: difference;
+    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Grey-Light.png');
   }
   &.top { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Yellow-Purple-Top.png');
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Grey-Light-Top.png');
   }
   &.bottom { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Yellow-Purple-Top.png');
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Grey-Light-Bottom.png');
   }
   &.final { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Yellow-Purple-Top.png');
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Grey-Light-Top.png');
   }
 }
 
-// Banner backgrounds for content sections
+// Night (Dark)
+.waveNight {
+  @extend %waveBase;
+  
+  &::after {
+    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Night.png');
+  }
+  &.top { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Night-Top.png');
+  }
+  &.bottom { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Night-Bottom.png');
+  }
+  &.final { 
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Night-Top.png');
+  }
+}
+
+// Content banner backgrounds
 .contentBannerGreenPurple {
   .content {
-    background-image: url('/assets/GD-2D/GD-Banners/GD-Green-Purple-03.png');
+    background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Green-Purple-03.png');
   }
 }
 
 .contentBannerPinkGreen {
   .content {
-    background-image: url('/assets/GD-2D/GD-Banners/GD-Pink-Green-03.png');
+    background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Pink-Green-03.png');
   }
 }
 
 .contentBannerPurpleYellow {
   .content {
-    background-image: url('/assets/GD-2D/GD-Banners/GD-Purple-Yellow-03.png');
+    background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Purple-Yellow-03.png');
   }
 }
 
 .contentBannerYellowPink {
   .content {
-    background-image: url('/assets/GD-2D/GD-Banners/GD-Yellow-Pink-03.png');
+    background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Yellow-Pink-03.png');
   }
 }
 
 .contentBannerGreyLight {
   .content {
-    background-image: url('/assets/GD-2D/GD-Banners/GD-Grey-Light-03.png');
+    background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Grey-Light-03.png');
   }
 }
 
 .contentBannerGreyDark {
   .content {
-    background-image: url('/assets/GD-2D/GD-Banners/GD-Grey-Dark-03.png');
+    background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Grey-Dark-03.png');
+  }
+}
+
+.contentBannerNight {
+  .content {
+    background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Night-03.png');
   }
 }
 
 // Banner backgrounds for cards
 .bannerGreenPurple {
-  background-image: url('/assets/GD-2D/GD-Banners/GD-Green-Purple-03.png');
+  background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Green-Purple-03.png');
 }
 
 .bannerPinkGreen {
-  background-image: url('/assets/GD-2D/GD-Banners/GD-Pink-Green-03.png');
+  background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Pink-Green-03.png');
 }
 
 .bannerPurpleYellow {
-  background-image: url('/assets/GD-2D/GD-Banners/GD-Purple-Yellow-03.png');
+  background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Purple-Yellow-03.png');
 }
 
 .bannerYellowPink {
-  background-image: url('/assets/GD-2D/GD-Banners/GD-Yellow-Pink-03.png');
+  background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Yellow-Pink-03.png');
 }
 
 .bannerGreyLight {
-  background-image: url('/assets/GD-2D/GD-Banners/GD-Grey-Light-03.png');
+  background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Grey-Light-03.png');
 }
 
 .bannerGreyDark {
-  background-image: url('/assets/GD-2D/GD-Banners/GD-Grey-Dark-03.png');
+  background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Grey-Dark-03.png');
 }
 
 // Card styles

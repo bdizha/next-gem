@@ -6,7 +6,7 @@ import { Grid } from '../Grid/Grid';
 import { Action } from '../Action/Action';
 import { Slider } from '../Slider/Slider';
 import clsx from 'clsx';
-import { scapeClasses, contentBannerClasses, getRandomClass } from '../../utils/backgrounds';
+import { getBackgroundClasses } from '../../utils/backgrounds';
 
 const BLOCK_COMPONENTS = {
   hero: Hero,
@@ -25,8 +25,7 @@ export function ContentBlocks({ blocks }: ContentBlocksProps) {
       {blocks.map((block, index) => {
         const isFirst = index === 0;
         const isLast = index === blocks.length - 1;
-        const scapeClass = getRandomClass(scapeClasses);
-        const contentBannerClass = getRandomClass(contentBannerClasses);
+        const { wave: waveClass, content: contentBannerClass } = getBackgroundClasses();
 
         let positionClass;
         if (block.type === 'hero') {
@@ -49,7 +48,7 @@ export function ContentBlocks({ blocks }: ContentBlocksProps) {
             key={block.id} 
             className={clsx(
               styles.section,
-              styles[scapeClass],
+              styles[waveClass],
               styles[contentBannerClass],
               styles[positionClass]
             )}

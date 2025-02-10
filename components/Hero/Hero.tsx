@@ -28,11 +28,11 @@ export function Hero({ title, titleAccent, accentColor = 'pink', description, im
           </h1>
           {description && <p>{description}</p>}
         </div>
-        {image && (
+        {/* {image && (
           <div className={styles.heroImage}>
             <Image src={image} alt="" width={600} height={600} priority />
           </div>
-        )}
+        )} */}
       </div>
     </section>
   );

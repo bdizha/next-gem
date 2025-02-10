@@ -1,7 +1,7 @@
 .hero {
   width: 100%;
-  min-height: 100vh;
-  padding: 6rem 2rem;
+  min-height: 60vh;
+  padding: 4rem 2rem;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -36,6 +36,8 @@
 
 .text {
   flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
   
   h1 {
     font-family: var(--font-graphigem-bold);
@@ -43,6 +45,7 @@
     line-height: 1.1;
     margin-bottom: 2rem;
     color: white;
+    text-align: center;
     
     span {
       display: block;
@@ -56,6 +59,7 @@
     line-height: 1.4;
     max-width: 600px;
     color: rgba(255, 255, 255, 0.9);
+    text-align: center;
   }
 }
 
