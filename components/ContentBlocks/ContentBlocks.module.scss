@@ -204,16 +204,6 @@
     background-position: top center !important;
   }
 
-  &.bottom {
-    align-items: center;
-    background-position: top center !important;
-  }
-
-  &.final {
-    align-items: flex-end;
-    background-position: top center !important;
-  }
-
   .content {
     position: relative;
     z-index: 2;
@@ -225,17 +215,68 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    box-shadow: 
+      0 48px 100px 0 rgba(0, 0, 0, 0.25),
+      0 24px 60px -12px rgba(0, 0, 0, 0.25),
+      0 -2px 6px 0 rgba(255, 255, 255, 0.1) inset,
+      0 2px 6px 0 rgba(0, 0, 0, 0.2) inset;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 
     &::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(8px) saturate(180%);
+      background: rgba(255, 255, 255, 0.08);
       border-radius: 48px;
       z-index: -1;
     }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 48px;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.15;
+      mix-blend-mode: soft-light;
+      z-index: -1;
+    }
   }
+}
+
+.card {
+  position: relative;
+  padding: 2rem;
+  border-radius: 24px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 
+    0 48px 100px 0 rgba(0, 0, 0, 0.25),
+    0 24px 60px -12px rgba(0, 0, 0, 0.25),
+    0 -2px 6px 0 rgba(255, 255, 255, 0.1) inset,
+    0 2px 6px 0 rgba(0, 0, 0, 0.2) inset;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 0;
+  }
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
 }
 
 %waveBase {
@@ -370,11 +411,17 @@
   .content {
     background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Green-Purple-02.png');
   }
+  :global(.Grid_card__0zD7G) {
+    background-image: url('/assets/GD-2D/GD-Rays/GD-Ray-Green-Purple.png');
+  }
 }
 
 .contentGradientPinkGreen {
   .content {
     background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Pink-Green-02.png');
+  }
+  :global(.Grid_card__0zD7G) {
+    background-image: url('/assets/GD-2D/GD-Rays/GD-Ray-Pink-Green.png');
   }
 }
 
@@ -382,11 +429,17 @@
   .content {
     background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Purple-Yellow-02.png');
   }
+  :global(.Grid_card__0zD7G) {
+    background-image: url('/assets/GD-2D/GD-Rays/GD-Ray-Purple-Yellow.png');
+  }
 }
 
 .contentGradientYellowPink {
   .content {
     background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Yellow-Pink-02.png');
+  }
+  :global(.Grid_card__0zD7G) {
+    background-image: url('/assets/GD-2D/GD-Rays/GD-Ray-Yellow-Pink.png');
   }
 }
 
@@ -394,11 +447,17 @@
   .content {
     background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Grey-Light-02.png');
   }
+  :global(.Grid_card__0zD7G) {
+    background-image: url('/assets/GD-2D/GD-Rays/GD-Ray-Grey-Light.png');
+  }
 }
 
 .contentGradientGreyDark {
   .content {
     background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Grey-Dark-02.png');
+  }
+  :global(.Grid_card__0zD7G) {
+    background-image: url('/assets/GD-2D/GD-Rays/GD-Ray-Grey-Dark.png');
   }
 }
 
@@ -406,29 +465,7 @@
   .content {
     background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Night-02.png');
   }
-}
-
-// Card styles
-.card {
-  position: relative;
-  padding: 2rem;
-  border-radius: 24px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  height: 100%;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 0;
+  :global(.Grid_card__0zD7G) {
+    background-image: url('/assets/GD-2D/GD-Rays/GD-Ray-Night.png');
   }
-}
-
-.cardContent {
-  position: relative;
-  z-index: 1;
 }
