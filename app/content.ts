@@ -10,7 +10,7 @@ export const homeContent = {
       title: 'Virtual Worlds, Real Impact',
       subtitle: 'Step into the next era of brand engagement with virtual worlds and spatial branding experiences.',
       description: 'We create immersive digital experiences that transform how brands connect with their audience in the virtual space.',
-      image: '/assets/GD-2D/GD-Icon/GD-P-Icon-White.png'
+      image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Vision.png'
     },
     {
       type: 'grid',
@@ -23,17 +23,17 @@ export const homeContent = {
         {
           title: 'Virtual Worlds',
           description: 'Build immersive digital environments that showcase your brand in innovative ways.',
-          image: '/icons/GD-Icon-011.png'
+          image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Robot.png'
         },
         {
           title: 'Digital Characters',
           description: 'Bring your brand to life with unique character designs and animations.',
-          image: '/icons/GD-Icon-012.png'
+          image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Control.png'
         },
         {
           title: 'Brand Integration',
           description: 'Seamlessly integrate your brand into virtual experiences.',
-          image: '/icons/GD-Icon-013.png'
+          image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Vision.png'
         }
       ]
     },
@@ -48,17 +48,17 @@ export const homeContent = {
         {
           title: 'Brand Strategy',
           description: 'Develop a comprehensive digital brand strategy that resonates with your audience.',
-          image: '/icons/GD-Icon-014.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Control.png'
         },
         {
           title: 'Visual Identity',
           description: 'Create a distinctive visual language that captures your brand essence.',
-          image: '/icons/GD-Icon-015.png'
+          image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Skills.png'
         },
         {
           title: 'Digital Experience',
           description: 'Design intuitive and engaging digital touchpoints.',
-          image: '/icons/GD-Icon-016.png'
+          image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Vision.png'
         }
       ]
     },
@@ -73,17 +73,17 @@ export const homeContent = {
         {
           title: 'Interactive Design',
           description: 'Build engaging interactions that keep users coming back.',
-          image: '/icons/GD-Icon-017.png'
+          image: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Rocket.png'
         },
         {
           title: 'User Experience',
           description: 'Craft seamless experiences that guide users naturally.',
-          image: '/icons/GD-Icon-018.png'
+          image: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Process.png'
         },
         {
           title: 'Performance',
           description: 'Optimize for speed and reliability across all platforms.',
-          image: '/icons/GD-Icon-019.png'
+          image: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Check.png'
         }
       ]
     },
@@ -93,7 +93,7 @@ export const homeContent = {
       theme: 'purple',
       accent: 'darkPurple',
       buttonStyle: 'solid',
-      image: '/icons/GD-Icon-020.png',
+      image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Vision.png',
       title: 'Our Approach',
       subtitle: 'We believe in a collaborative approach to creating virtual worlds. Our team works closely with you to understand your vision and bring it to life in ways that exceed expectations.',
       buttonText: 'Learn More',
@@ -105,7 +105,7 @@ export const homeContent = {
       theme: 'darkPurple',
       accent: 'purple',
       buttonStyle: 'outline',
-      image: '/icons/GD-Icon-021.png',
+      image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Story.png',
       title: 'Get in Touch',
       subtitle: 'Ready to transform your brand with immersive digital experiences? Let\'s start a conversation about your project.',
       buttonText: 'Contact Us',

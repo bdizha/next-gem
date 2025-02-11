@@ -1,43 +1,52 @@
-import { PageContent } from '../../types/content';
+import { ContentBlock } from '../../types/content';
 
-export const contactContent: PageContent = {
+export const contactContent = {
   blocks: [
     {
       type: 'hero',
       id: 'contact-hero',
-      titleAccent: 'Get in',
-      title: 'Touch',
-      accentColor: 'purple',
-      description: 'Ready to start your journey into the virtual space? We\'d love to hear from you.',
-      image: '/images/contact-hero.mp4'
+      theme: 'purple',
+      accent: 'darkPurple',
+      title: 'Get in Touch',
+      subtitle: "Let's create something amazing together",
+      description: 'Ready to transform your brand in the virtual space? We\'re here to help bring your vision to life.',
+      image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Story.png'
     },
     {
       type: 'grid',
-      id: 'contact-methods',
-      title: 'Connect With Us',
-      titleAccent: 'Let\'s Talk',
-      accentColor: 'purple',
-      description: 'Choose the best way to reach out and start a conversation about your brand\'s future in the virtual space.',
+      id: 'contact-options',
+      theme: 'purple',
+      accent: 'darkPurple',
+      title: 'How to Reach Us',
+      subtitle: 'Multiple ways to connect',
+      description: 'Choose the method that works best for you to start the conversation.',
       items: [
         {
           title: 'Schedule a Call',
-          description: 'Book a consultation with our team to discuss your vision.',
-          icon: '/icons/GD-Icon-029.png',
-          background: 'purpleWave'
+          description: 'Book a consultation to discuss your project in detail.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Profile.png'
         },
         {
           title: 'Send a Message',
-          description: 'Fill out our contact form and we\'ll get back to you promptly.',
-          icon: '/icons/GD-Icon-030.png',
-          background: 'purpleWave'
+          description: 'Write to us about your project and goals.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Process.png'
         },
         {
-          title: 'Visit Us',
-          description: 'Meet us in person or in our virtual office space.',
-          icon: '/icons/GD-Icon-031.png',
-          background: 'purpleWave'
+          title: 'Visit Our Office',
+          description: 'Come meet our team in person.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Skills.png'
         }
       ]
+    },
+    {
+      type: 'banner',
+      id: 'contact-cta',
+      theme: 'darkPurple',
+      accent: 'purple',
+      title: 'Ready to start your journey?',
+      subtitle: 'Transform your brand today',
+      description: 'Take the first step towards creating an unforgettable digital experience.',
+      image: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Rocket.png'
     }
-  ]
+  ] as ContentBlock[]
 };

@@ -1,76 +1,86 @@
-import { PageContent } from '../../types/content';
+import { ContentBlock } from '../../types/content';
 
-export const homeContent: PageContent = {
+export const homeContent = {
   blocks: [
     {
       type: 'hero',
       id: 'home-hero',
+      theme: 'purple',
+      accent: 'darkPurple',
       title: 'Building Immersive Experiences',
       description: 'Transform your brand through immersive digital experiences. Create engaging virtual worlds that captivate your audience.',
-      image: '/images/hero.mp4'
+      image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Vision.png'
     },
     {
       type: 'grid',
       id: 'envision',
+      theme: 'purple',
+      accent: 'darkPurple',
       title: 'Envision Your Future',
+      subtitle: 'Where innovation meets imagination',
       description: 'Imagine a world where your brand transcends traditional boundaries. Where every interaction is an opportunity to amaze.',
       items: [
         {
           title: 'Innovation',
-          description: 'Push the boundaries of what\'s possible with cutting-edge technology and creative solutions.',
-          icon: '/icons/GD-Icon-001.png',
+          description: 'Pushing boundaries in the virtual space with cutting-edge solutions.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Robot.png',
           background: 'pinkWave'
         },
         {
           title: 'Creativity',
-          description: 'Blend artistry and technology to create unique and memorable brand experiences.',
-          icon: '/icons/GD-Icon-002.png',
-          background: 'pinkWave'
+          description: 'Transforming ideas into captivating virtual experiences.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Goggles.png',
+          background: 'purpleWave'
         },
         {
-          title: 'Growth',
-          description: 'Scale your brand presence and reach new heights in the digital landscape.',
-          icon: '/icons/GD-Icon-003.png',
-          background: 'pinkWave'
+          title: 'Excellence',
+          description: 'Delivering exceptional quality in every project.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Check.png',
+          background: 'yellowWave'
         }
       ]
     },
     {
       type: 'grid',
       id: 'services',
-      title: 'Comprehensive Solutions',
-      description: 'We offer a full suite of services to help you succeed in the digital realm.',
+      theme: 'purple',
+      accent: 'darkPurple',
+      title: 'Our Services',
+      subtitle: 'Stand out in the digital landscape',
       items: [
         {
-          title: 'Virtual Worlds',
-          description: 'Create immersive environments that bring your brand to life.',
-          icon: '/icons/GD-Icon-004.png',
-          background: 'greenWave'
+          title: 'Virtual Spaces',
+          description: 'Create immersive digital environments that engage and inspire.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Skills.png',
+          background: 'pinkWave'
         },
         {
-          title: 'Digital Assets',
-          description: 'Design and develop unique digital assets that represent your brand.',
-          icon: '/icons/GD-Icon-005.png',
-          background: 'greenWave'
+          title: 'Digital Experiences',
+          description: 'Design interactive journeys that captivate your audience.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Vision.png',
+          background: 'purpleWave'
         },
         {
           title: 'Brand Strategy',
-          description: 'Develop comprehensive strategies for your digital presence.',
-          icon: '/icons/GD-Icon-006.png',
-          background: 'greenWave'
+          description: 'Develop a comprehensive digital brand strategy.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Control.png',
+          background: 'yellowWave'
         }
       ]
     },
     {
       type: 'action',
-      id: 'home-cta',
-      title: 'Start Your Journey',
-      description: 'Ready to transform your brand? Let\'s create something amazing together.',
-      image: '/icons/GD-Icon-007.png',
+      id: 'cta',
+      theme: 'darkPurple',
+      accent: 'purple',
+      title: 'Ready to transform your brand?',
+      subtitle: "Let's create something amazing together",
+      description: 'Join us in shaping the future of brand experiences in the virtual space.',
+      image: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Rocket.png',
       cta: {
         label: 'Get Started',
         href: '/contact'
       }
     }
-  ]
+  ] as ContentBlock[]
 };

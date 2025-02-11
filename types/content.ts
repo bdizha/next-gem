@@ -30,7 +30,12 @@ export type ActionBlock = {
   accent?: string;
   image?: string;
   title?: string;
+  subtitle?: string;
   description?: string;
+  cta?: {
+    label: string;
+    href: string;
+  };
 };
 
 export type SliderBlock = {

@@ -10,7 +10,7 @@ export const approachContent = {
       title: 'Our Approach',
       subtitle: 'Creating immersive digital experiences through innovative design and technology',
       description: 'We combine creativity, technology, and strategy to build memorable brand experiences in the virtual world.',
-      image: '/assets/GD-2D/GD-Icon/GD-P-Icon-White.png'
+      image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Control.png'
     },
     {
       type: 'grid',
@@ -22,18 +22,18 @@ export const approachContent = {
       items: [
         {
           title: 'Brand Strategy',
-          description: 'Developing comprehensive digital brand strategies that align with your business goals and resonate with your target audience.',
-          image: '/icons/GD-Icon-001.png'
+          description: 'We develop comprehensive strategies that align with your goals.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Control.png'
         },
         {
           title: 'Visual Identity',
-          description: 'Creating distinctive visual elements that capture your brand essence and ensure consistency across digital platforms.',
-          image: '/icons/GD-Icon-002.png'
+          description: 'Creating distinctive visual languages that capture brand essence.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Skills.png'
         },
         {
           title: 'Digital Experience',
-          description: 'Designing intuitive and engaging digital experiences that strengthen brand connection and drive user engagement.',
-          image: '/icons/GD-Icon-003.png'
+          description: 'Building immersive experiences that engage and inspire.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Vision.png'
         }
       ]
     },
@@ -48,17 +48,17 @@ export const approachContent = {
         {
           title: 'Character Design',
           description: 'Crafting unique brand mascots and characters that embody your brand personality and values.',
-          image: '/icons/GD-Icon-004.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Goggles.png'
         },
         {
           title: 'Animation',
           description: 'Creating engaging animations that tell your brand story and capture audience attention.',
-          image: '/icons/GD-Icon-005.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Process.png'
         },
         {
           title: 'Brand Integration',
           description: 'Seamlessly integrating characters into your brand ecosystem for consistent storytelling.',
-          image: '/icons/GD-Icon-006.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Rocket.png'
         }
       ]
     },
@@ -73,17 +73,17 @@ export const approachContent = {
         {
           title: 'Virtual Environments',
           description: 'Building immersive virtual spaces that showcase your brand and engage users in unique ways.',
-          image: '/icons/GD-Icon-007.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Robot.png'
         },
         {
           title: 'Interactive Experiences',
           description: 'Developing interactive features that encourage exploration and engagement within virtual spaces.',
-          image: '/icons/GD-Icon-008.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Check.png'
         },
         {
           title: 'Digital Integration',
           description: 'Connecting virtual experiences with real-world brand touchpoints for seamless engagement.',
-          image: '/icons/GD-Icon-009.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Refine.png'
         }
       ]
     },
@@ -97,7 +97,7 @@ export const approachContent = {
       subtitle: 'Ready to transform your brand with our innovative approach?',
       buttonText: 'Get in Touch',
       buttonLink: '/#contact-us',
-      image: '/icons/GD-Icon-010.png'
+      image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Story.png'
     }
   ] as ContentBlock[]
 };

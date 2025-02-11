@@ -10,7 +10,7 @@ export const aboutContent: PageContent = {
       title: 'Our Mission',
       subtitle: 'To entertain the world',
       description: 'We believe that future generations will experience the world through the lens of imagination. At Graphigem, we transform those imaginative visions into captivating brand experiences within the virtual space.',
-      image: '/assets/GD-2D/GD-Icon/GD-P-Icon-White.png'
+      image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Story.png'
     },
     {
       type: 'grid',
@@ -24,17 +24,17 @@ export const aboutContent: PageContent = {
         {
           title: 'Customer First',
           description: 'We constantly explore and implement the latest technologies and creative strategies to deliver cutting-edge virtual experiences.',
-          icon: '/icons/GD-Icon-011.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Robot.png'
         },
         {
           title: 'Brand-Centric',
           description: 'Your brand is unique. We craft every virtual world to amplify your identity and resonate with your target audience.',
-          icon: '/icons/GD-Icon-012.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Check.png'
         },
         {
           title: 'Future-Ready',
           description: 'The virtual space is evolving. We stay ahead of the curve, ensuring your brand is positioned for success in this dynamic landscape.',
-          icon: '/icons/GD-Icon-013.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Refine.png'
         }
       ]
     },
@@ -50,17 +50,17 @@ export const aboutContent: PageContent = {
         {
           title: 'Transform',
           description: 'We translate your brand vision into captivating virtual experiences that engage and inspire your audience.',
-          icon: '/icons/GD-Icon-014.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Goggles.png'
         },
         {
           title: 'Connect',
           description: 'We help you build meaningful connections with your audience through interactive and immersive virtual environments.',
-          icon: '/icons/GD-Icon-015.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Process.png'
         },
         {
           title: 'Scale',
           description: 'Expand your brand presence in the virtual space and unlock new opportunities for engagement and growth.',
-          icon: '/icons/GD-Icon-016.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Skills.png'
         }
       ]
     },
@@ -76,17 +76,17 @@ export const aboutContent: PageContent = {
         {
           title: 'Innovation',
           description: 'We embrace exploration and relentlessly pursue new ways to push the boundaries of virtual experiences.',
-          icon: '/icons/GD-Icon-017.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Rocket.png'
         },
         {
           title: 'Collaboration',
           description: 'We work closely with our clients, fostering open communication and building strong partnerships.',
-          icon: '/icons/GD-Icon-018.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Vision.png'
         },
         {
           title: 'Excellence',
           description: 'We are committed to delivering exceptional results through meticulous attention to detail and unwavering dedication.',
-          icon: '/icons/GD-Icon-019.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Control.png'
         }
       ]
     },

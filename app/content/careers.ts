@@ -1,56 +1,56 @@
-import { PageContent } from '../../types/content';
+import { ContentBlock } from '../../types/content';
 
-export const careersContent: PageContent = {
+export const careersContent = {
   blocks: [
     {
       type: 'hero',
       id: 'careers-hero',
-      titleAccent: 'Join Our',
-      title: 'Team',
-      accentColor: 'pink',
-      description: 'Help us shape the future of brand experiences in the virtual space.',
-      image: '/images/careers-hero.mp4'
+      theme: 'purple',
+      accent: 'darkPurple',
+      title: 'Join Our Team',
+      subtitle: 'Shape the future of digital experiences',
+      description: 'Be part of a team that\'s pushing the boundaries of what\'s possible in the virtual space.',
+      image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Vision.png'
     },
     {
       type: 'grid',
       id: 'why-join',
+      theme: 'purple',
+      accent: 'darkPurple',
       title: 'Why Join Us',
-      titleAccent: 'Growth & Innovation',
-      accentColor: 'pink',
-      description: 'Be part of a team that\'s pushing the boundaries of what\'s possible in the virtual space.',
+      subtitle: 'Be part of something special',
+      description: 'Join a team of innovators, creators, and visionaries shaping the future of brand experiences.',
       items: [
         {
-          title: 'Customer First',
-          description: 'Work with cutting-edge technologies and shape the future of digital experiences.',
-          icon: '/icons/GD-Icon-032.png',
-          background: 'pinkWave'
+          title: 'Innovation',
+          description: 'Work with cutting-edge technology and creative tools.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Rocket.png'
         },
         {
-          title: 'Growth Culture',
-          description: 'Continuous learning and development opportunities for all team members.',
-          icon: '/icons/GD-Icon-033.png',
-          background: 'pinkWave'
+          title: 'Growth',
+          description: 'Continuous learning and development opportunities.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Refine.png'
         },
         {
-          title: 'Global Impact',
-          description: 'Create experiences that reach and inspire audiences worldwide.',
-          icon: '/icons/GD-Icon-034.png',
-          background: 'pinkWave'
+          title: 'Impact',
+          description: 'Create work that makes a real difference.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Check.png'
         }
       ]
     },
     {
-      type: 'action',
+      type: 'banner',
       id: 'careers-cta',
-      theme: 'pink',
-      accent: 'green',
-      image: '/icons/GD-Icon-035.png',
-      title: 'Ready to Make an Impact?',
-      description: 'Explore our open positions and join our innovative team.',
+      theme: 'darkPurple',
+      accent: 'purple',
+      title: 'Ready to join our team?',
+      subtitle: "Let's create the future together",
+      description: 'Explore our open positions and find your perfect role.',
+      image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Skills.png',
       cta: {
-        label: 'View Openings',
-        href: '/careers#openings'
+        label: 'View Positions',
+        href: '/careers#positions'
       }
     }
-  ]
+  ] as ContentBlock[]
 };

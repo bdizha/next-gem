@@ -1,56 +1,56 @@
-import { PageContent } from '../../types/content';
+import { ContentBlock } from '../../types/content';
 
-export const portfolioContent: PageContent = {
+export const portfolioContent = {
   blocks: [
     {
       type: 'hero',
       id: 'portfolio-hero',
-      titleAccent: 'Our',
-      title: 'Work',
-      accentColor: 'yellow',
-      description: 'Explore our collection of immersive brand experiences and virtual worlds.',
-      image: '/images/portfolio-hero.mp4'
+      theme: 'purple',
+      accent: 'darkPurple',
+      title: 'Our Work',
+      subtitle: 'Transforming brands in the virtual space',
+      description: 'Explore our collection of innovative digital experiences and brand transformations.',
+      image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Vision.png'
     },
     {
       type: 'grid',
-      id: 'featured-work',
+      id: 'portfolio-highlights',
+      theme: 'purple',
+      accent: 'darkPurple',
       title: 'Featured Projects',
-      titleAccent: 'Success Stories',
-      accentColor: 'yellow',
-      description: 'Discover how we\'ve helped brands transform their digital presence through immersive experiences.',
+      subtitle: 'Recent success stories',
+      description: 'Discover how we\'ve helped brands create memorable digital experiences.',
       items: [
         {
-          title: 'Virtual Showroom',
-          description: 'An interactive product showcase for a leading luxury brand.',
-          icon: '/icons/GD-Icon-025.png',
-          background: 'yellowWave'
+          title: 'Virtual Showrooms',
+          description: 'Immersive digital spaces that showcase products and brand stories.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Skills.png'
         },
         {
-          title: 'Brand Museum',
-          description: 'A virtual museum experience celebrating a brand\'s heritage and future.',
-          icon: '/icons/GD-Icon-026.png',
-          background: 'yellowWave'
+          title: 'Brand Experiences',
+          description: 'Interactive digital journeys that engage and inspire audiences.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Story.png'
         },
         {
-          title: 'Digital Campus',
-          description: 'An immersive learning environment for corporate training.',
-          icon: '/icons/GD-Icon-027.png',
-          background: 'yellowWave'
+          title: 'Digital Assets',
+          description: 'Unique visual elements that strengthen brand identity.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Goggles.png'
         }
       ]
     },
     {
-      type: 'action',
+      type: 'banner',
       id: 'portfolio-cta',
-      theme: 'yellow',
+      theme: 'darkPurple',
       accent: 'purple',
-      image: '/icons/GD-Icon-028.png',
-      title: 'Want to See More?',
-      description: 'Contact us to explore our full portfolio and discuss your project.',
+      title: 'Ready to create your success story?',
+      subtitle: "Let's build something amazing together",
+      description: 'Transform your brand with our innovative digital solutions.',
+      image: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Rocket.png',
       cta: {
-        label: 'Get in Touch',
+        label: 'Start Your Project',
         href: '/contact'
       }
     }
-  ]
+  ] as ContentBlock[]
 };
