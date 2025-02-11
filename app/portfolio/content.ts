@@ -6,7 +6,7 @@ export const portfolioContent = {
       type: 'hero',
       id: 'portfolio-hero',
       theme: 'purple',
-      accent: 'darkPurple',
+      accent: 'pink',
       title: 'Our Portfolio',
       subtitle: 'Transforming brands in the virtual space',
       description: 'Explore our collection of innovative digital experiences and brand transformations.',
@@ -16,7 +16,7 @@ export const portfolioContent = {
       type: 'grid',
       id: 'portfolio-highlights',
       theme: 'purple',
-      accent: 'darkPurple',
+      accent: 'green',
       title: 'Featured Projects',
       subtitle: 'Recent success stories',
       description: 'Discover how we\'ve helped brands create memorable digital experiences.',
@@ -24,25 +24,28 @@ export const portfolioContent = {
         {
           title: 'Virtual Showrooms',
           description: 'Immersive digital spaces that showcase products and brand stories.',
-          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Skills.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Skills.png',
+          background: 'pinkWave'
         },
         {
           title: 'Brand Experiences',
           description: 'Interactive digital journeys that engage and inspire audiences.',
-          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Story.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Story.png',
+          background: 'purpleWave'
         },
         {
           title: 'Digital Assets',
           description: 'Unique visual elements that strengthen brand identity.',
-          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Goggles.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Goggles.png',
+          background: 'greenWave'
         }
       ]
     },
     {
       type: 'action',
       id: 'portfolio-cta',
-      theme: 'darkPurple',
-      accent: 'purple',
+      theme: 'purple',
+      accent: 'pink',
       title: 'Ready to create your success story?',
       subtitle: "Let's build something amazing together",
       description: 'Transform your brand with our innovative digital solutions.',

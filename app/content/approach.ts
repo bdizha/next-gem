@@ -6,7 +6,7 @@ export const approachContent = {
       type: 'hero',
       id: 'approach-hero',
       theme: 'purple',
-      accent: 'darkPurple',
+      accent: 'pink',
       title: 'Our Approach',
       subtitle: 'Creating immersive digital experiences through innovative design and technology',
       description: 'We combine creativity, technology, and strategy to build memorable brand experiences in the virtual world.',
@@ -16,31 +16,34 @@ export const approachContent = {
       type: 'grid',
       id: 'digital-branding',
       theme: 'purple',
-      accent: 'darkPurple',
+      accent: 'green',
       title: 'Digital Branding',
       subtitle: 'Building strong digital identities',
       items: [
         {
           title: 'Brand Strategy',
           description: 'We develop comprehensive strategies that align with your goals.',
-          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Control.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Control.png',
+          background: 'pinkWave'
         },
         {
           title: 'Visual Identity',
           description: 'Creating distinctive visual languages that capture brand essence.',
-          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Skills.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Skills.png',
+          background: 'purpleWave'
         },
         {
           title: 'Digital Experience',
           description: 'Building immersive experiences that engage and inspire.',
-          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Vision.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Vision.png',
+          background: 'greenWave'
         }
       ]
     },
     {
       type: 'grid',
       id: 'character-branding',
-      theme: 'darkPurple',
+      theme: 'pink',
       accent: 'purple',
       title: 'Character Branding',
       subtitle: 'Bringing brands to life through unique characters',
@@ -48,56 +51,64 @@ export const approachContent = {
         {
           title: 'Character Design',
           description: 'Crafting unique brand mascots and characters that embody your brand personality and values.',
-          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Goggles.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Goggles.png',
+          background: 'pinkWave'
         },
         {
           title: 'Animation',
-          description: 'Creating engaging animations that tell your brand story and capture audience attention.',
-          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Process.png'
+          description: 'Bringing characters to life through fluid motion and expressive animations.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Process.png',
+          background: 'purpleWave'
         },
         {
-          title: 'Brand Integration',
-          description: 'Seamlessly integrating characters into your brand ecosystem for consistent storytelling.',
-          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Rocket.png'
+          title: 'Integration',
+          description: 'Seamlessly incorporating characters across digital touchpoints.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Check.png',
+          background: 'greenWave'
         }
       ]
     },
     {
       type: 'grid',
-      id: 'virtual-world',
+      id: 'virtual-worlds',
       theme: 'purple',
-      accent: 'darkPurple',
-      title: 'Virtual World',
-      subtitle: 'Creating immersive digital spaces',
+      accent: 'yellow',
+      title: 'Virtual Worlds',
+      subtitle: 'Creating immersive digital environments',
       items: [
         {
-          title: 'Virtual Environments',
-          description: 'Building immersive virtual spaces that showcase your brand and engage users in unique ways.',
-          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Robot.png'
+          title: 'World Building',
+          description: 'Designing rich, interactive virtual environments that tell your brand story.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Robot.png',
+          background: 'pinkWave'
         },
         {
-          title: 'Interactive Experiences',
-          description: 'Developing interactive features that encourage exploration and engagement within virtual spaces.',
-          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Check.png'
+          title: 'User Experience',
+          description: 'Crafting intuitive navigation and engaging interactions.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Refine.png',
+          background: 'purpleWave'
         },
         {
-          title: 'Digital Integration',
-          description: 'Connecting virtual experiences with real-world brand touchpoints for seamless engagement.',
-          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Refine.png'
+          title: 'Performance',
+          description: 'Optimizing for smooth performance across all platforms.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Control.png',
+          background: 'greenWave'
         }
       ]
     },
     {
       type: 'action',
-      id: 'start-project',
-      theme: 'darkPurple',
-      accent: 'purple',
-      buttonStyle: 'solid',
-      title: 'Start Your Project',
-      subtitle: 'Ready to transform your brand with our innovative approach?',
-      buttonText: 'Get in Touch',
-      buttonLink: '/#contact-us',
-      image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Story.png'
+      id: 'approach-cta',
+      theme: 'purple',
+      accent: 'pink',
+      title: 'Ready to explore?',
+      subtitle: "Let's bring your brand into the virtual space",
+      description: 'Transform your brand with our innovative approach to digital experiences.',
+      image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Story.png',
+      cta: {
+        label: 'Start Your Journey',
+        href: '/contact'
+      }
     }
   ] as ContentBlock[]
 };

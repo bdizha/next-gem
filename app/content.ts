@@ -6,7 +6,7 @@ export const homeContent = {
       type: 'hero',
       id: 'hero',
       theme: 'purple',
-      accent: 'darkPurple',
+      accent: 'pink',
       title: 'Virtual Worlds, Real Impact',
       subtitle: 'Step into the next era of brand engagement with virtual worlds and spatial branding experiences.',
       description: 'We create immersive digital experiences that transform how brands connect with their audience in the virtual space.',
@@ -16,31 +16,34 @@ export const homeContent = {
       type: 'grid',
       id: 'envision-future',
       theme: 'purple',
-      accent: 'darkPurple',
+      accent: 'green',
       title: 'Envision the Future',
       subtitle: 'Create lasting impressions in virtual spaces',
       items: [
         {
           title: 'Virtual Worlds',
           description: 'Build immersive digital environments that showcase your brand in innovative ways.',
-          image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Robot.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Robot.png',
+          background: 'pinkWave'
         },
         {
           title: 'Digital Characters',
           description: 'Bring your brand to life with unique character designs and animations.',
-          image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Control.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Control.png',
+          background: 'purpleWave'
         },
         {
           title: 'Brand Integration',
           description: 'Seamlessly integrate your brand into virtual experiences.',
-          image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Vision.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Vision.png',
+          background: 'greenWave'
         }
       ]
     },
     {
       type: 'grid',
       id: 'unleash-brand',
-      theme: 'darkPurple',
+      theme: 'pink',
       accent: 'purple',
       title: 'Unleash Your Brand',
       subtitle: 'Stand out in the digital landscape',
@@ -48,42 +51,20 @@ export const homeContent = {
         {
           title: 'Brand Strategy',
           description: 'Develop a comprehensive digital brand strategy that resonates with your audience.',
-          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Control.png'
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Control.png',
+          background: 'pinkWave'
         },
         {
           title: 'Visual Identity',
-          description: 'Create a distinctive visual language that captures your brand essence.',
-          image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Skills.png'
+          description: 'Create a distinctive visual language that sets your brand apart.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Goggles.png',
+          background: 'purpleWave'
         },
         {
-          title: 'Digital Experience',
-          description: 'Design intuitive and engaging digital touchpoints.',
-          image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Vision.png'
-        }
-      ]
-    },
-    {
-      type: 'grid',
-      id: 'delight-customer',
-      theme: 'purple',
-      accent: 'darkPurple',
-      title: 'Delight Your Customers',
-      subtitle: 'Create memorable brand experiences',
-      items: [
-        {
-          title: 'Interactive Design',
-          description: 'Build engaging interactions that keep users coming back.',
-          image: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Rocket.png'
-        },
-        {
-          title: 'User Experience',
-          description: 'Craft seamless experiences that guide users naturally.',
-          image: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Process.png'
-        },
-        {
-          title: 'Performance',
-          description: 'Optimize for speed and reliability across all platforms.',
-          image: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Check.png'
+          title: 'Digital Assets',
+          description: 'Build a library of digital assets that strengthen your brand presence.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Skills.png',
+          background: 'greenWave'
         }
       ]
     },
@@ -91,7 +72,7 @@ export const homeContent = {
       type: 'action',
       id: 'our-approach',
       theme: 'purple',
-      accent: 'darkPurple',
+      accent: 'pink',
       buttonStyle: 'solid',
       image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Vision.png',
       title: 'Our Approach',
