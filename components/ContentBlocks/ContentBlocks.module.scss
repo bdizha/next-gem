@@ -249,6 +249,32 @@
   }
 }
 
+// Wave backgrounds
+.waveGreenPurple {
+  background: var(--gradient-green-purple);
+}
+
+.wavePinkGreen {
+  background: var(--gradient-pink-green);
+}
+
+.wavePurpleYellow {
+  background: var(--gradient-purple-yellow);
+}
+
+.waveYellowPink {
+  background: var(--gradient-yellow-pink);
+}
+
+.waveGreyLight {
+  background: var(--gradient-grey-light);
+}
+
+.waveNight {
+  background: var(--gradient-night-purple);
+}
+
+// Text accent colors for first word
 .section.waveGreenPurple :global(.textAccent) {
   color: var(--color-green);
 }
