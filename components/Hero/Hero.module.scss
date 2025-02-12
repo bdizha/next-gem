@@ -1,25 +1,61 @@
 .hero {
   width: 100%;
-  min-height: 64vh;
-  padding: 8rem 2rem 4rem;
-  position: relative;
-  overflow: hidden;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(45deg, var(--color-purple) 0%, var(--color-dark-purple) 100%);
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
   
-  &::before {
-    content: '';
+  .content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    
+    h1 {
+      font-family: var(--font-secondary);
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: 1;
+      margin-bottom: 2rem;
+      
+      span {
+        display: inline;
+      }
+    }
+    
+    p {
+      font-family: var(--font-base);
+      font-size: clamp(1.25rem, 2vw, 1.5rem);
+      line-height: 1.6;
+      margin-bottom: 3rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      
+      button {
+        min-width: 180px;
+        font-family: var(--font-primary);
+      }
+    }
+  }
+  
+  .background {
     position: absolute;
-    top: -10%;
-    left: -10%;
-    width: 120%;
-    height: 120%;
-    background: inherit;
-    animation: zoomBackground 20s ease-in-out infinite;
-    transform-origin: center;
-    z-index: 0;
+    inset: 0;
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
   }
 }
 

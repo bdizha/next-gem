@@ -10,7 +10,7 @@
     margin: 0 auto;
     
     h2 {
-      font-family: var(--font-graphigem-bold);
+      font-family: var(--font-secondary);
       font-size: clamp(2rem, 4vw, 3rem);
       line-height: 1.1;
       margin-bottom: 1.5rem;
@@ -21,6 +21,7 @@
     }
     
     p {
+      font-family: var(--font-base);
       font-size: 1.25rem;
       line-height: 1.6;
       color: rgba(255, 255, 255, 0.9);
@@ -40,6 +41,12 @@
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       transition: transform 0.3s ease;
+      box-shadow: 
+        0 48px 100px 0 rgba(0, 0, 0, 0.25),
+        0 24px 60px -12px rgba(0, 0, 0, 0.25),
+        0 -2px 6px 0 rgba(255, 255, 255, 0.1) inset,
+        0 2px 6px 0 rgba(0, 0, 0, 0.2) inset;
+      border: 1px solid rgba(255, 255, 255, 0.1);
       
       &:hover {
         transform: translateY(-4px);
@@ -64,12 +71,13 @@
         padding: 2rem;
         
         h3 {
-          font-family: var(--font-graphigem-bold);
+          font-family: var(--font-secondary);
           font-size: 1.5rem;
           margin-bottom: 1rem;
         }
         
         p {
+          font-family: var(--font-base);
           font-size: 1rem;
           line-height: 1.6;
           color: rgba(255, 255, 255, 0.9);

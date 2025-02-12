@@ -1,33 +1,65 @@
+// Primary colors
+$color-green: #00ff9d;
+$color-pink: #ff00ff;
+$color-purple: #9d00ff;
+$color-yellow: #ffff00;
+$color-grey: #808080;
+$color-night: #1a1a2e;
+
+// Dark variations
+$color-dark-green: #00804e;
+$color-dark-pink: #800080;
+$color-dark-purple: #4a0080;
+$color-dark-yellow: #808000;
+$color-dark-grey: #404040;
+$color-dark-night: #0d0d17;
+
+// Light variations
+$color-light-green: #80ffce;
+$color-light-pink: #ff80ff;
+$color-light-purple: #ce80ff;
+$color-light-yellow: #ffff80;
+$color-light-grey: #d3d3d3;
+$color-light-night: #2d2d4a;
+
+// Gradient pairs
+$gradient-green-purple: linear-gradient(45deg, $color-green 0%, $color-purple 100%);
+$gradient-pink-green: linear-gradient(45deg, $color-pink 0%, $color-green 100%);
+$gradient-purple-yellow: linear-gradient(45deg, $color-purple 0%, $color-yellow 100%);
+$gradient-yellow-pink: linear-gradient(45deg, $color-yellow 0%, $color-pink 100%);
+$gradient-grey-light: linear-gradient(45deg, $color-grey 0%, $color-light-grey 100%);
+$gradient-night-purple: linear-gradient(45deg, $color-night 0%, $color-dark-purple 100%);
+
 :root {
   // Primary colors
-  --color-green: #00ff9d;
-  --color-pink: #ff00ff;
-  --color-purple: #9d00ff;
-  --color-yellow: #ffff00;
-  --color-grey: #808080;
-  --color-night: #1a1a2e;
+  --color-green: #{$color-green};
+  --color-pink: #{$color-pink};
+  --color-purple: #{$color-purple};
+  --color-yellow: #{$color-yellow};
+  --color-grey: #{$color-grey};
+  --color-night: #{$color-night};
 
   // Dark variations
-  --color-dark-green: #00804e;
-  --color-dark-pink: #800080;
-  --color-dark-purple: #4a0080;
-  --color-dark-yellow: #808000;
-  --color-dark-grey: #404040;
-  --color-dark-night: #0d0d17;
+  --color-dark-green: #{$color-dark-green};
+  --color-dark-pink: #{$color-dark-pink};
+  --color-dark-purple: #{$color-dark-purple};
+  --color-dark-yellow: #{$color-dark-yellow};
+  --color-dark-grey: #{$color-dark-grey};
+  --color-dark-night: #{$color-dark-night};
 
   // Light variations
-  --color-light-green: #80ffce;
-  --color-light-pink: #ff80ff;
-  --color-light-purple: #ce80ff;
-  --color-light-yellow: #ffff80;
-  --color-light-grey: #d3d3d3;
-  --color-light-night: #2d2d4a;
+  --color-light-green: #{$color-light-green};
+  --color-light-pink: #{$color-light-pink};
+  --color-light-purple: #{$color-light-purple};
+  --color-light-yellow: #{$color-light-yellow};
+  --color-light-grey: #{$color-light-grey};
+  --color-light-night: #{$color-light-night};
 
   // Gradient pairs
-  --gradient-green-purple: linear-gradient(45deg, var(--color-green) 0%, var(--color-purple) 100%);
-  --gradient-pink-green: linear-gradient(45deg, var(--color-pink) 0%, var(--color-green) 100%);
-  --gradient-purple-yellow: linear-gradient(45deg, var(--color-purple) 0%, var(--color-yellow) 100%);
-  --gradient-yellow-pink: linear-gradient(45deg, var(--color-yellow) 0%, var(--color-pink) 100%);
-  --gradient-grey-light: linear-gradient(45deg, var(--color-grey) 0%, var(--color-light-grey) 100%);
-  --gradient-night-purple: linear-gradient(45deg, var(--color-night) 0%, var(--color-dark-purple) 100%);
+  --gradient-green-purple: #{$gradient-green-purple};
+  --gradient-pink-green: #{$gradient-pink-green};
+  --gradient-purple-yellow: #{$gradient-purple-yellow};
+  --gradient-yellow-pink: #{$gradient-yellow-pink};
+  --gradient-grey-light: #{$gradient-grey-light};
+  --gradient-night-purple: #{$gradient-night-purple};
 }
