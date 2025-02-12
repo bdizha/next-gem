@@ -8,9 +8,18 @@ import clsx from 'clsx';
 
 type HeroProps = HeroBlock & {
   className?: string;
+  theme?: string;
 };
 
-export function Hero({ title, titleAccent, accentColor = 'pink', description, image, className }: HeroProps) {
+export function Hero({ title, titleAccent, accentColor = 'pink', description, image, className, theme }: HeroProps) {
+  // Split title into words
+  const words = title.split(' ');
+  const firstWord = words[0];
+  const restOfTitle = words.slice(1).join(' ');
+
+  // Extract first color from theme (e.g., 'yellow' from 'yellowPurple')
+  const themeFirstColor = theme?.match(/^[a-z]+/i)?.[0].toLowerCase() || accentColor;
+
   return (
     <section className={clsx(
       styles.hero,
@@ -24,7 +33,8 @@ export function Hero({ title, titleAccent, accentColor = 'pink', description, im
             {titleAccent && (
               <span className={`text-${accentColor}`}>{titleAccent}</span>
             )}
-            {title}
+            <span className={`text-${themeFirstColor}`}>{firstWord}</span>{' '}
+            {restOfTitle}
           </h1>
           {description && <p>{description}</p>}
         </div>

@@ -1,11 +1,12 @@
 .hero {
   width: 100%;
-  min-height: 60vh;
-  padding: 4rem 2rem;
+  min-height: 64vh;
+  padding: 8rem 2rem 4rem;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
   background: linear-gradient(45deg, var(--color-purple) 0%, var(--color-dark-purple) 100%);
   
   &::before {
@@ -30,7 +31,7 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 4rem;
 }
 
@@ -38,6 +39,7 @@
   flex: 1;
   max-width: 800px;
   margin: 0 auto;
+  text-align: center;
   
   h1 {
     font-family: var(--font-graphigem-bold);
@@ -54,12 +56,11 @@
   }
   
   p {
-    font-family: var(--font-boldland);
-    font-size: clamp(1.25rem, 2vw, 1.5rem);
-    line-height: 1.4;
-    max-width: 600px;
+    font-size: 1.25rem;
+    line-height: 1.6;
     color: rgba(255, 255, 255, 0.9);
-    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
   }
 }
 
