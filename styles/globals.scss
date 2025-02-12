@@ -1,0 +1,32 @@
+@import './colors.scss';
+@import './variables.scss';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: var(--color-night);
+  color: white;
+  font-family: var(--font-graphigem);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Global utility classes
+.text-green { color: var(--color-green); }
+.text-pink { color: var(--color-pink); }
+.text-purple { color: var(--color-purple); }
+.text-yellow { color: var(--color-yellow); }
+.text-grey { color: var(--color-grey); }
+.text-night { color: var(--color-night); }
