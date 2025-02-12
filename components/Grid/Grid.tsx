@@ -3,6 +3,8 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './Grid.module.scss';
+import { GridBlock } from '../../types/content';
+import clsx from 'clsx';
 
 type GridItem = {
   title: string;
@@ -11,23 +13,29 @@ type GridItem = {
   background?: string;
 };
 
-type GridProps = {
-  title?: string;
+type GridProps = GridBlock & {
   titleAccent?: string;
   accentColor?: string;
   description?: string;
   items?: GridItem[];
+  className?: string;
 };
 
-export function Grid({ title, titleAccent, accentColor, description, items = [] }: GridProps) {
+export function Grid({ title, titleAccent, accentColor, description, items = [], className }: GridProps) {
+  // Split title into words
+  const words = title?.split(' ') || [];
+  const firstWord = words[0];
+  const restOfTitle = words.slice(1).join(' ');
+
   return (
-    <div className={styles.grid}>
+    <div className={clsx(styles.grid, className)}>
       <div className={styles.header}>
         <h2 className={styles.title}>
           {titleAccent && (
             <span className={`text-${accentColor}`}>{titleAccent}</span>
           )}{' '}
-          {title}
+          <span className="textAccent">{firstWord}</span>
+          {' '}{restOfTitle}
         </h2>
         {description && <p className={styles.description}>{description}</p>}
       </div>
