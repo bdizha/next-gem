@@ -5,6 +5,7 @@ import { Hero } from './Hero';
 import { Grid } from '../Grid/Grid';
 import { Action } from '../Action/Action';
 import { Slider } from '../Slider/Slider';
+import { Footer } from '../Footer/Footer';
 import clsx from 'clsx';
 import { getBackgroundClasses } from '../../utils/backgrounds';
 
@@ -13,6 +14,7 @@ const BLOCK_COMPONENTS = {
   grid: Grid,
   action: Action,
   slider: Slider,
+  footer: Footer,
 } as const;
 
 interface ContentBlocksProps {

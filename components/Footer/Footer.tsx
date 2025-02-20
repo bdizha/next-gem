@@ -9,14 +9,14 @@ import contentStyles from '../ContentBlocks/ContentBlocks.module.scss';
 
 export function Footer() {
   return (
-    <footer className={clsx(
+    <section className={clsx(
       styles.footer,
       contentStyles.section,
       contentStyles.waveNight,
       contentStyles.contentGradientNight,
       contentStyles.top
     )}>
-      <div className={styles.container}>
+      <div className={styles.content}>
         <div className={styles.top}>
           <Link href="/" className={styles.logo}>
             <Image
@@ -26,12 +26,10 @@ export function Footer() {
               height={48}
             />
           </Link>
-          <p className={styles.tagline}>
-            Delight your customer!
-          </p>
+          <p className={styles.tagline}>Delight your customer!</p>
         </div>
 
-        <div className={styles.content}>
+        <div className={styles.columns}>
           <div className={styles.column}>
             <h3>Company</h3>
             <ul>
@@ -68,6 +66,6 @@ export function Footer() {
           </nav>
         </div>
       </div>
-    </footer>
+    </section>
   );
 }
