@@ -3,11 +3,19 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import clsx from 'clsx';
 import styles from './Footer.module.scss';
+import contentStyles from '../ContentBlocks/ContentBlocks.module.scss';
 
 export function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer className={clsx(
+      styles.footer,
+      contentStyles.section,
+      contentStyles.waveNight,
+      contentStyles.contentGradientNight,
+      contentStyles.top
+    )}>
       <div className={styles.container}>
         <div className={styles.top}>
           <Link href="/" className={styles.logo}>
@@ -19,7 +27,7 @@ export function Footer() {
             />
           </Link>
           <p className={styles.tagline}>
-            Creating value in the virtual world through strategic and creative digital services.
+            Delight your customer!
           </p>
         </div>
 
@@ -52,7 +60,7 @@ export function Footer() {
 
         <div className={styles.bottom}>
           <div className={styles.copyright}>
-            &copy; {new Date().getFullYear()} GraphiGem Digital. All rights reserved.
+            &copy; {new Date().getFullYear()} Graphi<span className={styles.textAccent}>Gem</span> Digital. All rights reserved.
           </div>
           <nav className={styles.nav}>
             <Link href="/privacy" className={styles.link}>Privacy Policy</Link>

@@ -271,7 +271,11 @@
 }
 
 .waveNight {
-  background: var(--gradient-night-purple);
+  background: linear-gradient(180deg, 
+    var(--purple-wave),
+    rgba(124, 58, 237, 0.05) 30%,
+    rgba(0, 0, 0, 0.8)
+  );
 }
 
 // Text accent colors for first word
@@ -296,7 +300,7 @@
 }
 
 .section.waveNight :global(.textAccent) {
-  color: var(--color-night);
+  color: var(--color-purple);
 }
 
 .card {

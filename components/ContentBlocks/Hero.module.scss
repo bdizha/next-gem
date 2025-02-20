@@ -6,23 +6,19 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: calc(3.625rem + 4rem);
-  padding-bottom: 4rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: var(--section-spacing) var(--space-md);
+  margin-top: calc(var(--header-height) + 4rem); 
   position: relative;
   overflow: hidden;
   
   &::before {
     content: '';
     position: absolute;
-    top: -10%;
-    left: -10%;
-    width: 120%;
-    height: 120%;
-    animation: zoomBackground 20s ease-in-out infinite;
-    transform-origin: center;
-    z-index: 0;
+    inset: 0;
+    background: url('/images/noise.png') repeat;
+    opacity: 0.4;
+    mix-blend-mode: overlay;
+    pointer-events: none;
   }
   
   .content {
@@ -30,6 +26,7 @@
     z-index: 2;
     max-width: 800px;
     margin: 0 auto;
+    padding: var(--content-spacing) 0;
     
     .text {
       h1 {
