@@ -53,7 +53,30 @@ export type SliderBlock = {
   }[];
 };
 
-export type ContentBlock = HeroBlock | GridBlock | ActionBlock | SliderBlock;
+export type FooterBlock = {
+  type: 'footer';
+  id: string;
+  logo: {
+    src: string;
+    alt: string;
+  };
+  tagline: string;
+  columns: Array<{
+    title: string;
+    links: Array<{
+      label: string;
+      href: string;
+      external?: boolean;
+    }>;
+  }>;
+  copyright: string;
+  policies: Array<{
+    label: string;
+    href: string;
+  }>;
+};
+
+export type ContentBlock = HeroBlock | GridBlock | ActionBlock | SliderBlock | FooterBlock;
 
 export type Tab = {
   id: string;

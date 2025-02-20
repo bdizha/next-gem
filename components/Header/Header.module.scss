@@ -8,45 +8,41 @@
   justify-content: center;
   width: calc(100% - 4rem);
   max-width: var(--max-width);
-  background: rgba(20, 20, 20, 0.4);
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 48px;
   padding: 0.75rem 1.5rem;
   transition: all var(--transition-normal);
+  background: rgba(20, 20, 20, 0.3);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: var(--border-radius);
+  box-shadow: 
+    0 48px 100px 0 rgba(0, 0, 0, 0.25),
+    0 24px 60px -12px rgba(0, 0, 0, 0.25),
+    0 -2px 6px 0 rgba(255, 255, 255, 0.1) inset,
+    0 2px 6px 0 rgba(0, 0, 0, 0.2) inset;
 
   &::before {
     content: '';
     position: absolute;
     inset: 0;
-    border-radius: 48px;
-    padding: 1px;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.15),
-      rgba(255, 255, 255, 0.03)
-    );
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: var(--border-radius);
+    z-index: -1;
   }
 
   &::after {
     content: '';
     position: absolute;
     inset: 0;
-    border-radius: 48px;
+    border-radius: var(--border-radius);
     background: radial-gradient(
       circle at calc(var(--x, 0) * 1px) calc(var(--y, 0) * 1px),
-      rgba(255, 255, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0.08) 0%,
       transparent 100%
     );
     opacity: var(--hover, 0);
     transition: opacity var(--transition-normal);
     pointer-events: none;
+    z-index: -1;
   }
 }
 
@@ -249,7 +245,6 @@
   padding: 1rem;
   background: var(--background-color);
   backdrop-filter: blur(12px);
-  border: 1px solid var(--border-color);
   border-radius: 48px;
   display: flex;
   flex-direction: column;

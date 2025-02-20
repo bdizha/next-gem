@@ -1,16 +1,26 @@
+%glassEffect {
+  background: rgba(20, 20, 20, 0.3);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 2px 12px -1px rgba(0, 0, 0, 0.1);
+}
+
 .hero {
   width: 100%;
   text-align: center;
   padding: 6rem 2rem;
-  min-height: auto;
+  min-height: 48vh;
   display: flex;
   align-items: center;
   justify-content: center;
   
   .heroContent {
+    @extend %glassEffect;
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
+    padding: 4rem;
+    border-radius: 48px;
     
     h1 {
       font-family: var(--font-graphigem-bold);
@@ -38,6 +48,7 @@
 }
 
 .grid {
+  @extend %glassEffect;
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
@@ -185,7 +196,6 @@
   box-shadow: 
     0 8px 32px 0 rgba(0, 0, 0, 0.15),
     inset 0 0 0 1px rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .section {
@@ -224,7 +234,6 @@
       0 2px 6px 0 rgba(0, 0, 0, 0.2) inset;
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
 
     &::before {
       content: '';
@@ -249,25 +258,100 @@
   }
 }
 
-// Wave backgrounds
+// Wave backgrounds and their after effects
 .waveGreenPurple {
   background: var(--gradient-green-purple);
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 1;
+    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Green-Purple.png');
+  }
 }
 
 .wavePinkGreen {
   background: var(--gradient-pink-green);
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 1;
+    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Pink-Green.png');
+  }
 }
 
 .wavePurpleYellow {
   background: var(--gradient-purple-yellow);
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 1;
+    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Purple-Yellow.png');
+  }
 }
 
 .waveYellowPink {
   background: var(--gradient-yellow-pink);
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 1;
+    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Yellow-Pink.png');
+  }
 }
 
 .waveGreyLight {
   background: var(--gradient-grey-light);
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 1;
+    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Grey-Light.png');
+  }
 }
 
 .waveNight {
@@ -276,31 +360,21 @@
     rgba(124, 58, 237, 0.05) 30%,
     rgba(0, 0, 0, 0.8)
   );
-}
-
-// Text accent colors for first word
-.section.waveGreenPurple :global(.textAccent) {
-  color: var(--color-green);
-}
-
-.section.wavePinkGreen :global(.textAccent) {
-  color: var(--color-pink);
-}
-
-.section.wavePurpleYellow :global(.textAccent) {
-  color: var(--color-purple);
-}
-
-.section.waveYellowPink :global(.textAccent) {
-  color: var(--color-yellow);
-}
-
-.section.waveGreyLight :global(.textAccent) {
-  color: var(--color-grey);
-}
-
-.section.waveNight :global(.textAccent) {
-  color: var(--color-purple);
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 1;
+    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Night.png');
+  }
 }
 
 .card {
@@ -319,8 +393,7 @@
     0 2px 6px 0 rgba(0, 0, 0, 0.2) inset;
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -333,133 +406,6 @@
 .cardContent {
   position: relative;
   z-index: 1;
-}
-
-%waveBase {
-  position: relative;
-  
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: 100%;
-    background-position: top center;
-    background-repeat: no-repeat;
-    opacity: 0.7;
-    pointer-events: none;
-    z-index: 1;
-  }
-}
-
-// Green Purple
-.waveGreenPurple {
-  @extend %waveBase;
-  
-  &::after {
-    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Green-Purple.png');
-  }
-  &.top { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Green-Purple-Top.png');
-  }
-  &.bottom { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Green-Purple-Bottom.png');
-  }
-  &.final { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Green-Purple-Top.png');
-  }
-}
-
-// Pink Green
-.wavePinkGreen {
-  @extend %waveBase;
-  
-  &::after {
-    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Pink-Green.png');
-  }
-  &.top { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Pink-Green-Top.png');
-  }
-  &.bottom { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Pink-Green-Bottom.png');
-  }
-  &.final { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Pink-Green-Top.png');
-  }
-}
-
-// Purple Yellow
-.wavePurpleYellow {
-  @extend %waveBase;
-  
-  &::after {
-    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Purple-Yellow.png');
-  }
-  &.top { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Purple-Yellow-Top.png');
-  }
-  &.bottom { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Purple-Yellow-Bottom.png');
-  }
-  &.final { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Purple-Yellow-Top.png');
-  }
-}
-
-// Yellow Pink
-.waveYellowPink {
-  @extend %waveBase;
-  
-  &::after {
-    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Yellow-Pink.png');
-  }
-  &.top { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Yellow-Pink-Top.png');
-  }
-  &.bottom { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Yellow-Pink-Bottom.png');
-  }
-  &.final { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Yellow-Pink-Top.png');
-  }
-}
-
-// Grey Light
-.waveGreyLight {
-  @extend %waveBase;
-  
-  &::after {
-    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Grey-Light.png');
-  }
-  &.top { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Grey-Light-Top.png');
-  }
-  &.bottom { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Grey-Light-Bottom.png');
-  }
-  &.final { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Grey-Light-Top.png');
-  }
-}
-
-// Night (Dark)
-.waveNight {
-  @extend %waveBase;
-  
-  &::after {
-    background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Night.png');
-  }
-  &.top { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Night-Top.png');
-  }
-  &.bottom { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Night-Bottom.png');
-  }
-  &.final { 
-    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Night-Top.png');
-  }
 }
 
 // Content gradient backgrounds
@@ -524,4 +470,29 @@
   :global(.Grid_card__0zD7G) {
     background-image: url('/assets/GD-2D/GD-Rays/GD-Ray-Night.png');
   }
+}
+
+// Text accent colors for first word
+.section.waveGreenPurple :global(.textAccent) {
+  color: var(--color-green);
+}
+
+.section.wavePinkGreen :global(.textAccent) {
+  color: var(--color-pink);
+}
+
+.section.wavePurpleYellow :global(.textAccent) {
+  color: var(--color-purple);
+}
+
+.section.waveYellowPink :global(.textAccent) {
+  color: var(--color-yellow);
+}
+
+.section.waveGreyLight :global(.textAccent) {
+  color: var(--color-grey);
+}
+
+.section.waveNight :global(.textAccent) {
+  color: var(--color-purple);
 }

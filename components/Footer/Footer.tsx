@@ -16,7 +16,7 @@ export function Footer() {
       contentStyles.contentGradientNight,
       contentStyles.top
     )}>
-      <div className={styles.content}>
+      <div className={clsx(styles.content, contentStyles.content)}>
         <div className={styles.top}>
           <Link href="/" className={styles.logo}>
             <Image
