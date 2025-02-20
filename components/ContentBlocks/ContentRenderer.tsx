@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Hero } from '../Hero/Hero';
+import { Hero } from './Hero';
 import { Grid } from '../Grid/Grid';
 import { Action } from '../Action/Action';
 import { Slider } from '../Slider/Slider';

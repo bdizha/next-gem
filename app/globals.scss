@@ -1,38 +1,60 @@
-@import '../styles/fonts.scss';
-@import '../styles/theme.scss';
+@import '../styles/colors';
+@import '../styles/variables';
+@import '../styles/fonts';
 
 @font-face {
-  font-family: 'Graphigem Regular';
-  src: url('/fonts/Graphigem-Regular.woff2') format('woff2');
+  font-family: 'GraphiGem';
+  src: url('/fonts/graphigem/Graphigem-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Graphigem Bold';
-  src: url('/fonts/Graphigem-Bold.woff2') format('woff2');
+  font-family: 'GraphiGem';
+  src: url('/fonts/graphigem/Graphigem-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'BoldLand';
-  src: url('/fonts/BoldLand.woff2') format('woff2');
+  src: url('/fonts/BoldLand/BoldLand-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 :root {
   --max-width: 1280px;
-  --border-radius: 12px;
+  --border-radius: 64px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
-
+  /* Font families */
+  --font-base: 'BoldLand', sans-serif;
+  --font-primary: 'GraphiGem', sans-serif;
+  --font-secondary: 'GraphiGem', sans-serif;
+  
+  /* Font weights */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+  
+  /* Font sizes */
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 30px;
+  --font-size-4xl: 36px;
+  --font-size-5xl: 48px;
+  --font-size-6xl: 60px;
+  
+  /* Line heights */
+  --line-height-base: 1.5;
+  --line-height-tight: 1.25;
+  --line-height-relaxed: 1.75;
+  
   /* Brand Colors */
   --purple: #6C63FF;
   --purple-rgb: 108, 99, 255;
@@ -67,34 +89,17 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background: var(--color-night);
+  color: white;
   font-family: var(--font-base);
-  font-weight: var(--font-regular);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-graphigem);
-  font-weight: var(--font-bold);
-}
-
-p, span, div {
-  font-family: var(--font-base);
-  font-weight: var(--font-regular);
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
-  -webkit-font-smoothing: antialiased;
-}
-
-main {
-  min-height: 100vh;
-  overflow: hidden;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  font-family: var(--font-base);
   padding: 0.5rem 1rem;
   border-radius: 9999px;
   transition: all 0.2s;
@@ -105,14 +110,43 @@ a {
   }
 }
 
-button {
+h1 {
+  font-family: var(--font-base);
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-bold);
+}
+
+h2 {
+  font-family: var(--font-secondary);
+  line-height: var(--line-height-tight);
+  font-weight: bold;
+  
+  span.textAccent {
+    font-family: var(--font-secondary);
+    font-weight: bold;
+  }
+}
+
+h3, h4, h5, h6 {
   font-family: var(--font-primary);
+  line-height: var(--line-height-tight);
+  font-weight: normal;
+}
+
+p, span, div {
+  font-family: var(--font-base);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-regular);
+}
+
+button, input, textarea, select {
+  font-family: var(--font-base);
+  font-weight: var(--font-regular);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
-  font-weight: 600;
   font-size: 1rem;
   transition: all 0.2s;
   cursor: pointer;
@@ -146,6 +180,13 @@ button {
 .text-pink {
   color: var(--pink);
 }
+
+.text-green { color: var(--color-green); }
+.text-pink { color: var(--color-pink); }
+.text-purple { color: var(--color-purple); }
+.text-yellow { color: var(--color-yellow); }
+.text-grey { color: var(--color-grey); }
+.text-night { color: var(--color-night); }
 
 /* Wave Background Classes */
 .waveGreyLight {
@@ -294,42 +335,42 @@ button {
 .text-h1 {
   font-family: var(--font-secondary);
   font-size: 6rem;
-  font-weight: 700;
+  font-weight: var(--font-bold);
   line-height: 1.2;
 }
 
 .text-h2 {
   font-family: var(--font-secondary);
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: var(--font-bold);
   line-height: 1.2;
 }
 
 .text-h3 {
   font-family: var(--font-secondary);
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: var(--font-bold);
   line-height: 1.2;
 }
 
 .text-h4 {
   font-family: var(--font-secondary);
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: var(--font-bold);
   line-height: 1.2;
 }
 
 .text-h5 {
   font-family: var(--font-secondary);
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: var(--font-bold);
   line-height: 1.2;
 }
 
 .text-h6 {
   font-family: var(--font-secondary);
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: var(--font-bold);
   line-height: 1.2;
 }
 
