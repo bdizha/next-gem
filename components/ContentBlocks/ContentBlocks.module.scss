@@ -258,7 +258,6 @@
   }
 }
 
-// Wave backgrounds and their after effects
 .waveGreenPurple {
   background: var(--gradient-green-purple);
   &::after {
@@ -276,6 +275,20 @@
     z-index: 1;
     background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Green-Purple.png');
   }
+
+  &.top {
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Green-Purple-Top.png');
+  }
+  &.bottom {
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Green-Purple-Bottom.png');
+  }
+  &.final {
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Green-Purple-Top.png');
+  }
+}
+
+.contentGradientGreenPurple .content {
+  background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Green-Purple-02.png');
 }
 
 .wavePinkGreen {
@@ -295,6 +308,20 @@
     z-index: 1;
     background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Pink-Green.png');
   }
+
+  &.top {
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Pink-Green-Top.png');
+  }
+  &.bottom {
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Pink-Green-Bottom.png');
+  }
+  &.final {
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Pink-Green-Top.png');
+  }
+}
+
+.contentGradientPinkGreen .content {
+  background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Pink-Green-02.png');
 }
 
 .wavePurpleYellow {
@@ -314,6 +341,20 @@
     z-index: 1;
     background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Purple-Yellow.png');
   }
+
+  &.top {
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Purple-Yellow-Top.png');
+  }
+  &.bottom {
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Purple-Yellow-Bottom.png');
+  }
+  &.final {
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Purple-Yellow-Top.png');
+  }
+}
+
+.contentGradientPurpleYellow .content {
+  background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Purple-Yellow-02.png');
 }
 
 .waveYellowPink {
@@ -333,6 +374,20 @@
     z-index: 1;
     background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Yellow-Pink.png');
   }
+
+  &.top {
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Yellow-Pink-Top.png');
+  }
+  &.bottom {
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Yellow-Pink-Bottom.png');
+  }
+  &.final {
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Yellow-Pink-Top.png');
+  }
+}
+
+.contentGradientYellowPink .content {
+  background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Yellow-Pink-02.png');
 }
 
 .waveGreyLight {
@@ -352,6 +407,20 @@
     z-index: 1;
     background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Grey-Light.png');
   }
+
+  &.top {
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Grey-Light-Top.png');
+  }
+  &.bottom {
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Grey-Light-Bottom.png');
+  }
+  &.final {
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Grey-Light-Top.png');
+  }
+}
+
+.contentGradientGreyLight .content {
+  background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Grey-Light-02.png');
 }
 
 .waveNight {
@@ -375,6 +444,20 @@
     z-index: 1;
     background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Night.png');
   }
+
+  &.top {
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Night-Top.png');
+  }
+  &.bottom {
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Night-Bottom.png');
+  }
+  &.final {
+    background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Night-Top.png');
+  }
+}
+
+.contentGradientNight .content {
+  background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Night-02.png');
 }
 
 .card {
