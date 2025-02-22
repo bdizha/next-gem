@@ -2,14 +2,14 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './ContentBlocks.module.scss';
 import { GridBlock } from '../../types/content';
+import clsx from 'clsx';
 
 export function Grid({ 
-  columns, 
-  title, 
-  titleAccent, 
+  title,
+  titleAccent,
   accentColor = 'pink',
-  description, 
-  items 
+  description,
+  items = []
 }: GridBlock) {
   return (
     <div className={styles.grid}>
@@ -26,20 +26,20 @@ export function Grid({
           {description && <p>{description}</p>}
         </div>
       )}
-      <div className={styles.gridItems} data-columns={columns}>
-        {items.map((item, index) => (
+      <div className={styles.items}>
+        {items?.map((item, index) => (
           <div 
             key={index} 
-            className={styles.gridItem}
+            className={clsx(styles.item, item.background && styles[item.background])}
           >
             {item.icon && (
-              <div className={styles.iconWrapper}>
+              <div className={styles.imageWrapper}>
                 <Image 
                   src={item.icon} 
                   alt={item.title} 
-                  width={80} 
-                  height={80}
-                  className={styles.icon}
+                  width={120} 
+                  height={120}
+                  className={styles.image}
                 />
               </div>
             )}

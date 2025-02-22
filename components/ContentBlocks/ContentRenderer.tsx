@@ -1,28 +1,23 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
+import styles from './ContentBlocks.module.scss';
+import { ContentBlock } from '../../types/content';
 import { Hero } from './Hero';
-import { Grid } from '../Grid/Grid';
+import { Grid } from './Grid';
 import { Action } from '../Action/Action';
 import { Slider } from '../Slider/Slider';
-import styles from './ContentBlocks.module.scss';
-import { usePathname } from 'next/navigation';
-import { scapeClasses, contentGradientClasses, getRandomClass } from '../../utils/backgrounds';
 import { TabsComponent as Tabs } from '../Tabs/Tabs';
 import clsx from 'clsx';
+import { getBackgroundClasses } from '../../utils/backgrounds';
+import { usePathname } from 'next/navigation';
 
-export interface ContentBlock {
-  id: string;
-  type: 'hero' | 'grid' | 'action' | 'slider';
-  titleAccent?: string;
-  title?: string;
-  accentColor?: string;
-  description?: string;
-  image?: string;
-  items?: any[];
-  theme?: string;
-  accent?: string;
-}
+const BLOCK_COMPONENTS = {
+  hero: Hero,
+  grid: Grid,
+  action: Action,
+  slider: Slider,
+} as const;
 
 export interface ContentRendererProps {
   content: {
@@ -36,13 +31,6 @@ export interface ContentRendererProps {
     content: ContentBlock[];
   };
 }
-
-const BLOCK_COMPONENTS = {
-  hero: Hero,
-  grid: Grid,
-  action: Action,
-  slider: Slider,
-} as const;
 
 const ContentRenderer: React.FC<ContentRendererProps> = ({ content }) => {
   const pathname = usePathname();
@@ -72,12 +60,11 @@ const ContentRenderer: React.FC<ContentRendererProps> = ({ content }) => {
           onTabChange={handleTabChange} 
         />
       )}
-      <div>
+      <div className={styles.contentWrapper}>
         {currentContent.map((block, index) => {
           const isFirst = index === 0;
           const isLast = index === currentContent.length - 1;
-          const scapeClass = getRandomClass(scapeClasses);
-          const contentGradientClass = getRandomClass(contentGradientClasses);
+          const { wave: waveClass, content: contentGradientClass } = getBackgroundClasses();
 
           // Position logic:
           // 1. Home page hero is always top
@@ -103,13 +90,17 @@ const ContentRenderer: React.FC<ContentRendererProps> = ({ content }) => {
               key={block.id} 
               className={clsx(
                 styles.section,
-                styles[scapeClass],
+                styles[waveClass],
                 styles[contentGradientClass],
                 styles[positionClass]
               )}
             >
               <div className={styles.content}>
-                <Component {...block} />
+                {block.type === 'grid' ? (
+                  <Grid {...block} />
+                ) : (
+                  <Component {...block} />
+                )}
               </div>
             </section>
           );

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './ContentBlocks.module.scss';
 import { ContentBlock } from '../../types/content';
 import { Hero } from './Hero';
-import { Grid } from '../Grid/Grid';
+import { Grid } from './Grid';
 import { Action } from '../Action/Action';
 import { Slider } from '../Slider/Slider';
 import { Footer } from '../Footer/Footer';
@@ -26,7 +26,6 @@ export function ContentBlocks({ blocks }: ContentBlocksProps) {
     <div className={styles.contentWrapper}>
       {blocks.map((block, index) => {
         const { wave: waveClass, content: contentGradientClass } = getBackgroundClasses();
-
         const Component = BLOCK_COMPONENTS[block.type];
 
         if (!Component) {
@@ -45,7 +44,11 @@ export function ContentBlocks({ blocks }: ContentBlocksProps) {
             )}
           >
             <div className={styles.content}>
-              <Component {...block} />
+              {block.type === 'grid' ? (
+                <Grid {...block} />
+              ) : (
+                <Component {...block} />
+              )}
             </div>
           </section>
         );
