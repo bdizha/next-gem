@@ -53,6 +53,7 @@ $themes: (
   padding: 4rem 2rem;
   background-size: cover;
   background-position: top;
+  background-repeat: no-repeat;
   text-align: center;
   display: flex;
   align-items: flex-start;
@@ -63,6 +64,7 @@ $themes: (
     inset: 0;
     background-size: cover;
     background-position: top;
+    background-repeat: no-repeat;
     z-index: 0;
   }
   
@@ -85,6 +87,7 @@ $themes: (
       background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Green-Purple-03.png');
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
     }
   }
   
@@ -93,6 +96,7 @@ $themes: (
       background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Pink-Purple-03.png');
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
     }
   }
   
@@ -101,6 +105,7 @@ $themes: (
       background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Purple-Blue-03.png');
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
     }
   }
   
@@ -109,6 +114,7 @@ $themes: (
       background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Grey-Light-03.png');
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
     }
   }
   
@@ -117,6 +123,7 @@ $themes: (
       background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Yellow-Pink-03.png');
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
     }
   }
   
@@ -125,6 +132,7 @@ $themes: (
       background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Grey-Dark-03.png');
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
     }
   }
 }
@@ -481,6 +489,7 @@ $themes: (
           background-image: map-get($assets, banner);
           background-size: cover;
           background-position: center;
+          background-repeat: no-repeat;
           opacity: 0.1;
           z-index: 0;
         }
@@ -506,63 +515,105 @@ $themes: (
 .contentGradientGreenPurple {
   .blockContent {
     background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Green-Purple-02.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
   :global(.Grid_card__0zD7G) {
     background-image: url('/assets/GD-2D/GD-Rays/GD-Ray-Green-Purple.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
 }
 
 .contentGradientPinkGreen {
   .blockContent {
     background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Pink-Green-02.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
   :global(.Grid_card__0zD7G) {
     background-image: url('/assets/GD-2D/GD-Rays/GD-Ray-Pink-Green.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
 }
 
 .contentGradientPurpleYellow {
   .blockContent {
     background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Purple-Yellow-02.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
   :global(.Grid_card__0zD7G) {
     background-image: url('/assets/GD-2D/GD-Rays/GD-Ray-Purple-Yellow.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
 }
 
 .contentGradientYellowPink {
   .blockContent {
     background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Yellow-Pink-02.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
   :global(.Grid_card__0zD7G) {
     background-image: url('/assets/GD-2D/GD-Rays/GD-Ray-Yellow-Pink.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
 }
 
 .contentGradientGreyLight {
   .blockContent {
     background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Grey-Light-02.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
   :global(.Grid_card__0zD7G) {
     background-image: url('/assets/GD-2D/GD-Rays/GD-Ray-Grey-Light.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
 }
 
 .contentGradientGreyDark {
   .blockContent {
     background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Grey-Dark-02.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
   :global(.Grid_card__0zD7G) {
     background-image: url('/assets/GD-2D/GD-Rays/GD-Ray-Grey-Dark.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
 }
 
 .contentGradientNight {
   .blockContent {
     background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Night-02.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
   :global(.Grid_card__0zD7G) {
     background-image: url('/assets/GD-2D/GD-Rays/GD-Ray-Night.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
 }
 
@@ -611,11 +662,17 @@ $themes: (
 
   &.top, &.bottom, &.final {
     background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Green-Purple-Top.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
 }
 
 .contentGradientGreenPurple .blockContent {
   background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Green-Purple-02.png');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
   
   &::before {
     content: "";
@@ -625,6 +682,9 @@ $themes: (
     border-radius: var(--border-radius);
     z-index: -1;
     background: url('/assets/GD-2D/GD-Extras/GD-Wave-Green-Purple.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
     opacity: 0.15;
   }
 }
@@ -649,11 +709,17 @@ $themes: (
 
   &.top, &.bottom, &.final {
     background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Pink-Green-Top.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
 }
 
 .contentGradientPinkGreen .blockContent {
   background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Pink-Green-02.png');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
   
   &::before {
     content: "";
@@ -663,6 +729,9 @@ $themes: (
     border-radius: var(--border-radius);
     z-index: -1;
     background: url('/assets/GD-2D/GD-Extras/GD-Wave-Pink-Green.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
     opacity: 0.15;
   }
 }
@@ -687,11 +756,17 @@ $themes: (
 
   &.top, &.bottom, &.final {
     background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Purple-Yellow-Top.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
 }
 
 .contentGradientPurpleYellow .blockContent {
   background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Purple-Yellow-02.png');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
   
   &::before {
     content: "";
@@ -701,6 +776,9 @@ $themes: (
     border-radius: var(--border-radius);
     z-index: -1;
     background: url('/assets/GD-2D/GD-Extras/GD-Wave-Purple-Yellow.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
     opacity: 0.15;
   }
 }
@@ -725,11 +803,17 @@ $themes: (
 
   &.top, &.bottom, &.final {
     background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Yellow-Pink-Top.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
 }
 
 .contentGradientYellowPink .blockContent {
   background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Yellow-Pink-02.png');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
   
   &::before {
     content: "";
@@ -739,6 +823,9 @@ $themes: (
     border-radius: var(--border-radius);
     z-index: -1;
     background: url('/assets/GD-2D/GD-Extras/GD-Wave-Yellow-Pink.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
     opacity: 0.15;
   }
 }
@@ -763,11 +850,17 @@ $themes: (
 
   &.top, &.bottom, &.final {
     background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Grey-Light-Top.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
 }
 
 .contentGradientGreyLight .blockContent {
   background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Grey-Light-02.png');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
   
   &::before {
     content: "";
@@ -777,6 +870,9 @@ $themes: (
     border-radius: var(--border-radius);
     z-index: -1;
     background: url('/assets/GD-2D/GD-Extras/GD-Wave-Grey-Light.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
     opacity: 0.15;
   }
 }
@@ -805,11 +901,17 @@ $themes: (
 
   &.top, &.bottom, &.final {
     background-image: url('/assets/GD-2D/GD-Scapes/GD-Scape-Night-Top.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
 }
 
 .contentGradientNight .blockContent {
   background-image: url('/assets/GD-2D/GD-Gradients/GD-Gradient-Night-02.png');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
   
   &::before {
     content: "";
@@ -819,6 +921,9 @@ $themes: (
     border-radius: var(--border-radius);
     z-index: -1;
     background: url('/assets/GD-2D/GD-Extras/GD-Wave-Night.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
     opacity: 0.15;
   }
 }
@@ -947,6 +1052,7 @@ $themes: (
           background-image: map-get($assets, banner);
           background-size: cover;
           background-position: center;
+          background-repeat: no-repeat;
           opacity: 0.1;
           z-index: 0;
         }
