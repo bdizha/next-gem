@@ -36,25 +36,42 @@
     
     .item {
       position: relative;
-      border-radius: var(--border-radius);
-      overflow: hidden;
+      padding: var(--spacing-lg);
       background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--border-radius);
+      text-align: center;
+      overflow: hidden;
       transition: transform 0.3s ease;
       box-shadow: 
         0 32px 64px 0 rgba(0, 0, 0, 0.25),
         0 24px 60px -12px rgba(0, 0, 0, 0.25),
         0 -2px 6px 0 rgba(255, 255, 255, 0.1) inset,
         0 2px 6px 0 rgba(0, 0, 0, 0.2) inset;
-      border: 1px solid rgba(255, 255, 255, 0.1);
       
       &::before {
         content: '';
         position: absolute;
         inset: 0;
-        background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.1) 0%, transparent 75%);
-        z-index: 1;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        z-index: 0;
+      }
+      
+      :global([data-theme='purple']) & {
+        &::before {
+          background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Purple-03.png');
+        }
+      }
+      
+      :global([data-theme='pink']) & {
+        &::before {
+          background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Pink-03.png');
+        }
       }
       
       &:hover {
@@ -63,60 +80,21 @@
       
       .image {
         position: relative;
-        width: 100%;
-        padding-top: 75%;
-        overflow: hidden;
-        border-radius: var(--border-radius);
-        margin-bottom: 2rem;
-        
-        &.bannerPink {
-          background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Pink-Purple-03.png');
-        }
-        
-        &.bannerPurple {
-          background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Purple-Blue-03.png');
-        }
-        
-        &.bannerBlue {
-          background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Grey-Light-03.png');
-        }
-        
-        &.bannerGreen {
-          background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Green-Purple-03.png');
-        }
-        
-        &.bannerYellow {
-          background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Yellow-Pink-03.png');
-        }
-        
-        &.bannerGrey {
-          background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Grey-Dark-03.png');
-        }
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 1.5rem;
+        z-index: 1;
         
         img {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 120px;
-          height: 120px;
+          width: 100%;
+          height: 100%;
           object-fit: contain;
-          transition: transform var(--transition-bounce);
-        }
-
-        &::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 75%);
-          z-index: 1;
         }
       }
       
       .content {
         position: relative;
-        padding: 0 2rem 2rem;
-        z-index: 2;
+        z-index: 1;
         
         h3 {
           font-family: var(--font-bold-land);

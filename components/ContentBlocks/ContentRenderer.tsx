@@ -7,7 +7,7 @@ import { Hero } from './Hero';
 import { Grid } from './Grid';
 import { Header } from './Header';
 import { Media } from './Media';
-import { Player } from './Player';
+import { VideoPlayer } from '../VideoPlayer/VideoPlayer';
 import { Footer } from './Footer';
 import clsx from 'clsx';
 
@@ -16,7 +16,7 @@ const BlockComponents = {
   grid: Grid,
   header: Header,
   media: Media,
-  player: Player,
+  player: VideoPlayer,
   footer: Footer,
 };
 

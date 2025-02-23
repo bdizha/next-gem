@@ -58,6 +58,11 @@ export type MediaBlock = BaseBlock & {
   aspectRatio?: '16:9' | '4:3' | '1:1' | 'auto';
 };
 
+export type PlayerBlock = BaseBlock & {
+  type: 'player';
+  src: string;
+};
+
 export type FooterBlock = BaseBlock & {
   type: 'footer';
   links?: {
@@ -66,12 +71,15 @@ export type FooterBlock = BaseBlock & {
   }[];
 };
 
-export type Block = 
+export type ContentBlock = 
   | HeroBlock 
   | GridBlock 
   | HeaderBlock 
   | MediaBlock 
+  | PlayerBlock 
   | FooterBlock;
+
+export type Block = ContentBlock;
 
 export type PageContent = {
   blocks: Block[];

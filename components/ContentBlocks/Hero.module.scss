@@ -1,55 +1,50 @@
 .hero {
+  position: relative;
   width: 100%;
-  min-height: 48vh;
+  min-height: 32vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: var(--section-spacing) var(--space-md);
-  margin-top: calc(var(--header-height) + 4rem); 
-  position: relative;
   overflow: hidden;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url('/images/noise.png') repeat;
-    opacity: 0.4;
-    mix-blend-mode: overlay;
-    pointer-events: none;
-  }
+  border-radius: var(--border-radius);
   
   .content {
     position: relative;
     z-index: 2;
+    padding: 2rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .text {
     max-width: 800px;
     margin: 0 auto;
-    padding: var(--content-spacing) 0;
     
-    .text {
-      h1 {
-        font-family: var(--font-base);
-        font-size: clamp(2.5rem, 5vw, 3.5rem);
-        line-height: 1.2;
-        margin-bottom: 2rem;
-        
-        span {
-          display: inline;
-          font-family: var(--font-base);
-        }
-      }
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      font-family: var(--font-boldland);
       
-      p {
-        font-family: var(--font-base);
-        font-size: clamp(1.25rem, 2vw, 1.5rem);
-        line-height: 1.6;
-        margin-bottom: 3rem;
-        color: rgba(255, 255, 255, 0.9);
+      .textAccent {
+        background: linear-gradient(45deg, var(--color-pink), var(--color-purple));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
     }
+    
+    p {
+      font-size: clamp(1.125rem, 2vw, 1.5rem);
+      line-height: 1.6;
+      opacity: 0.9;
+    }
   }
+}
+
+.lightText {
+  color: white;
 }
 
 @keyframes zoomBackground {

@@ -102,6 +102,14 @@
   }
 }
 
+.contentWrapper {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
 .sectionContent {
   max-width: var(--max-width);
   width: 100%;
@@ -143,15 +151,6 @@
 .waveYellowPurple {
   background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Yellow-Purple-Final.png');
   color: white;
-}
-
-.contentWrapper {
-  max-width: var(--max-width);
-  width: 100%;
-  margin: 0 auto;
-  padding: 2rem;
-  position: relative;
-  z-index: 1;
 }
 
 .content {

@@ -8,9 +8,10 @@ import styles from "./VideoPlayer.module.scss"
 interface VideoPlayerProps {
   src: string
   description?: string
+  theme?: string
 }
 
-export function VideoPlayer({ src, description }: VideoPlayerProps) {
+export function VideoPlayer({ src, description, theme }: VideoPlayerProps) {
   const [isPaused, setIsPaused] = useState(false)
   const [channel, setChannel] = useState(1)
   const [volume, setVolume] = useState(100)
@@ -51,7 +52,7 @@ export function VideoPlayer({ src, description }: VideoPlayerProps) {
   }, [])
 
   return (
-    <div className={styles.maskedContainer}>
+    <div className={styles.videoPlayerWrapper}>
       <div className={styles.videoPlayer}>
         <div className={styles.videoPlayerContainer}>
           <video

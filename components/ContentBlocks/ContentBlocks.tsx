@@ -1,20 +1,20 @@
 import React from 'react';
 import styles from './ContentBlocks.module.scss';
 import { ContentBlock } from '../../types/content';
-import { Hero } from './Hero';
 import { Grid } from './Grid';
 import { Action } from '../Action/Action';
 import { Slider } from '../Slider/Slider';
 import { Footer } from '../Footer/Footer';
+import { VideoPlayer } from '../VideoPlayer/VideoPlayer';
 import clsx from 'clsx';
 import { getBackgroundClasses } from '../../utils/backgrounds';
 
 const BLOCK_COMPONENTS = {
-  hero: Hero,
   grid: Grid,
   action: Action,
   slider: Slider,
   footer: Footer,
+  player: VideoPlayer,
 } as const;
 
 interface ContentBlocksProps {
@@ -44,11 +44,7 @@ export function ContentBlocks({ blocks }: ContentBlocksProps) {
             )}
           >
             <div className={styles.content}>
-              {block.type === 'grid' ? (
-                <Grid {...block} />
-              ) : (
-                <Component {...block} />
-              )}
+              <Component {...block} />
             </div>
           </section>
         );

@@ -3,40 +3,39 @@ import { ContentBlock } from '../../types/content';
 export const homeContent = {
   blocks: [
     {
-      type: 'hero',
-      id: 'home-hero',
+      type: 'grid',
+      id: 'hero',
       theme: 'purple',
       accent: 'darkPurple',
       title: 'Building Immersive Experiences',
       description: 'Transform your brand through immersive digital experiences. Create engaging virtual worlds that captivate your audience.',
-      image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Vision.png'
+      items: []
     },
     {
       type: 'grid',
-      id: 'envision',
+      id: 'envision-future',
       theme: 'purple',
-      accent: 'darkPurple',
-      title: 'Envision Your Future',
-      subtitle: 'Where innovation meets imagination',
-      description: 'Imagine a world where your brand transcends traditional boundaries. Where every interaction is an opportunity to amaze.',
+      accent: 'green',
+      title: 'Envision the Future',
+      subtitle: 'Create lasting impressions in virtual spaces',
       items: [
         {
-          title: 'Innovation',
-          description: 'Pushing boundaries in the virtual space with cutting-edge solutions.',
+          title: 'Virtual Worlds',
+          description: 'Build immersive digital environments that showcase your brand in innovative ways.',
           icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Robot.png',
           background: 'pinkWave'
         },
         {
-          title: 'Creativity',
-          description: 'Transforming ideas into captivating virtual experiences.',
-          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Goggles.png',
+          title: 'Digital Characters',
+          description: 'Bring your brand to life with unique character designs and animations.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Control.png',
           background: 'purpleWave'
         },
         {
-          title: 'Excellence',
-          description: 'Delivering exceptional quality in every project.',
-          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration_Check.png',
-          background: 'yellowWave'
+          title: 'Brand Integration',
+          description: 'Seamlessly integrate your brand into virtual experiences.',
+          icon: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Vision.png',
+          background: 'greenWave'
         }
       ]
     },

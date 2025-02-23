@@ -12,6 +12,14 @@ export const homeContent = {
       description: 'We create immersive digital experiences that transform how brands connect with their audience in the virtual space.',
       image: '/assets/GD-2D/GD-Illustrations/GD-Illustration-Our-Vision.png'
     },
+    // Video player section (hidden for now)
+    // {
+    //   type: 'player',
+    //   id: 'intro-video',
+    //   theme: 'purple',
+    //   src: '/videos/BoldIcon/BOLDMAN-SHOWCASING-EROS.mp4',
+    //   description: 'Our Vision in Motion'
+    // },
     {
       type: 'grid',
       id: 'envision-future',
