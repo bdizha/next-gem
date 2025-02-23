@@ -1,92 +1,78 @@
-export type HeroBlock = {
+export type BlockTheme = 
+  | 'pinkPurple'
+  | 'purpleBlue'
+  | 'greyLight'
+  | 'greenPurple'
+  | 'yellowPink'
+  | 'greyDark';
+
+export type BlockItem = {
+  title: string;
+  description?: string;
+  icon?: string;
+  link?: string;
+};
+
+export type BaseBlock = {
+  id: string;
+  theme?: BlockTheme;
+  title?: string;
+  titleAccent?: string;
+  description?: string;
+};
+
+export type MediaItem = {
+  type: 'image' | 'video';
+  url: string;
+  alt?: string;
+  width?: number;
+  height?: number;
+  poster?: string; // For video thumbnails
+  autoplay?: boolean;
+  loop?: boolean;
+  muted?: boolean;
+};
+
+export type HeroBlock = BaseBlock & {
   type: 'hero';
-  id: string;
-  titleAccent?: string;
-  title?: string;
-  accentColor?: string;
-  description?: string;
-  image?: string;
+  media?: MediaItem;
 };
 
-export type GridBlock = {
+export type GridBlock = BaseBlock & {
   type: 'grid';
-  id: string;
-  title?: string;
-  titleAccent?: string;
-  accentColor?: string;
-  description?: string;
-  items?: Array<{
-    title: string;
-    description: string;
-    icon: string;
-    background?: string;
-  }>;
+  items: BlockItem[];
 };
 
-export type ActionBlock = {
-  type: 'action';
-  id: string;
-  theme?: string;
-  accent?: string;
-  image?: string;
-  title?: string;
-  subtitle?: string;
-  description?: string;
-  cta?: {
+export type HeaderBlock = BaseBlock & {
+  type: 'header';
+  navigation?: {
     label: string;
     href: string;
-  };
-};
-
-export type SliderBlock = {
-  type: 'slider';
-  id: string;
-  title?: string;
-  titleAccent?: string;
-  accentColor?: string;
-  description?: string;
-  items: {
-    src: string;
-    title: string;
-    width?: number;
-    height?: number;
   }[];
 };
 
-export type FooterBlock = {
+export type MediaBlock = BaseBlock & {
+  type: 'media';
+  items: MediaItem[];
+  layout?: 'grid' | 'slider' | 'full';
+  aspectRatio?: '16:9' | '4:3' | '1:1' | 'auto';
+};
+
+export type FooterBlock = BaseBlock & {
   type: 'footer';
-  id: string;
-  logo: {
-    src: string;
-    alt: string;
-  };
-  tagline: string;
-  columns: Array<{
-    title: string;
-    links: Array<{
-      label: string;
-      href: string;
-      external?: boolean;
-    }>;
-  }>;
-  copyright: string;
-  policies: Array<{
+  links?: {
     label: string;
     href: string;
-  }>;
+  }[];
 };
 
-export type ContentBlock = HeroBlock | GridBlock | ActionBlock | SliderBlock | FooterBlock;
-
-export type Tab = {
-  id: string;
-  title: string;
-  titleAccent?: string;
-  accentColor?: string;
-  content: ContentBlock[];
-};
+export type Block = 
+  | HeroBlock 
+  | GridBlock 
+  | HeaderBlock 
+  | MediaBlock 
+  | FooterBlock;
 
 export type PageContent = {
-  blocks: ContentBlock[];
-  tabs?: Tab[];
+  blocks: Block[];
 };

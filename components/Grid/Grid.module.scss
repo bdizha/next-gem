@@ -1,0 +1,186 @@
+.grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  
+  .header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    
+    h2 {
+      font-family: var(--font-bold-land);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      
+      span {
+        display: inline;
+        font-family: var(--font-bold-land);
+      }
+    }
+    
+    p {
+      font-family: var(--font-bold-land);
+      font-size: 1.25rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+  
+  .items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    
+    .item {
+      position: relative;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: transform 0.3s ease;
+      box-shadow: 
+        0 32px 64px 0 rgba(0, 0, 0, 0.25),
+        0 24px 60px -12px rgba(0, 0, 0, 0.25),
+        0 -2px 6px 0 rgba(255, 255, 255, 0.1) inset,
+        0 2px 6px 0 rgba(0, 0, 0, 0.2) inset;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.1) 0%, transparent 75%);
+        z-index: 1;
+      }
+      
+      &:hover {
+        transform: translateY(-4px);
+      }
+      
+      .image {
+        position: relative;
+        width: 100%;
+        padding-top: 75%;
+        overflow: hidden;
+        border-radius: var(--border-radius);
+        margin-bottom: 2rem;
+        
+        &.bannerPink {
+          background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Pink-Purple-03.png');
+        }
+        
+        &.bannerPurple {
+          background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Purple-Blue-03.png');
+        }
+        
+        &.bannerBlue {
+          background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Grey-Light-03.png');
+        }
+        
+        &.bannerGreen {
+          background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Green-Purple-03.png');
+        }
+        
+        &.bannerYellow {
+          background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Yellow-Pink-03.png');
+        }
+        
+        &.bannerGrey {
+          background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Grey-Dark-03.png');
+        }
+        
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 120px;
+          height: 120px;
+          object-fit: contain;
+          transition: transform var(--transition-bounce);
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 75%);
+          z-index: 1;
+        }
+      }
+      
+      .content {
+        position: relative;
+        padding: 0 2rem 2rem;
+        z-index: 2;
+        
+        h3 {
+          font-family: var(--font-bold-land);
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+        }
+        
+        p {
+          font-family: var(--font-bold-land);
+          font-size: 1rem;
+          line-height: 1.6;
+          color: rgba(255, 255, 255, 0.9);
+        }
+      }
+    }
+  }
+}
+
+// Theme-based banner backgrounds for images
+.waveNight .image {
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Purple-Blue-03.png');
+}
+
+.wavePurple .image {
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Green-Purple-03.png');
+}
+
+.waveBlue .image {
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Grey-Light-03.png');
+}
+
+.wavePink .image {
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Pink-Purple-03.png');
+}
+
+.waveGreen .image {
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Grey-Dark-03.png');
+}
+
+.waveYellow .image {
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Yellow-Pink-03.png');
+}
+
+// Banner backgrounds classes for reference
+.bannerGreyLight {
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Grey-Light-03.png');
+}
+
+.bannerGreyDark {
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Grey-Dark-03.png');
+}
+
+.bannerGreenPurple {
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Green-Purple-03.png');
+}
+
+.bannerPinkPurple {
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Pink-Purple-03.png');
+}
+
+.bannerPurpleBlue {
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Purple-Blue-03.png');
+}
+
+.bannerYellowPink {
+  background-image: url('/assets/GD-2D/GD-Banners/GD-Banner-Yellow-Pink-03.png');
+}
