@@ -1,8 +1,13 @@
 %glassEffect {
   background: rgba(20, 20, 20, 0.3);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  box-shadow: 0 2px 12px -1px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: var(--border-radius);
+  box-shadow: 
+    0 32px 64px 0 rgba(0, 0, 0, 0.25),
+    0 24px 60px -12px rgba(0, 0, 0, 0.25),
+    0 -2px 6px 0 rgba(255, 255, 255, 0.1) inset,
+    0 2px 6px 0 rgba(0, 0, 0, 0.2) inset;
 }
 
 // Theme variables
@@ -50,12 +55,55 @@ $themes: (
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 12rem 0;
   overflow: hidden;
   
   & > div {
     position: relative;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    width: 100%;
+    padding: var(--spacing-lg);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-radius: var(--border-radius);
+    box-shadow: 
+      0 32px 64px 0 rgba(0, 0, 0, 0.15),
+      0 24px 60px -12px rgba(0, 0, 0, 0.15),
+      0 -2px 6px 0 rgba(255, 255, 255, 0.2) inset,
+      0 2px 6px 0 rgba(0, 0, 0, 0.1) inset;
     z-index: 2;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: var(--border-radius);
+      z-index: -1;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: var(--border-radius);
+      background: radial-gradient(
+        circle at calc(var(--x, 0) * 1px) calc(var(--y, 0) * 1px),
+        rgba(255, 255, 255, 0.15) 0%,
+        transparent 100%
+      );
+      opacity: var(--hover, 0);
+      transition: opacity var(--transition-normal);
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    > * {
+      position: relative;
+      z-index: 1;
+    }
   }
   
   &::after {
@@ -70,7 +118,7 @@ $themes: (
     background-repeat: no-repeat;
     opacity: 0.7;
     pointer-events: none;
-    z-index: 1;
+    z-index: 0;
   }
   
   &[data-theme='purple'] {
@@ -79,16 +127,6 @@ $themes: (
     
     &:first-child {
       background: transparent;
-      
-      .content {
-        background: rgba(255, 255, 255, 0.1);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-        border-radius: var(--border-radius);
-        padding: var(--spacing-lg);
-      }
       
       &::after {
         background-image: url('/assets/GD-2D/GD-Waves/GD-Wave-Purple-Final.png');
@@ -109,28 +147,6 @@ $themes: (
   &:has(.videoPlayerWrapper) {
     padding: 0;
     min-height: auto;
-  }
-  
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-size: 100%;
-    background-position: top;
-    background-repeat: no-repeat;
-    z-index: 0;
-  }
-  
-  > div {
-    position: relative;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    width: 100%;
-  }
-  
-  &.top {
-    align-items: flex-start;
-    padding-top: 8rem;
   }
 }
 
